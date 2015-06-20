@@ -563,9 +563,8 @@ hr.tall{
 .header-v3{	
 	background: #fff;	
 	left: 0;
-	z-index: 9999;
+	z-index: 999;
 	width: 100%;
-	position: relative;
 	border-color: rgba(0,0,0,0.3);
 	-webkit-transition: all .25s ease-in-out;
     -moz-transition: all .25s ease-in-out;
@@ -703,7 +702,7 @@ hr.tall{
 	padding: 0;
 	left: 30px;
 	top: 27px;
-	z-index: 999 !important;
+	z-index: 9999 !important;
 }
 .info-head .dropdown-menu > li > a:hover,
 .info-head .dropdown-menu > li > a:focus,
