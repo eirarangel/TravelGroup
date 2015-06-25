@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 <div id="header-sticky-wrapper" class="sticky-wrapper" style="height: 60px;"><header id="header" class="header-v1">
                 <!-- Main Nav -->
+=======
+<header  class="header-v3">
+>>>>>>> origin/master
                 <nav class="flat-mega-menu">            
                     <!-- flat-mega-menu class -->
                     <label for="mobile-button"> <i class="fa fa-bars"></i></label><!-- mobile click button to show menu -->
@@ -76,5 +80,9 @@
                         </li>
                     </ul>
                 </nav>
+<<<<<<< HEAD
                 <!-- Main Nav -->
             </header></div>
+=======
+                </header>
+>>>>>>> origin/master

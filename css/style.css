@@ -763,18 +763,38 @@ hr.tall{
 .title-header{
 	text-align: center;
 }
-.title-header h1{
+.title-header h1, .title-header h2, .title-header h3 {
 	color: #fff;
 	font-size: 5.2rem;
 	text-shadow: 2px 3px 3px rgba(0,0,0,0.5);
 	line-height: 5.6rem;
 	font-weight: bold;
+	padding: 0px;
+}
+
+.title-header h2 {
+	font-size: 0.8rem;
 }
 .title-header p{
 	color: #f7f7f7;
 	margin: 0 auto 30px auto;
 	max-width: 700px;
 	text-shadow: 2px 3px 3px rgba(0,0,0,0.3);
+}
+
+ .title-header h3 {
+	font-size: 2.8rem;
+}
+
+.icon-row {
+	margin: 0 8% 0 8%;
+	background-color:rgba(0, 0, 0, 0.1);
+	border-radius: 25px;
+	padding:20px;
+}
+
+.banner-col {
+	border-right: 1px solid #fff;
 }
 
 /* Nav Tabs ------------------------------*/

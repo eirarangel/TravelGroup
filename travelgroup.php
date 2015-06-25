@@ -47,9 +47,17 @@
         <div id="layout">
 
             <!-- Header-->
+<<<<<<< HEAD
                 <?php
                 include 'menu.php';
                 ?>
+=======
+                <!-- Main Nav -->
+                <?php
+                include 'menu.php';
+                ?>
+                <!-- Main Nav -->
+>>>>>>> origin/master
             <!-- End Header-->
 
              <!-- Slide And Filter Section-->    
@@ -90,9 +98,37 @@
                     <div class="tp-bannertimer"></div>  
                 </div>
                  <!-- SLIDE CONTENT-->
+                 <!-- FILTER HEADER - TITLE HEADER-->
+                <div class="filter-title">
+                    <!-- TITLE HEADER-->
+                    <div class="title-header">
+                        <div class="row icon-row">
+                            <div class="col-md-2 banner-col"> <h2>DUMMY 1</h2> 
+                            <h3 class="fa fa-ship icon-banner"></h3></div>
+                            <div class="col-md-2  banner-col"><h2>GRADUATION <h3 class="fa fa-graduation-cap icon-banner"></h3></h2>
+                            </div>
+                            <div class="col-md-2  banner-col"><h2>SPRING BREAK</h2>
+                            <h3 class="fa fa-sun-o icon-banner"></h3></div>
+                            <div class="col-md-2  banner-col"><h2>QUINCEAÑERAS</h2>
+                            <h3 class="fa fa-birthday-cake icon-banner"></h3></div>
+                            <div class="col-md-2  banner-col">
+                                <h2>DUMMY 2</h2> 
+                            <h3 class="fa fa-subway icon-banner"></h3>
+                            </div>
+                            <div class="col-md-2"><h2>DUMMY 3</h2> 
+                            <h3 class="fa fa-bed icon-banner"></h3></div>
+                        </div>
+                        
+                    </div>
+                    <!-- END TITLE HEADER-->
+                    <!-- END FILTER HEADER-->
+                </div>
+                <!-- END FILTERHEADER - TITLE HEADER -->
 
             </section>       
             <!-- End Slide And Filter Section-->
+
+
 
             <!--Content Central -->
             <section class="content-central">
