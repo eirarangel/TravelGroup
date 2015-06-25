@@ -88,9 +88,10 @@
 }
 .flat-mega-menu > ul > .title {
 	border-left: none;
-	min-width: 20%;
+	width: 150px;
 	float: left;
 	position: relative;
+	margin-bottom: 10px;
 }
 .flat-mega-menu > ul > .title i{
 	position: absolute;
