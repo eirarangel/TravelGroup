@@ -40,67 +40,7 @@
         <div class="preloader">
             <div class="status">&nbsp;</div>
         </div>
-        <!--End Preloader-->
-    
-        <!-- Theme-options -->
-        <div id="theme-options">
-            <div class="openclose"></div>
-            <div class="title">
-               <span>THEME OPTIONS</span>
-               <p>Choose a combination of predefined colors here. Here are some examples. You can create any additional number on your backend theme, also can choose the background you want and four differents layouts.</p>
-            </div>
-            <span>SKINS</span>
-            <ul id="colorchanger">      
-                <li><a class="colorbox red" href="?theme=red" title="Red Skin"></a></li>
-                <li><a class="colorbox blue" href="?theme=blue" title="Blue Skin"></a></li>                    
-                <li><a class="colorbox yellow" href="?theme=yellow" title="Yellow Skin"></a></li>
-                <li><a class="colorbox green" href="?theme=green" title="Green Skin"></a></li>
-                <li><a class="colorbox orange" href="?theme=orange" title="Orange Skin"></a></li>
-                <li><a class="colorbox purple" href="?theme=purple" title="Purple Skin"></a></li>
-                <li><a class="colorbox pink" href="?theme=pink" title="Pink Skin"></a></li>
-                <li><a class="colorbox cocoa" href="?theme=cocoa" title="Cocoa Skin"></a></li>
-            </ul>
-            <span>LAYOUT STYLE</span>
-            <ul class="layout-style">      
-                <li class="wide">Wide</li>
-                <li class="semiboxed active">Semiboxed</li> 
-                <li class="boxed">Boxed</li> 
-                <li class="boxed-margin">Boxed Margin</li>               
-            </ul>               
-            <div class="patterns">
-                <span>BACKGROUND PATTERNS</span>
-                <ul class="backgrounds">
-                    <li class="bgnone" title="None - Default"></li>
-                    <li class="bg1"></li>
-                    <li class="bg2"></li>
-                    <li class="bg3"></li>
-                    <li class="bg4 "></li>
-                    <li class="bg5"></li> 
-                    <li class="bg6"></li>
-                    <li class="bg7"></li>
-                    <li class="bg8"></li>
-                    <li class="bg9 "></li>
-                    <li class="bg10"></li> 
-                    <li class="bg11"></li> 
-                    <li class="bg12"></li> 
-                    <li class="bg13"></li> 
-                    <li class="bg14"></li> 
-                    <li class="bg15"></li> 
-                    <li class="bg16"></li> 
-                    <li class="bg17"></li> 
-                    <li class="bg18"></li> 
-                    <li class="bg19"></li> 
-                    <li class="bg20"></li> 
-                    <li class="bg21"></li> 
-                    <li class="bg22"></li> 
-                    <li class="bg23"></li> 
-                    <li class="bg24"></li> 
-                    <li class="bg25"></li> 
-                    <li class="bg26"></li>                   
-                </ul>  
-            </div>
-        </div>
-        <!-- End Theme-options -->       
+        <!--End Preloader-->   
 
         <!-- layout-->
         <div id="layout">
@@ -173,7 +113,7 @@
                                     <li>
                                         <h2><span>Punta</span> Cana</h2>
                                         <a href="packages-index.html"><img src="img/gallery-2/1.jpg" alt="image 1"> </a> 
-                                        <p>Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales.</p>
+                                        <p>Punta Cana is a cape located east of the Dominican Republic in the province of La Altagracia.</p>
                                         <a href="packages-index.html" class="btn btn-primary">View Details</a>
                                     </li>
                                 </ul>
@@ -182,7 +122,7 @@
                                     <li>
                                         <h2><span>Santa</span> Marta</h2>
                                         <a href="packages-index.html"><img src="img/gallery-2/2.jpg" alt="image 1"> </a> 
-                                        <p>Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales.</p>
+                                        <p>Santa Marta, officially Tourism, Cultural and Historic District of Santa Marta is a Colombian city.</p>
                                         <a href="packages-index.html" class="btn btn-primary">View Details</a>
                                     </li>
                                 </ul>
@@ -191,7 +131,7 @@
                                     <li>
                                         <h2><span>Isla</span> de San Andres</h2>
                                         <a href="packages-index.html"><img src="img/gallery-2/3.jpg" alt="image 1"> </a> 
-                                        <p>Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales.</p>
+                                        <p>San Andres Island is the largest of the islands forming part of the Archipelago of San Andrés.</p>
                                         <a href="packages-index.html" class="btn btn-primary">View Details</a>
                                     </li>
                                 </ul>
@@ -200,7 +140,7 @@
                                     <li>
                                         <h2><span>Cartagena</span> de Indias</h2>
                                         <a href="packages-index.html"><img src="img/gallery-2/4.jpg" alt="image 1"> </a> 
-                                        <p>Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales.</p>
+                                        <p>Cartagena de Indias, officially Tourist and Cultural District of Cartagena de Indias Cartagena de Indias abbreviated.</p>
                                         <a href="packages-index.html" class="btn btn-primary">View Details</a>
                                     </li>
                                 </ul>
@@ -319,107 +259,282 @@
             <!-- End Header-->
 
             <!-- Section Title-->    
-            <div class="section-title-02">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <h1>Contact</h1>
+            <div class="section-title-01">
+                <!-- Parallax Background -->
+                <div class="bg_parallax image_03_parallax"></div>
+                <!-- Parallax Background -->
+
+                <!-- Content Parallax-->
+                <div class="opacy_bg_02">
+                     <div class="container">
+                        <h1>Gallery - 4</h1>
+                        <div class="crumbs">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li>/</li>
+                                <li>Features</li>  
+                                <li>/</li>
+                                <li>Templates</li>  
+                                <li>/</li>
+                                <li>Gallery - 4</li>                                       
+                            </ul>    
                         </div>
-                        <div class="col-md-8">
-                            <div class="crumbs">
-                                <ul>
-                                    <li><a href="index.html">Home</a></li>
-                                    <li>/</li>
-                                    <li>Contact</li>                                       
-                                </ul>    
-                            </div>
-                        </div>
-                    </div>
+                    </div>  
                 </div>  
+                <!-- End Content Parallax--> 
             </div>   
             <!-- End Section Title-->
 
             <!--Content Central -->
-            <div class="content-central">
+            <section class="content-central">
                 <!-- Shadow Semiboxed -->
                 <div class="semiboxshadow text-center">
                     <img src="img/img-theme/shp.png" class="img-responsive" alt="">
                 </div>
                 <!-- End Shadow Semiboxed -->
 
-                <!-- Google Map --> 
-                <div id="map"></div>
-                <!-- End Google Map --> 
-
-                <!-- End content info - page Fill with -->
+                <!-- End content info - Vacations Destinatios-->
                 <div class="content_info">
                     <div class="paddings-mini">
                         <div class="container">
-                            <div class="row">
-                                <!-- Sidebars -->
-                                <div class="col-md-4">
-                                    <aside>
-                                        <h4>The Office</h4>
-                                        <address>
-                                          <strong>Travelia, Inc.</strong><br>
-                                          <i class="fa fa-map-marker"></i><strong>Address: </strong> fa795 Folsom Ave, Suite 600<br>
-                                          <i class="fa fa-plane"></i><strong>City: </strong>San Francisco, CA 94107<br>
-                                          <i class="fa fa-phone"></i> <abbr title="Phone">P:</abbr> (123) 456-7890
-                                        </address>
-
-                                        <address>
-                                          <strong>Travelia Emails</strong><br>
-                                          <i class="fa fa-envelope"></i><strong>Email:</strong><a href="mailto:#"> sales@iwthemes.com</a><br>
-                                          <i class="fa fa-envelope"></i><strong>Email:</strong><a href="mailto:#"> support@iwthemes.com</a>
-                                        </address>
-                                    </aside>
-
-                                    <hr class="tall">
-
-                                     <aside>
-                                        <h4>Recent flickr</h4>
-                                        <ul id="flickr" class="thumbs"></ul>
-                                    </aside>
-                                </div>
-                                <!-- End Sidebars -->
-
-                                <div class="col-md-8">
-                                    <h3>Contact Form</h3>
-                                    <p class="lead">
-                                       Find a wide variety of airline tickets and cheap flights, hotels, tour packages, car rentals, cruises and more in travelia.com.You can choose your favorite destination and start planning your long-awaited vacation.
-                                       You can also check availability of flights and hotels quickly and easily, in order to find the option that best suits your needs.
-                                    </p>
-                                    <form id="form-contact" class="form-theme" action="php/send-mail.php">
-                                        <input type="text" placeholder="Name" name="Name" required="">
-                                        <input type="email" placeholder="Email" name="Email" required="">
-                                        <input type="number" placeholder="Phone" name="Phone" required="">
-                                        <textarea placeholder="Your Message" name="message" required=""></textarea>
-                                        <input type="submit" name="Submit" value="Send Message" class="btn btn-primary">
-                                    </form> 
-                                    <div id="result"></div>  
-                                </div>
+                            <!-- Nav Filters -->
+                            <div class="portfolioFilter">
+                                <a href="#" data-filter="*" class="current">Show All</a>
+                                <a href="#beach" data-filter=".beach">Beach</a>
+                                <a href="#nature" data-filter=".nature">Nature</a>
+                                <a href="#extreme" data-filter=".extreme">Extreme</a>
+                                <a href="#romantic" data-filter=".romantic">Romantic</a>
                             </div>
+                            <!-- End Nav Filters -->
+
+                            <!-- Items Gallery filters-->
+                            <div class="portfolioContainer">
+                                
+                                <!-- Item Gallery-->
+                                <div class="col-xs-12 col-sm-6 col-md-3 nature">
+                                    <div class="img-hover">
+                                        <img src="img/gallery-2/1.jpg" alt="" class="img-responsive">
+                                        <div class="overlay"><a href="img/gallery-2/1.jpg" class="fancybox"><i class="fa fa-plus-circle"></i></a></div>
+                                    </div>
+
+                                    <div class="info-gallery">
+                                        <h3>
+                                            The Large Everest Mount<br>
+                                            <span>HIMALAYA MOUNTAINS</span>
+                                        </h3>
+                                        <hr class="separator">
+                                        <p>Donec sodales sagittis magna. Sed consequat, leo eget.</p>
+                                        <ul class="starts">
+                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-star-half-empty"></i></a></li>
+                                        </ul>
+                                        <div class="content-btn"><a href="#" class="btn btn-primary">View Details</a></div>
+                                        <div class="price"><span>$</span><b>From</b>45</div>
+                                    </div>
+                                </div>
+                                <!-- End Item Gallery-->
+
+                                <!-- Item Gallery-->
+                                <div class="col-xs-12 col-sm-6 col-md-3 nature">
+                                    <div class="img-hover">
+                                        <img src="img/gallery-2/2.jpg" alt="" class="img-responsive">
+                                        <div class="overlay"><a href="img/gallery-2/2.jpg" class="fancybox"><i class="fa fa-plus-circle"></i></a></div>
+                                    </div>
+
+                                    <div class="info-gallery">
+                                        <h3>
+                                            Chinese Mountains<br>
+                                            <span>ORIENTAL NATURE</span>
+                                        </h3>
+                                        <hr class="separator">
+                                        <p>Donec sodales sagittis magna. Sed consequat, leo eget.</p>
+                                        <ul class="starts">
+                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-star-half-empty"></i></a></li>
+                                        </ul>
+                                        <div class="content-btn"><a href="#" class="btn btn-primary">View Details</a></div>
+                                        <div class="price"><span>$</span><b>From</b>25</div>
+                                    </div>
+                                </div>
+                                <!-- End Item Gallery-->
+
+                                <!-- Item Gallery-->
+                                <div class="col-xs-12 col-sm-6 col-md-3 beach">
+                                    <div class="img-hover">
+                                        <img src="img/gallery-2/3.jpg" alt="" class="img-responsive">
+                                        <div class="overlay"><a href="img/gallery-2/3.jpg" class="fancybox"><i class="fa fa-plus-circle"></i></a></div>
+                                    </div>
+
+                                    <div class="info-gallery">
+                                        <h3>
+                                            Polynesia Bora Bora<br>
+                                            <span>FRENCH ISLANDS</span>
+                                        </h3>
+                                        <hr class="separator">
+                                        <p>Donec sodales sagittis magna. Sed consequat, leo eget.</p>
+                                        <ul class="starts">
+                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-star-half-empty"></i></a></li>
+                                        </ul>
+                                        <div class="content-btn"><a href="#" class="btn btn-primary">View Details</a></div>
+                                        <div class="price"><span>$</span><b>From</b>60</div>
+                                    </div>
+                                </div>
+                                <!-- End Item Gallery-->
+
+                                <!-- Item Gallery-->
+                                <div class="col-xs-12 col-sm-6 col-md-3 beach">
+                                    <div class="img-hover">
+                                        <img src="img/gallery-2/4.jpg" alt="" class="img-responsive">
+                                        <div class="overlay"><a href="img/gallery-2/4.jpg" class="fancybox"><i class="fa fa-plus-circle"></i></a></div>
+                                    </div>
+
+                                    <div class="info-gallery">
+                                        <h3>
+                                            Tayrona Park<br>
+                                            <span>SANTA MARTA COLOMBIA</span>
+                                        </h3>
+                                        <hr class="separator">
+                                        <p>Donec sodales sagittis magna. Sed consequat, leo eget.</p>
+                                        <ul class="starts">
+                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-star-half-empty"></i></a></li>
+                                        </ul>
+                                        <div class="content-btn"><a href="#" class="btn btn-primary">View Details</a></div>
+                                        <div class="price"><span>$</span><b>From</b>75</div>
+                                    </div>
+                                </div>
+                                <!-- End Item Gallery-->
+
+                                <!-- Item Gallery-->
+                                <div class="col-xs-12 col-sm-6 col-md-3 extreme">
+                                    <div class="img-hover">
+                                        <img src="img/gallery-2/5.jpg" alt="" class="img-responsive">
+                                        <div class="overlay"><a href="img/gallery-2/5.jpg" class="fancybox"><i class="fa fa-plus-circle"></i></a></div>
+                                    </div>
+
+                                    <div class="info-gallery">
+                                        <h3>
+                                            Extreme Mountains<br>
+                                            <span>CLIMB TO THE TOP</span>
+                                        </h3>
+                                        <hr class="separator">
+                                        <p>Donec sodales sagittis magna. Sed consequat, leo eget.</p>
+                                        <ul class="starts">
+                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-star-half-empty"></i></a></li>
+                                        </ul>
+                                        <div class="content-btn"><a href="#" class="btn btn-primary">View Details</a></div>
+                                        <div class="price"><span>$</span><b>From</b>20</div>
+                                    
+                                    </div>
+                                </div>
+                                <!-- End Item Gallery-->
+
+                                <!-- Item Gallery-->
+                                <div class="col-xs-12 col-sm-6 col-md-3 romantic">
+                                    <div class="img-hover">
+                                        <img src="img/gallery-2/6.jpg" alt="" class="img-responsive">
+                                        <div class="overlay"><a href="img/gallery-2/6.jpg" class="fancybox"><i class="fa fa-plus-circle"></i></a></div>
+                                    </div>
+
+                                    <div class="info-gallery">
+                                        <h3>
+                                            Tower Eiffel<br>
+                                            <span>ITALIE FRANCE</span>
+                                        </h3>
+                                        <hr class="separator">
+                                        <p>Donec sodales sagittis magna. Sed consequat, leo eget.</p>
+                                        <ul class="starts">
+                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-star-half-empty"></i></a></li>
+                                        </ul>
+                                        <div class="content-btn"><a href="#" class="btn btn-primary">View Details</a></div>
+                                        <div class="price"><span>$</span><b>From</b>15</div>
+                                    </div>
+                                </div>
+                                <!-- End Item Gallery-->
+
+                                <!-- Item Gallery-->
+                                <div class="col-xs-12 col-sm-6 col-md-3 romantic">
+                                    <div class="img-hover">
+                                        <img src="img/gallery-2/7.jpg" alt="" class="img-responsive">
+                                        <div class="overlay"><a href="img/gallery-2/7.jpg" class="fancybox"><i class="fa fa-plus-circle"></i></a></div>
+                                    </div>
+
+                                    <div class="info-gallery">
+                                        <h3>
+                                            Beautiful Venice<br>
+                                            <span>LOCATED IN ITALY</span>
+                                        </h3>
+                                        <hr class="separator">
+                                        <p>Donec sodales sagittis magna. Sed consequat, leo eget.</p>
+                                        <ul class="starts">
+                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-star-half-empty"></i></a></li>
+                                        </ul>
+                                        <div class="content-btn"><a href="#" class="btn btn-primary">View Details</a></div>
+                                        <div class="price"><span>$</span><b>From</b>80</div>
+                                    
+                                    </div>
+                                </div>
+                                <!-- End Item Gallery-->
+
+                                <!-- Item Gallery-->
+                                <div class="col-xs-12 col-sm-6 col-md-3 romantic">
+                                    <div class="img-hover">
+                                        <img src="img/gallery-2/8.jpg" alt="" class="img-responsive">
+                                        <div class="overlay"><a href="img/gallery-2/8.jpg" class="fancybox"><i class="fa fa-plus-circle"></i></a></div>
+                                    </div>
+
+                                    <div class="info-gallery">
+                                        <h3>
+                                            Romantic Night<br>
+                                            <span>BEAUTIFUL BEACHES</span>
+                                        </h3>
+                                        <hr class="separator">
+                                        <p>Donec sodales sagittis magna. Sed consequat, leo eget.</p>
+                                        <ul class="starts">
+                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-star-half-empty"></i></a></li>
+                                        </ul>
+                                        <div class="content-btn"><a href="#" class="btn btn-primary">View Details</a></div>
+                                        <div class="price"><span>$</span><b>From</b>58</div>
+                                    
+                                    </div>
+                                </div>
+                                <!-- End Item Gallery-->
+                            </div>   
+                            <!-- End Items Gallery filters-->       
                         </div>
                     </div>
                 </div>   
-                <!-- End content info - page Fill with  --> 
-
-                <!-- Twitter Section -->
-                <div class="section-twitter content_resalt border-top">
-                    <i class="fa fa-twitter icon-big"></i>
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="text-center">
-                                    <h2>Our recents <span class="text-resalt">twitts</span>.</h2>
-                                </div>
-                                <div id="twitter"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>  
-                <!-- End Twitter Section -->  
-            </div>
+                <!-- End content info - Vacations Destinatios--> 
+            </section>
             <!-- End Content Central -->
       
             <!-- footer-->
@@ -577,77 +692,9 @@
         <script type="text/javascript" src="js/theme-options/jquery.cookies.js"></script> 
         <!-- Bootstrap.js-->
         <script type="text/javascript" src="js/bootstrap/bootstrap.js"></script>
-        <script type="text/javascript" src="js/bootstrap/bootstrap-slider.js"></script> 
+        <script type="text/javascript" src="js/bootstrap/bootstrap-slider.js"></script>  
         <!--MAIN FUNCTIONS-->
         <script type="text/javascript" src="js/main.js"></script>
         <!-- ======================= End JQuery libs =========================== -->
-
-        <!--  ======================= Google Map  ============================== -->
-        <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
-        <script type="text/javascript">
-            /*
-                Map Settings
-                Find the Latitude and Longitude of your address:    
-                - http://universimmedia.pagesperso-orange.fr/geo/loc.htm    
-                - http://www.findlatitudeandlongitude.com/find-address-from-latitude-and-longitude/
-            */
-
-            // Map Markers
-            var mapMarkers = [{
-                address: "217 Summit Boulevard, Birmingham, AL 35243",
-                html: "<strong>Alabama Office</strong><br>217 Summit Boulevard, Birmingham, AL 35243<br><br><a href='#' onclick='mapCenterAt({latitude: 33.44792, longitude: -86.72963, zoom: 16}, event)'>[+] zoom here</a>",
-                icon: {
-                    image: "img/img-theme/pin.png",
-                    iconsize: [26, 46],
-                    iconanchor: [12, 46]
-                }
-            },{
-                address: "645 E. Shaw Avenue, Fresno, CA 93710",
-                html: "<strong>California Office</strong><br>645 E. Shaw Avenue, Fresno, CA 93710<br><br><a href='#' onclick='mapCenterAt({latitude: 36.80948, longitude: -119.77598, zoom: 16}, event)'>[+] zoom here</a>",
-                icon: {
-                    image: "img/img-theme/pin.png",
-                    iconsize: [26, 46],
-                    iconanchor: [12, 46]
-                }
-            },{
-                address: "New York, NY 10017",
-                html: "<strong>New York Office</strong><br>New York, NY 10017<br><br><a href='#' onclick='mapCenterAt({latitude: 40.75198, longitude: -73.96978, zoom: 16}, event)'>[+] zoom here</a>",
-                icon: {
-                    image: "img/img-theme/pin.png",
-                    iconsize: [26, 46],
-                    iconanchor: [12, 46]
-                }
-            }];
-
-            // Map Initial Location
-            var initLatitude = 38.09024;
-            var initLongitude = -98.71289;
-
-            // Map Extended Settings
-            var mapSettings = {
-                controls: {
-                    panControl: true,
-                    zoomControl: true,
-                    mapTypeControl: true,
-                    scaleControl: true,
-                    streetViewControl: true,
-                    overviewMapControl: true
-                },
-                scrollwheel: false,
-                markers: mapMarkers,
-                latitude: initLatitude,
-                longitude: initLongitude,
-                zoom: 5
-            };
-            
-            $("#map").gMap(mapSettings);
-
-            // Map Center At
-            var mapCenterAt = function(options, e) {
-                e.preventDefault();
-                $("#map").gMap("centerAt", options);
-            }
-
-        </script>
     </body>
 </html>

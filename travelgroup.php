@@ -74,61 +74,9 @@
             <!-- Header-->
             <header  class="header-v3">
                 <!-- Main Nav -->
-                <nav class="flat-mega-menu">            
-                    <!-- flat-mega-menu class -->
-                    <label for="mobile-button"> <i class="fa fa-bars"></i></label><!-- mobile click button to show menu -->
-                    <input id="mobile-button" type="checkbox">                          
-
-                    <ul class="collapse"><!-- collapse class for collapse the drop down -->
-                        <!-- website title - Logo class -->
-                        <li class="title">
-                            <a href="index.html"><span><img src="img/test/logo.PNG" alt="Travel Group logo"/> </span> <!-- <span>T</span>ravel Group - College Holidays<span>.</span>--></a> <!--
-                            <i class="fa fa-sun-o"></i> -->
-                        </li>
-                        <!-- End website title - Logo class -->
-
-                        <li><a href="#">HOME</a></li>
-                        
-
-                        <li> <a href="#">CRUISE SHIP</a>
-                            <ul class="drop-down one-column hover-fade"><!-- first level drop down -->
-                                <li><a href="#">GRAD TRIP</a> </li>
-                                <li><a href="#">SPRING BREAK GROUP</a> </li>
-                                <li><a href="#">QUINCEAÑERAS</a> </li>
-                            </ul>
-                        </li>
-
-                        <li> <a href="#">VACATIONS</a>
-                            <ul class="drop-down one-column hover-fade"><!-- first level drop down -->
-                                <li><a href="#">GRAD TRIP</a> </li>
-                                <li><a href="#">SPRING BREAK GROUP</a> </li>
-                                <li><a href="#">QUINCEANERAS</a> </li>
-                                <li><a href="#">GRAND MAYAN HOTEL </a> </li>
-                            </ul>
-                        </li>
-
-
-                        <li> <a href="#">DESTINATIONS</a>
-                            <ul class="drop-down one-column hover-fade"><!-- first level drop down -->
-                                <li><a href="#">CANCUN</a> </li>
-                                <li><a href="#">PLAYA DEL CARMEN</a> </li>
-                                <li><a href="#">EL PACIFICO, CRUISE SHIP</a> </li>
-                                <li><a href="#">GRAND MAYAN HOTEL </a> </li>
-                                <li><a href="#">EL CARIBE, CRUISE SHIP</a> </li>
-                                <li><a href="#">NUEVO VALLARTA</a> </li>
-                            </ul>
-                        </li>
-
-                        <li> <a href="#">ABOUT US</a>
-                            <ul class="drop-down one-column hover-fade"><!-- first level drop down -->
-                                <li><a href="#">MISSION</a> </li>
-                                <li><a href="#">VISION</a> </li>
-                                <li><a href="#">VALUES</a> </li>
-                                <li><a href="#">PHILOSOPHY</a> </li>
-                            </ul>
-                        </li>     
-                    </ul>
-                </nav>
+                <?php
+                include 'menu.php';
+                ?>
                 <!-- Main Nav -->
             </header>
             <!-- End Header-->
@@ -411,105 +359,9 @@
             <!-- End Content Central -->
       
             <!-- footer-->
-            <footer id="footer" class="footer-v2">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="row">
-                            <div class="col-md-1"></div>                  
-                                <!-- Social Us-->
-                                <div class="col-md-3">
-                                    <h3>FOLLOW US</h3>
-                                    <ul class="social">
-                                        <li class="facebook"><span><i class="fa fa-facebook"></i></span><a href="#">Facebook</a></li>
-                                        <li class="twitter"><span><i class="fa fa-twitter"></i></span><a href="#">Twitter</a></li>
-                                        <li class="github"><span><i class="fa fa-github"></i></span><a href="#">Github</a></li>
-                                    </ul>
-                                </div>
-                                <!-- End Social Us-->
-                                
-                                <!-- Recent links-->
-                                <div class="col-md-4">
-                                    <h3>TRAVEL SPECIALISTS </h3>
-                                    <ul>
-                                        <li><i class="fa fa-check"></i> <a href="#">Golf Vacations</a></li>
-                                        <li><i class="fa fa-check"></i> <a href="#">Disney Parks Vacations</a></li>
-                                        <li><i class="fa fa-check"></i> <a href="#">Vacations As Advertised</a></li>                                    
-                                    </ul>
-                                </div>
-                                <!-- End Recent links-->
-
-                                <!-- Contact Us-->
-                                <div class="col-md-4">
-                                   <h3>CONTACT US</h3>
-                                   <ul class="contact_footer">
-                                        <li>
-                                            <i class="fa fa-envelope"></i> <a href="#">example@example.com</a>
-                                        </li>
-                                        <li>
-                                            <i class="fa fa-headphones"></i> <a href="#">55-5698-4589</a>
-                                         </li>
-                                        <li class="location">
-                                            <i class="fa fa-home"></i> <a href="#"> Av new stret - New York</a>
-                                        </li>                                   
-                                    </ul>
-                                </div>
-                                <!-- Contact Us-->
-                            </div>  
-
-                            <div class="divisor"></div>
-                            
-                            <div class="row">
-                                <!-- Newsletter-->
-                                <div class="col-md-12">
-                                    <h3>NEWSLETTER SIGN UP</h3>  
-                                    <form id="newsletterForm" action="php/mailchip/newsletter-subscribe.php">
-                                        <div class="row">
-                                            <div class="col-md-5">
-                                                <div class="input-group">
-                                                    <span class="input-group-addon">
-                                                        <i class="fa fa-envelope"></i>
-                                                    </span>
-                                                    <input class="form-control" placeholder="Your Name" name="name" type="text" required="required">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-5">
-                                                <div class="input-group">
-                                                    <span class="input-group-addon">
-                                                        <i class="fa fa-envelope"></i>
-                                                    </span>
-                                                    <input class="form-control" placeholder="Your  Email" name="email" type="email" required="required">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-2">
-                                                <span class="input-group-btn">
-                                                    <button class="btn btn-primary" type="submit" name="subscribe">SIGN UP</button>
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </form>   
-                                    <div id="result-newsletter"></div>
-                                </div>
-                                <!-- end Newsletter-->
-                            </div>                      
-                        </div>
-
-                       
-                    </div>
-                </div>
-
-                <!-- footer Down-->
-                <div class="footer-down">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-5">
-                                <p>&copy; 2015 Travel Group . All Rights Reserved.  2010 - 2015</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- footer Down-->
-            </footer>      
+                <?php
+                include 'footer.php';
+                ?>
             <!-- End footer-->
         </div>
         <!-- End layout-->
