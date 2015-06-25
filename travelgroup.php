@@ -47,17 +47,11 @@
         <div id="layout">
 
             <!-- Header-->
-<<<<<<< HEAD
-                <?php
-                include 'menu.php';
-                ?>
-=======
                 <!-- Main Nav -->
                 <?php
                 include 'menu.php';
                 ?>
                 <!-- Main Nav -->
->>>>>>> origin/master
             <!-- End Header-->
 
              <!-- Slide And Filter Section-->    
