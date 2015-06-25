@@ -763,7 +763,7 @@ hr.tall{
 .title-header{
 	text-align: center;
 }
-.title-header h1, h2, h3 {
+.title-header h1, .title-header h2, .title-header h3 {
 	color: #fff;
 	font-size: 5.2rem;
 	text-shadow: 2px 3px 3px rgba(0,0,0,0.5);
@@ -782,7 +782,7 @@ hr.tall{
 	text-shadow: 2px 3px 3px rgba(0,0,0,0.3);
 }
 
-.icon-banner {
+ .title-header h3 {
 	font-size: 2.8rem;
 }
 

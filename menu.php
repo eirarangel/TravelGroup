@@ -1,3 +1,4 @@
+<header  class="header-v3">
                 <nav class="flat-mega-menu">            
                     <!-- flat-mega-menu class -->
                     <label for="mobile-button"> <i class="fa fa-bars"></i></label><!-- mobile click button to show menu -->
@@ -58,3 +59,4 @@
 
                     </ul>
                 </nav>
+                </header>

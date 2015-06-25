@@ -72,13 +72,11 @@
             <!-- End Info Head -->
 
             <!-- Header-->
-            <header  class="header-v3">
                 <!-- Main Nav -->
                 <?php
                 include 'menu.php';
                 ?>
                 <!-- Main Nav -->
-            </header>
             <!-- End Header-->
 
              <!-- Slide And Filter Section-->    
