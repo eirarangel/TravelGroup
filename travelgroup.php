@@ -36,53 +36,24 @@
         <![endif]-->
     </head>
     <body>
-        <!--Preloader-->
+       <!--Preloader-->
         <div class="preloader">
             <div class="status">&nbsp;</div>
         </div>
-        <!--End Preloader-->     
+        <!--End Preloader-->    
+         
 
         <!-- layout-->
         <div id="layout">
-            <!-- Info Head -->
-            <div class="info-head">  
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <ul>  
-                                <li>
-                                    <ul>
-                                      <li class="dropdown">
-                                        <i class="fa fa-globe"></i> 
-                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                            Language<i class="fa fa-angle-down"></i>
-                                        </a>
-                                         <ul class="dropdown-menu">  
-                                             <li><a href="#"><img src="img/language/spanish.png" alt="">Spanish</a></li>
-                                             <li><a href="#"><img src="img/language/english.png" alt="">English</a></li>
-                                        </ul>
-                                      </li>                      
-                                    </ul>
-                                </li>
-                            </ul> 
-                        </div>
-                    </div>
-                </div>            
-            </div>
-            <!-- End Info Head -->
 
             <!-- Header-->
-            <header  class="header-v3">
-                <!-- Main Nav -->
                 <?php
                 include 'menu.php';
                 ?>
-                <!-- Main Nav -->
-            </header>
             <!-- End Header-->
 
              <!-- Slide And Filter Section-->    
-            <section class="tp-banner-container">
+            <section class="tp-banner-container no-margin" style="overflow: visible;">
                 <!-- SLIDE  -->
                 <div class="tp-banner" >
                     <!-- SLIDES CONTENT-->

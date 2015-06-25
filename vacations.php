@@ -3,7 +3,7 @@
     <head>
         <!-- Basic -->
         <meta charset="utf-8">
-        <title>Travelia - Travel Agency, Responsive - Hotel Online Booking</title>
+        <title>TravelGroup - Vacations</title>
         <meta name="keywords" content="HTML5 Template" />
         <meta name="description" content="World Cup - Responsive HTML5 Template soccer and sports">
         <meta name="author" content="iwthemes.com">  

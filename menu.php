@@ -1,3 +1,5 @@
+<div id="header-sticky-wrapper" class="sticky-wrapper" style="height: 60px;"><header id="header" class="header-v1">
+                <!-- Main Nav -->
                 <nav class="flat-mega-menu">            
                     <!-- flat-mega-menu class -->
                     <label for="mobile-button"> <i class="fa fa-bars"></i></label><!-- mobile click button to show menu -->
@@ -5,9 +7,9 @@
 
                     <ul class="collapse"><!-- collapse class for collapse the drop down -->
                         <!-- website title - Logo class -->
-                        <li class="title" style="margin-bottom: 0px;">
-                            <a href="index.html"><span><img src="img/test/logo.PNG" alt="Travel Group logo" style="margin-top: 5px;"> </span> <!-- <span>T</span>ravel Group - College Holidays<span>.</span>--></a> <!--
-                            <i class="fa fa-sun-o"></i> -->
+                        <li class="title">
+                            <a href="index.html"><span>T</span>ravelgroup<span>.</span></a> 
+                            <!--<i class="fa fa-rocket"></i>-->
                         </li>
                         <!-- End website title - Logo class -->
 
@@ -56,5 +58,23 @@
 
                         <li><a href="contact.php">CONTACT</a></li>
 
+                        <li class="search-bar"><i class="fa fa-globe"></i> Languaje <!-- search bar -->
+                            <ul class="drop-down hover-expand">
+                                <li>
+                                    <form method="post" action="#">
+                                        <table>
+                                            <tbody><tr>
+                                                <!--
+                                                <td> <a href="#"><img src="img/language/spanish.png" alt="">Spanish</a> </td>
+                                                <td> <a href="#"><img src="img/language/english.png" alt="">English</a> </td>
+                                            -->
+                                            </tr>
+                                        </tbody></table>
+                                    </form>
+                                </li>
+                            </ul>
+                        </li>
                     </ul>
                 </nav>
+                <!-- Main Nav -->
+            </header></div>

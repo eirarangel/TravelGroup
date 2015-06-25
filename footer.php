@@ -29,9 +29,9 @@
                                 <div class="col-md-4">
                                     <h3>VACATIONS</h3>
                                     <ul>
-                                        <li><i class="fa fa-check"></i> <a href="#">Golf Vacations</a></li>
-                                        <li><i class="fa fa-check"></i> <a href="#">Disney Parks Vacations</a></li>
-                                        <li><i class="fa fa-check"></i> <a href="#">Vacations As Advertised</a></li>                                    
+                                        <li><i class="fa fa-check"></i> <a href="#">Vacations_#1</a></li>
+                                        <li><i class="fa fa-check"></i> <a href="#">Vacations_#2</a></li>
+                                        <li><i class="fa fa-check"></i> <a href="#">Vacations_#3</a></li>                                    
                                     </ul>
                                 </div>
                                 <!-- End Recent links-->

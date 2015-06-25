@@ -3,7 +3,7 @@
     <head>
         <!-- Basic -->
         <meta charset="utf-8">
-        <title>Travelia - Travel Agency, Responsive - Hotel Online Booking</title>
+        <title>TravelGroup - Privacy Policy</title>
         <meta name="keywords" content="HTML5 Template" />
         <meta name="description" content="World Cup - Responsive HTML5 Template soccer and sports">
         <meta name="author" content="iwthemes.com">  
@@ -44,31 +44,6 @@
 
         <!-- layout-->
         <div id="layout">
-
-        <div class="info-head">  
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <ul>  
-                                <li>
-                                    <ul>
-                                      <li class="dropdown">
-                                        <i class="fa fa-globe"></i> 
-                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                            Language<i class="fa fa-angle-down"></i>
-                                        </a>
-                                         <ul class="dropdown-menu">  
-                                             <li><a href="#"><img src="img/language/spanish.png" alt="">Spanish</a></li>
-                                             <li><a href="#"><img src="img/language/english.png" alt="">English</a></li>
-                                        </ul>
-                                      </li>                      
-                                    </ul>
-                                </li>
-                            </ul> 
-                        </div>
-                    </div>
-                </div>            
-            </div>
 
             <!-- Header-->
             <header class="header-v3">
