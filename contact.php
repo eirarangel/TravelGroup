@@ -60,17 +60,8 @@
             <div class="section-title-02">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-4">
+                        <div class="col-md-12">
                             <h1>Contact</h1>
-                        </div>
-                        <div class="col-md-8">
-                            <div class="crumbs">
-                                <ul>
-                                    <li><a href="index.html">Home</a></li>
-                                    <li>/</li>
-                                    <li>Contact</li>                                       
-                                </ul>    
-                            </div>
                         </div>
                     </div>
                 </div>  
@@ -99,7 +90,7 @@
                                     <aside>
                                         <h4>The Office</h4>
                                         <address>
-                                          <strong>Travelgroup, Collage Holidays.</strong><br>
+                                          <strong>Travelgroup, College Holidays.</strong><br>
                                           <i class="fa fa-map-marker"></i><strong>Address: </strong> 875 Bowsprit Rd.<br>
                                           <i class="fa fa-plane"></i><strong>City: </strong>Chula Vista, CA 91914<br>
                                           <i class="fa fa-phone"></i><strong>Phone (US):</strong>(619) 730-0380<br />
@@ -213,7 +204,7 @@
             // Map Markers
             var mapMarkers = [{
                 address: "875 BOWSPRIT RD. CHULA VISTA, CA 91914",
-                html: "<strong>CA Office</strong><br>875 Bowsprit Rd. Chula Vista, CA 91914<br><br><a href='#' onclick='mapCenterAt({latitude: 33.44792, longitude: -86.72963, zoom: 16}, event)'>[+] zoom here</a>",
+                html: "<strong>CA Office</strong><br>875 Bowsprit Rd. Chula Vista, CA 91914<br><br><a href='#' onclick='mapCenterAt({latitude: 32.6537109, longitude: -116.9488188, zoom: 13}, event)'>[+] zoom here</a>",
                 icon: {
                     image: "img/img-theme/pin.png",
                     iconsize: [26, 46],
@@ -222,7 +213,7 @@
             }];
 
             // Map Initial Location
-            var initLatitude = 32.5137109;
+            var initLatitude = 32.8137109;
             var initLongitude = -117.0288188;
 
             // Map Extended Settings

@@ -1,4 +1,4 @@
-<div id="header-sticky-wrapper" class="sticky-wrapper" style="height: 60px;"><header id="header" class="header-v1">
+<div id="header-sticky-wrapper" class="sticky-wrapper" style="height: 60px;"><header id="header" class="header-v3">
                 <!-- Main Nav -->
 
                 <nav class="flat-mega-menu">            
@@ -15,10 +15,51 @@
                         <!-- End website title - Logo class -->
 
                         <li><a href="travelgroup.php">HOME</a></li>
-                        
 
+                        <li><a href="categorys.php">CATEGORYS</a></li>                        
+                        
+                        <li> <a href="#">PACKAGES</a> 
+                            <div class="drop-down full-width hover-fade"><!-- full width drop down with 4 columns + images -->
+                                <ul><!-- column one -->
+                                    <li>
+                                        <h2><span>DUMMY</span> 1</h2>
+                                        <a href="packages-index.html"><img src="img/gallery-2/1.jpg" alt="image 1"> </a> 
+                                        <p>Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales.</p>
+                                        <a href="packages-index.html" class="btn btn-primary">View Details</a>
+                                    </li>
+                                </ul>
+                                
+                                <ul><!-- column two -->
+                                    <li>
+                                        <h2><span>DUMMY</span> 2</h2>
+                                        <a href="packages-index.html"><img src="img/gallery-2/2.jpg" alt="image 1"> </a> 
+                                        <p>Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales.</p>
+                                        <a href="packages-index.html" class="btn btn-primary">View Details</a>
+                                    </li>
+                                </ul>
+                                
+                                <ul><!-- column three -->
+                                    <li>
+                                        <h2><span>DUMMY</span> 3</h2>
+                                        <a href="packages-index.html"><img src="img/gallery-2/3.jpg" alt="image 1"> </a> 
+                                        <p>Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales.</p>
+                                        <a href="packages-index.html" class="btn btn-primary">View Details</a>
+                                    </li>
+                                </ul>
+                                
+                                <ul><!-- column four -->
+                                    <li>
+                                        <h2><span>DUMMY</span> 4</h2>
+                                        <a href="packages-index.html"><img src="img/gallery-2/4.jpg" alt="image 1"> </a> 
+                                        <p>Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales.</p>
+                                        <a href="packages-index.html" class="btn btn-primary">View Details</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>                        
+                        <!--
                         <li> <a href="cruise_ship.php">CRUISE SHIP</a>
-                            <ul class="drop-down one-column hover-fade"><!-- first level drop down -->
+                            <ul class="drop-down one-column hover-fade">
                                 <li><a href="#">GRAD TRIP</a> </li>
                                 <li><a href="#">SPRING BREAK GROUP</a> </li>
                                 <li><a href="#">QUINCEAÑERAS</a> </li>
@@ -26,7 +67,7 @@
                         </li>
 
                         <li> <a href="vacations.php">VACATIONS</a>
-                            <ul class="drop-down one-column hover-fade"><!-- first level drop down -->
+                            <ul class="drop-down one-column hover-fade">
                                 <li><a href="#">GRAD TRIP</a> </li>
                                 <li><a href="#">SPRING BREAK GROUP</a> </li>
                                 <li><a href="#">QUINCEANERAS</a> </li>
@@ -36,7 +77,7 @@
 
 
                         <li> <a href="destinations.php">DESTINATIONS</a>
-                            <ul class="drop-down one-column hover-fade"><!-- first level drop down -->
+                            <ul class="drop-down one-column hover-fade">
                                 <li><a href="#">CANCUN</a> </li>
                                 <li><a href="#">PLAYA DEL CARMEN</a> </li>
                                 <li><a href="#">EL PACIFICO, CRUISE SHIP</a> </li>
@@ -46,7 +87,7 @@
                             </ul>
                         </li>
 
-                        <!--<li> <a href="aboutus.php">ABOUT US</a>
+                        <li> <a href="aboutus.php">ABOUT US</a>
                             <ul class="drop-down one-column hover-fade">
                                 <li><a href="#">MISSION</a> </li>
                                 <li><a href="#">VISION</a> </li>
@@ -59,7 +100,7 @@
 
                         <li><a href="contact.php">CONTACT</a></li>
 
-                        <li class="search-bar"><i class="fa fa-globe"></i> Languaje <!-- search bar -->
+                        <li class="search-bar"><i class="fa fa-globe"></i> Language <!-- search bar -->
                             <ul class="drop-down hover-expand">
                                 <li>
                                     <form method="post" action="#">

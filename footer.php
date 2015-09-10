@@ -27,11 +27,12 @@
                                 
                                 <!-- Recent links-->
                                 <div class="col-md-4">
-                                    <h3>VACATIONS</h3>
+                                    <h3>CATEGORYS</h3>
                                     <ul>
                                         <li><i class="fa fa-check"></i> <a href="#">Vacations_#1</a></li>
                                         <li><i class="fa fa-check"></i> <a href="#">Vacations_#2</a></li>
                                         <li><i class="fa fa-check"></i> <a href="#">Vacations_#3</a></li>                                    
+                                        <li><i class="fa fa-check"></i> <a href="#">Vacations_#4</a></li>                                           
                                     </ul>
                                 </div>
                                 <!-- End Recent links-->

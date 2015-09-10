@@ -33,7 +33,7 @@ $(document).ready(function($) {
 
   //=================================== Sticky nav ===================================//
 
-  $("#header").sticky({topSpacing:0});
+  // $("#header").sticky({topSpacing:0});
 
   //=================================== datepicker ===================================//
   $(".date-input" ).datepicker();
