@@ -16,7 +16,6 @@
         <link href="css/theme-responsive.css" rel="stylesheet" media="screen">
         <!-- Skins Theme -->
         <link href="#" rel="stylesheet" media="screen" class="skin">
-
         <!-- Favicons -->
         <link rel="shortcut icon" href="img/icons/favicon.ico">
         <link rel="apple-touch-icon" href="img/icons/apple-touch-icon.png">

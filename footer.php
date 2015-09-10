@@ -65,16 +65,15 @@
                 <div class="footer-down">
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-5">
-                                <p>&copy; 2015 Travelgroup <a href="privacy_policy.php">Privacy Policy</a>. All Rights Reserved.</p>
+                            <div class="col-md-6">
+                                <p>&copy; 2015 Travelgroup Holliday, CST #2079194-10, <a href="privacy_policy.php">Privacy Policy</a>.</p>
                             </div>
-                            <div class="col-md-7">
+                            <div class="col-md-6">
                                 <!-- Nav Footer-->
                                 <ul class="nav-footer">
                                     <li><a href="travelgroup.php">HOME</a> </li>
-                                    <li><a href="cruise_ship.php">CRUISE SHIP</a></li>
-                                    <li><a href="vacations.php">VACATIONS</a></li> 
-                                    <li><a href="destinations.php">DESTINATIONS</a></li>           
+                                    <li><a href="categorys.php">CATEGORIES</a></li>
+                                    <li><a href="packages.php">PACKAGES</a></li>         
                                     <li><a href="contact.php">CONTACT</a></li>
                                 </ul>
                                 <!-- End Nav Footer-->

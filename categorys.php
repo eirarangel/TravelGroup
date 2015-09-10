@@ -81,17 +81,24 @@
 
             <!--Content Central -->
             <section class="content-central">
-                <!-- Shadow Semiboxed -->
-                <div class="semiboxshadow text-center">
-                    <img src="img/img-theme/shp.png" class="img-responsive" alt="">
-                </div>
-                <!-- End Shadow Semiboxed -->
+                    <!-- Info Resalt-->
+                    <div class="padding-bottom">
+                        <!-- Title -->
+                        <div class="container">
+                            <div class="row">
+                                <div class="titles">
+                                    <h2>Travelers <span>Choice</span> of Hotels</h2>
+                                    <i class="fa fa-plane"></i>
+                                    <hr class="tall">
+                                </div>                    
+                            </div>
+                        </div>
+                        <!-- End Title-->
 
-                <!-- End content info - Vacations Destinatios-->
-                <div class="content_info">
-<div id="boxes-carousel" class="owl-carousel owl-theme" style="opacity: 1; display: block;">
+                        <!-- boxes-carousel-->
+                        <div id="boxes-carousel">
                             <!-- Item carousel Boxed-->
-                            <div class="owl-wrapper-outer"><div class="owl-wrapper" style="width: 3080px; left: 0px; display: block; transition: all 1000ms ease; transform: translate3d(0px, 0px, 0px);"><div class="owl-item" style="width: 308px;"><div>
+                            <div>
                                 <div class="img-hover">
                                     <img src="img/gallery-2/1.jpg" alt="" class="img-responsive">
                                     <div class="overlay"><a href="img/gallery-2/1.jpg" class="fancybox"><i class="fa fa-plus-circle"></i></a></div>
@@ -114,7 +121,11 @@
                                     <div class="content-btn"><a href="#" class="btn btn-primary">View Details</a></div>
                                     <div class="price"><span>$</span><b>From</b>45</div>
                                 </div>
-                            </div></div><div class="owl-item" style="width: 308px;"><div>
+                            </div>
+                            <!-- End Item carousel Boxed-->
+
+                            <!-- Item carousel Boxed-->
+                            <div>
                                 <div class="img-hover">
                                     <img src="img/gallery-2/2.jpg" alt="" class="img-responsive">
                                     <div class="overlay"><a href="img/gallery-2/2.jpg" class="fancybox"><i class="fa fa-plus-circle"></i></a></div>
@@ -137,7 +148,11 @@
                                     <div class="content-btn"><a href="#" class="btn btn-primary">View Details</a></div>
                                     <div class="price"><span>$</span><b>From</b>25</div>
                                 </div>
-                            </div></div><div class="owl-item" style="width: 308px;"><div>
+                            </div>
+                            <!-- End Item carousel Boxed-->
+
+                            <!-- Item carousel Boxed-->
+                            <div>
                                 <div class="img-hover">
                                     <img src="img/gallery-2/3.jpg" alt="" class="img-responsive">
                                     <div class="overlay"><a href="img/gallery-2/3.jpg" class="fancybox"><i class="fa fa-plus-circle"></i></a></div>
@@ -160,7 +175,11 @@
                                     <div class="content-btn"><a href="#" class="btn btn-primary">View Details</a></div>
                                     <div class="price"><span>$</span><b>From</b>60</div>
                                 </div>
-                            </div></div><div class="owl-item" style="width: 308px;"><div>
+                            </div>
+                            <!-- End Item carousel Boxed-->
+
+                            <!-- Item carousel Boxed-->
+                            <div>
                                 <div class="img-hover">
                                     <img src="img/gallery-2/6.jpg" alt="" class="img-responsive">
                                     <div class="overlay"><a href="img/gallery-2/6.jpg" class="fancybox"><i class="fa fa-plus-circle"></i></a></div>
@@ -183,7 +202,11 @@
                                     <div class="content-btn"><a href="#" class="btn btn-primary">View Details</a></div>
                                     <div class="price"><span>$</span><b>From</b>15</div>
                                 </div>
-                            </div></div><div class="owl-item" style="width: 308px;"><div>
+                            </div>
+                            <!-- End Item carousel Boxed-->
+
+                            <!-- Item carousel Boxed-->
+                            <div>
                                 <div class="img-hover">
                                     <img src="img/gallery-2/4.jpg" alt="" class="img-responsive">
                                     <div class="overlay"><a href="img/gallery-2/4.jpg" class="fancybox"><i class="fa fa-plus-circle"></i></a></div>
@@ -206,27 +229,13 @@
                                     <div class="content-btn"><a href="#" class="btn btn-primary">View Details</a></div>
                                     <div class="price"><span>$</span><b>From</b>75</div>
                                 </div>
-                            </div></div></div></div>
+                            </div>
                             <!-- End Item carousel Boxed-->
-
-                            <!-- Item carousel Boxed-->
-                            
-                            <!-- End Item carousel Boxed-->
-
-                            <!-- Item carousel Boxed-->
-                            
-                            <!-- End Item carousel Boxed-->
-
-                            <!-- Item carousel Boxed-->
-                            
-                            <!-- End Item carousel Boxed-->
-
-                            <!-- Item carousel Boxed-->
-                            
-                            <!-- End Item carousel Boxed-->
-                        <div class="owl-controls clickable"><div class="owl-buttons"><div class="owl-prev"><i class="fa fa-angle-left"></i></div><div class="owl-next"><i class="fa fa-angle-right"></i></div></div></div></div>                       
-                </div>   
-                <!-- End content info - Vacations Destinatios--> 
+                        </div>
+                        <!-- End boxes-carousel-->
+                    </div>
+                    <!-- End Info Resalt-->
+ 
 
                 <div class="content_info">
                     <div class="skin_base paddings-mini color-white text-center">

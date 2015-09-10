@@ -506,7 +506,7 @@
 	display: block;
 }
 /* image layout */
-.flat-mega-menu img {
+.flat-mega-menu .img {
 	width: 100%;
 	float: left;
 	margin-top: 25px;

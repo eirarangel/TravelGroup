@@ -90,7 +90,7 @@
                                     <aside>
                                         <h4>The Office</h4>
                                         <address>
-                                          <strong>Travelgroup, College Holidays.</strong><br>
+                                          <strong>Travelgroup Holidays.</strong><br>
                                           <i class="fa fa-map-marker"></i><strong>Address: </strong> 875 Bowsprit Rd.<br>
                                           <i class="fa fa-plane"></i><strong>City: </strong>Chula Vista, CA 91914<br>
                                           <i class="fa fa-phone"></i><strong>Phone (US):</strong>(619) 730-0380<br />
@@ -112,7 +112,7 @@
                                 <div class="col-md-8">
                                     <h3>Contact Form</h3>
                                     <p class="lead">
-                                       Find a wide variety of tour packages, cruises and more in travelgroupcollege.com.You can choose your favorite destination and start planning your long-awaited vacation.
+                                       Find a wide variety of tour packages, cruises and more in travelgroupcollege.com, you can choose your favorite destination and start planning your long-awaited vacation.
                                        You can also check availability of tours and hotels quickly and easily, in order to find the option that best suits your needs.
                                     </p>
                                     <form id="form-contact" class="form-theme" action="php/send-mail.php">
