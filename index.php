@@ -280,10 +280,14 @@
         for (var i = 0; i < results.length; i++) {
             var object = results[i];
             var category = object.get('category');
+            var image = "img/hotel-img/1.jpg";
+            if(typeof object.get("image") != "undefined") {
+                image = object.get("image").url();
+            }
             var element = '<div class="col-xs-12 col-sm-6 col-md-4">' +
                             '<div class="img-hover">' +
-                                '<img src="img/hotel-img/1.jpg" alt="" class="img-responsive">' +
-                                '<div class="overlay"><a href="img/hotel-img/1.jpg" class="fancybox"><i class="fa fa-plus-circle"></i></a></div>' +
+                                '<img src="'+image+'" alt="" class="img-responsive" style="max-height:220px; width:100%">' +
+                                '<div class="overlay"><a href="'+image+'" class="fancybox"><i class="fa fa-plus-circle"></i></a></div>' +
                             '</div>' +
                             '<div class="info-gallery info-gallery-custom">' +
                                 '<h3>' + object.get('name') + '<br>' +

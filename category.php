@@ -103,7 +103,7 @@
 
             var element = '<div>' + 
                             '<div class="img-hover">' +
-                                '<img src="'+ image +'" alt="" class="img-responsive">' +
+                                '<img src="'+ image +'" alt="" class="img-responsive" style="max-height:205px; width:100%">' +
                                 '<div class="overlay"><a href="'+image+'" class="fancybox"><i class="fa fa-plus-circle"></i></a></div>' +
                             '</div>' +
                             '<div class="info-gallery info-gallery-custom">' +

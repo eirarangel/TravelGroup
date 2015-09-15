@@ -67,7 +67,7 @@
         for (var i = 0; i < results.length; i++) {
             var object = results[i];
             if(i==0)
-                elements += '<a href="#" data-filter="*" class="current">Show All</a>';
+                elements += '<a href="#" data-filter="*" class="current" id="all-filter">Show All</a>';
                 var element = '<a href="#tripPack' + object.id + '" data-filter=".tripPack' + object.id + '">' + object.get("name") + '</a>';
             elements += element;
         }
@@ -109,7 +109,7 @@
             }
             var element = '<div class="col-xs-12 col-sm-6 col-md-3 tripPack' + object.get("category").id + '">' + 
                             '<div class="img-hover">' +
-                                '<img src="' + image +'" alt="" class="img-responsive">' +
+                                '<img src="' + image +'" alt="" class="img-responsive" style="max-height:150px; width:100%">' +
                                 '<div class="overlay"><a href="' + image +'" class="fancybox"><i class="fa fa-plus-circle"></i></a></div>' +
                             '</div>' +
                             '<div class="info-gallery info-gallery-trip">' +
@@ -142,6 +142,8 @@
                     }
             });
         });
+
+        $("#all-filter").click();
     }
 </script>
     </body>
