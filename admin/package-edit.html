@@ -1,0 +1,508 @@
+<div class="row" id="topNav">
+	<a href="#" id="backPackage">Regresar</a>
+</div>
+
+<div class="alert alert-danger alert-dismissible" role="alert" id="errorAlert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <span id="errorMessage"></span>
+</div>
+
+<div class="alert alert-success alert-dismissible" role="alert" id="successAlert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <span id="successMessage"></span>
+</div>
+
+
+
+<h1 class="page-header">Agregar paquete</h1>
+
+<form id="addPackageItem">
+    <div class="row">
+        <div class="form-group col-md-4">
+            <label for="formItemId">ID</label>
+            <input type="text" class="form-control" id="formItemId" readonly>
+        </div>
+        <div class="form-group col-md-4">
+            <label for="formCreatedAt">Creado</label>
+            <input type="text" class="form-control" id="formCreatedAt" readonly>
+        </div>
+        <div class="form-group col-md-4">
+            <label for="formUpdatedAt">Actualizado</label>
+            <input type="text" class="form-control" id="formUpdatedAt" readonly>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group col-md-6">
+            <label for="formAgent" class="priority_label">Detalles con agente</label>
+            <label class="radio-inline">
+                <input type="checkbox" id="formAgent" value="1">
+            </label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group col-md-12">
+            <label for="formNameEsp">Nombre en español</label>
+            <input type="text" class="form-control" id="formNameEsp" required>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group col-md-12">
+            <label for="formNameEng">Nombre en inglés</label>
+            <input type="text" class="form-control" id="formNameEng" required>
+        </div>
+    </div>
+
+    <div id="noDetailsAgent">
+        <div class="row">
+            <div class="form-group col-md-6">
+                <label for="formDate">Fecha de inicio</label>
+                <input type="date" class="form-control" id="formDate">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="formPrice">Precio</label>
+                <input type="number" class="form-control" id="formPrice">
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-6">
+                <label for="formDurationEsp">Duración en español</label>
+                <input type="text" class="form-control" id="formDurationEsp" placeholder="Días, Semanas, Meses..." required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="formDurationEng">Duración en inglés</label>
+                <input type="text" class="form-control" id="formDurationEng" placeholder="Days, Weeks, Months..." required>
+            </div>
+        </div>
+        <div class="row">
+        	<div class="form-group col-md-6">
+                <label for="placesEsp">Destinos en español</label>
+                <textarea class="form-control" rows="2" id="placesEsp" placeholder="Poner los destinos separados en comas. Ej: Los Cabos, Puerto Peñasco, San Diego" required></textarea>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="placesEng">Destinos en inglés</label>
+                <textarea class="form-control" rows="2" id="placesEng" placeholder="Poner los destinos separados en comas. Ej: Los Cabos, Puerto Peñasco, San Diego" required></textarea>
+            </div>
+        </div>
+        <div class="row">
+        	<div class="form-group col-md-6">
+                <label for="includeEsp">Incluye en español</label>
+                <textarea class="form-control" rows="2" id="includeEsp" placeholder="Poner lo que incluye separado en comas. Ej: Los Cabos, Puerto Peñasco, San Diego" required></textarea>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="includeEng">Incluye en inglés</label>
+                <textarea class="form-control" rows="2" id="includeEng" placeholder="Poner lo que incluye separado en comas. Ej: Los Cabos, Puerto Peñasco, San Diego" required></textarea>
+            </div>
+        </div>
+        <div class="row">
+        	<div class="form-group col-md-6">
+                <label for="formRestrictionsEsp">Restricciones en español</label>
+                <textarea class="form-control" rows="2" id="formRestrictionsEsp" placeholder="Poner las restricciones separadas en comas. Ej: Mayor de 18 años, Sólo parejas" required></textarea>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="formRestrictionsEng">Restricciones en inglés</label>
+                <textarea class="form-control" rows="2" id="formRestrictionsEng" placeholder="Poner las restricciones separadas en comas. Ej: Mayor de 18 años, Sólo parejas" required></textarea>
+            </div>
+        </div>
+        <div class="row">
+        	<div class="form-group col-md-12">
+                <label for="formDescriptionEsp">Descripción en español</label>
+                <textarea class="form-control" rows="3" id="formDescriptionEsp" required></textarea>
+            </div>
+        </div>
+        <div class="row">
+        	<div class="form-group col-md-12">
+                <label for="formDescriptionEng">Descripción en inglés</label>
+                <textarea class="form-control" rows="3" id="formDescriptionEng" required></textarea>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+    	<div class="form-group col-md-12">
+            <label for="formCategory">Categoría</label>
+            <select id="formCategory" class="form-control" required>
+			</select>
+        </div>
+    </div>
+    <div class="row">
+    	<div class="form-group col-md-6">
+            <label for="formPriority" class="priority_label">Prioridad 1</label>
+            <label class="radio-inline">
+                <input type="checkbox" id="formPriority" value="1">
+            </label>
+        </div>
+
+        <div class="form-group col-md-6">
+            <label for="formPriority2" class="priority_label">Prioridad 2</label>
+            <label class="radio-inline">
+                <input type="checkbox" id="formPriority2" value="1">
+            </label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group col-md-3">
+            <a href="#" id="deletePackage">Eliminar paquete</a>
+        </div>
+    	<div class="form-group col-md-4 col-md-offset-5">
+        	<button type="submit" id="saveCatItem" class="btn btn-success">Guardar</button>
+    	</div>
+	</div>
+</form>
+
+<!-- Modal -->
+<div class="modal fade" id="confirmDeleteModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Eliminar paquete</h4>
+            </div>
+            <div class="modal-body"><p>¿Está seguro de ejecutar esta acción?</div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-danger" id="deletePackageAction">Eliminar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#errorAlert").hide();
+        $("#successAlert").hide();
+        $("#backPackage").click(function() {
+            window.history.pushState("object or string", "Title", "http://localhost/TravelGroup/admin/");
+        	$("#dynamic-content").load("http://localhost/TravelGroup/admin/package.html");
+        });
+        getCategories();
+        addCategoryItem();
+        removePackageEvent();
+
+        $('#formAgent').change(function() {
+            if($(this).is(":checked")) {
+                removeRequired();
+                $("#noDetailsAgent").hide();
+                
+            } else {
+                $("#noDetailsAgent").show();
+                addRequired();
+            }
+
+        });
+    });
+
+    function validateEditAction() {
+        if(getURLParameter('edit')) {
+            var packageId = getURLParameter('edit');
+            var query = new Parse.Query(Parse.Object.extend("Packages"));
+            query.get(packageId, {
+                success: function(packageEsp) {
+                    $("#formItemId").val(packageEsp.id);
+                    $("#formCreatedAt").val(packageEsp.createdAt);
+                    $("#formUpdatedAt").val(packageEsp.updatedAt);
+                    $("#formNameEsp").val(packageEsp.get('name'));
+                    $("#formCategory").val(packageEsp.get('category').id);
+
+                    if(packageEsp.get('priority') == 1) $("#formPriority").prop('checked', true);
+                    if(packageEsp.get('priority2') == 1) $("#formPriority2").prop('checked', true);
+
+                    var queryEng = new Parse.Query(Parse.Object.extend("Packages"));
+                    queryEng.equalTo('packageEsp', packageEsp);
+                    queryEng.first({
+                        success: function(packageEng) {
+                            if(packageEsp.get('detailsAgent') == 1) {
+                                $("#formAgent").prop('checked', true);
+                                removeRequired();
+                                $("#noDetailsAgent").hide();
+                            } else {
+                                var date = new Date(packageEsp.get('date'));
+                                currentMonth = date.getMonth() + 1;
+                                if(currentMonth < 10) currentMonth = '0' + currentMonth;
+                                currentDate = date.getDate() + 1;
+                                if(currentDate < 10) currentDate = '0' + currentDate;
+                                var newDate = date.getFullYear() + '-' + currentMonth + '-' + currentDate;
+
+                                $("#formDate").val(newDate);
+                                $("#formPrice").val(packageEsp.get('price'));
+                                $("#formDurationEsp").val(packageEsp.get('duration'));
+                                $("#placesEsp").val(packageEsp.get('destinations'));
+                                $("#includeEsp").val(packageEsp.get('include'));
+                                $("#formDescriptionEsp").val(packageEsp.get('description'));
+                                $("#formRestrictionsEsp").val(packageEsp.get('restrictions'));
+                                $("#formDurationEng").val(packageEng.get('duration'));
+                                $("#placesEng").val(packageEng.get('destinations'));
+                                $("#includeEng").val(packageEng.get('include'));
+                                $("#formRestrictionsEng").val(packageEng.get('restrictions'));
+                                $("#formDescriptionEng").val(packageEng.get('description'));
+                            }
+                            $("#formNameEng").val(packageEng.get('name'));
+                        }, error: function(error) {
+                            errorAlert(error);
+                        }
+                    });
+                }, error: function(error) {
+                    errorAlert(error);
+                }
+            });
+        } else {
+            $("#deletePackage").hide();
+        }
+    }
+
+ 	function getCategories() {
+        var query = new Parse.Query(Parse.Object.extend("Category"));
+        query.descending("createdAt");
+        query.find({
+            success: function(results) {
+                createCategoriesData(results);
+            },
+            error: function(error) {
+                errorAlert(error);
+            }
+        });
+    }
+
+    function createCategoriesData(results) {
+        var rows = "";
+        if(results.length == 0) rows += "<p>No hay resultados</p>";
+        
+        for (var i = 0; i < results.length; i++) {
+            var object = results[i];
+            var row = "<option value ='" + object.id + "'>" + object.get("name") + " | " + object.get("nameEng") + "</option>";
+            rows += row;
+        }
+        $("#formCategory").append(rows);
+        validateEditAction();
+    }
+
+    function addCategoryItem() {
+        $("#addPackageItem").submit(function(event){
+            event.preventDefault();
+            var packageDetails = {};
+            packageDetails.nameEsp = $("#formNameEsp").val();
+            packageDetails.nameEng = $("#formNameEng").val();
+            if(!$("#formAgent").is(":checked")) {
+                packageDetails.date = new Date($("#formDate").val());
+                packageDetails.price = parseFloat($("#formPrice").val());
+                packageDetails.durationEsp = $("#formDurationEsp").val();
+                packageDetails.durationEng = $("#formDurationEng").val();
+                packageDetails.placesEsp = $("#placesEsp").val();
+                packageDetails.placesEng = $("#placesEng").val();
+                packageDetails.includeEsp = $("#includeEsp").val();
+                packageDetails.includeEng = $("#includeEng").val();
+                packageDetails.restrictionsEsp = $("#formRestrictionsEsp").val();
+                packageDetails.restrictionsEng = $("#formRestrictionsEng").val();
+                packageDetails.descriptionEsp = $("#formDescriptionEsp").val();
+                packageDetails.descriptionEng = $("#formDescriptionEng").val();
+            }
+            packageDetails.categoryId = $("#formCategory").val();
+            packageDetails.priority = 0;
+            if ($('#formPriority').is(":checked")) packageDetails.priority = 1;
+            packageDetails.priority2 = 0;
+            if ($('#formPriority2').is(":checked")) packageDetails.priority2 = 1;
+
+            var query = new Parse.Query(Parse.Object.extend("Category"));
+            query.get(packageDetails.categoryId, {
+                success: function(category) {
+                    if(getURLParameter('edit')) {
+                        var Package = Parse.Object.extend("Packages");
+                        var packageEsp = new Package();
+                        packageEsp.set("objectId", getURLParameter('edit'));
+                        packageEsp.save(null, {
+                            success: function(packageEsp) {
+                                packageEsp = setPackageDataEsp(packageEsp, packageDetails);
+                                packageEsp.set('category', category);
+                                packageEsp.save();
+
+                                var queryEng = new Parse.Query(Parse.Object.extend("Packages"));
+                                queryEng.equalTo("packageEsp", packageEsp);
+                                queryEng.first({
+                                    success: function(packageEng) {
+                                        packageEng = setPackageDataEng(packageEng, packageDetails);
+                                        packageEng.set('category', category);
+                                        packageEng.save();
+                                        successAlert("Paquete modificado");
+                                    },
+                                    error: function(error) {
+                                        errorAlert(error);
+                                    }
+                                });
+                            }, error: function(error) {
+                                errorAlert(error);
+                            }
+                        });
+                    } else {
+                        var Package = Parse.Object.extend("Packages");
+                        var packageEsp = new Package();
+                        packageEsp = setPackageDataEsp(packageEsp, packageDetails);
+
+                        var packageEng = new Package();
+                        packageEng = setPackageDataEng(packageEng, packageDetails);
+
+                        savePackage(category, packageEsp, packageEng);
+                    }
+                }, error: function(error) {
+                    errorAlert(error);
+                }
+            });
+        });
+    }
+
+    function setPackageDataEsp(packageEsp, packageDetails) {
+        packageEsp.set("name", packageDetails.nameEsp);
+        if(!$("#formAgent").is(":checked")) {         
+            packageEsp.set("date", packageDetails.date);
+            packageEsp.set("price", packageDetails.price);
+            packageEsp.set('duration', packageDetails.durationEsp);            
+            packageEsp.set('destinations', packageDetails.placesEsp);
+            packageEsp.set('include', packageDetails.includeEsp);
+            packageEsp.set('restrictions', packageDetails.restrictionsEsp);
+            packageEsp.set('description', packageDetails.descriptionEsp);
+            packageEsp.set('detailsAgent', 0);
+        } else {
+            packageEsp.set('detailsAgent', 1);
+        }
+        packageEsp.set('priority', packageDetails.priority);
+        packageEsp.set('priority2', packageDetails.priority2);
+        packageEsp.set('languages', 0);
+
+        return packageEsp;
+    }
+
+    function setPackageDataEng(packageEng, packageDetails) {
+        packageEng.set("name", packageDetails.nameEng);
+        if(!$("#formAgent").is(":checked")) {   
+            packageEng.set("date", packageDetails.date);
+            packageEng.set("price", packageDetails.price);
+            packageEng.set('duration', packageDetails.durationEng);
+            packageEng.set('destinations', packageDetails.placesEng);
+            packageEng.set('include', packageDetails.includeEng);
+            packageEng.set('restrictions', packageDetails.restrictionsEng);
+            packageEng.set('description', packageDetails.descriptionEng);
+            packageEng.set('detailsAgent', 0);
+        } else {
+            packageEng.set('detailsAgent', 1);
+        }
+        packageEng.set('priority', packageDetails.priority);
+        packageEng.set('priority2', packageDetails.priority2);
+        packageEng.set('languages', 1);
+
+        return packageEng;
+    }
+
+    function savePackage(category, packageEsp, packageEng) {
+        packageEsp.set('category', category);
+        packageEsp.save(null, {
+            success: function(packageEsp) {
+                packageEng.set("packageEsp", packageEsp);
+                packageEng.set("category", category);
+                packageEng.save(null, {
+                    success: function(packageEng) {
+                        console.log('save successfully yaih!');
+                        successAlert("Paquete agregado");
+                        $("#formItemId").val(packageEsp.id);
+                        $("#formCreatedAt").val(packageEsp.createdAt);
+                        $("#formUpdatedAt").val(packageEsp.updatedAt);
+                        $("#deletePackage").show();
+                        window.history.pushState("object or string", "Title", "http://localhost/TravelGroup/admin?edit=" + packageEsp.id);
+                    }, error: function(packageEng, error) {
+                        errorAlert(error);
+                    }
+                });
+            }, error: function(packageEsp, error) {
+                errorAlert(error);
+            }
+        });
+    }
+
+    function getURLParameter(name) {
+      return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null
+    }
+
+    function removePackageEvent() {
+        $("#deletePackage").click(function() {
+            $("#confirmDeleteModal").modal("show");
+        });
+
+        $("#deletePackageAction").click(function() {
+            $("#confirmDeleteModal").modal("hide");
+            var query = new Parse.Query(Parse.Object.extend("Packages"));
+            query.get(getURLParameter('edit'), {
+                success: function(packageEsp) {
+                    var queryEng = new Parse.Query(Parse.Object.extend("Packages"));
+                    queryEng.equalTo('packageEsp', packageEsp);
+                    queryEng.first({
+                        success: function(packageEng) {
+                            packageEng.destroy({
+                                success: function(myObject) {
+                                    console.log('packageEng deleted');
+                                    packageEsp.destroy({
+                                        success: function(myObject) {
+                                            console.log('packageEsp deleted');
+                                            window.history.pushState("object or string", "Title", "http://localhost/TravelGroup/admin");
+                                            $("#dynamic-content").load("http://localhost/TravelGroup/admin/package.html");
+                                        }, error: function(myObject, error) {
+                                            errorAlert(error);
+                                        }
+                                    });
+                                }, error: function(myObject, error) {
+                                    errorAlert(error);
+                                }
+                            });
+                        }, error: function(error) {
+                            errorAlert(error);
+                        }
+                    });
+                }, error: function(error) {
+                    errorAlert(error);
+                }
+            });
+        });
+    }
+
+
+    function errorAlert(error) {
+        $('html,body').scrollTop(0);
+        $("#errorMessage").text("Error: " + error.code + " " + error.message);
+        $("#errorAlert").show();
+        $("#successAlert").hide();
+    }
+
+    function successAlert(message) {
+        $("#successMessage").text(message);
+        $("#successAlert").show();
+        $("#errorAlert").hide();
+        $('html,body').scrollTop(0);
+    }
+
+    function removeRequired() {
+        $("#formDate").prop('required',false);
+        $("#formPrice").prop('required',false);
+        $("#formDurationEsp").prop('required',false);
+        $("#placesEsp").prop('required',false);
+        $("#includeEsp").prop('required',false);
+        $("#formDescriptionEsp").prop('required',false);
+        $("#formRestrictionsEsp").prop('required',false);
+        $("#formDurationEng").prop('required',false);
+        $("#placesEng").prop('required',false);
+        $("#includeEng").prop('required',false);
+        $("#formRestrictionsEng").prop('required',false);
+        $("#formDescriptionEng").prop('required',false);
+    }
+
+    function addRequired() {
+        $("#formDate").prop('required',true);
+        $("#formPrice").prop('required',true);
+        $("#formDurationEsp").prop('required',true);
+        $("#placesEsp").prop('required',true);
+        $("#includeEsp").prop('required',true);
+        $("#formDescriptionEsp").prop('required',true);
+        $("#formRestrictionsEsp").prop('required',true);
+        $("#formDurationEng").prop('required',true);
+        $("#placesEng").prop('required',true);
+        $("#includeEng").prop('required',true);
+        $("#formRestrictionsEng").prop('required',true);
+        $("#formDescriptionEng").prop('required',true);
+    }
+
+</script>

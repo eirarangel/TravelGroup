@@ -1,0 +1,57 @@
+ 
+    <div class="container">
+
+      <div class="alert alert-danger alert-dismissible" role="alert" id="errorAlert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <p>Error al iniciar sesión: <span id="errorLoginMessage"></span></p>
+      </div>
+
+      <form id="login" class="form-signin">
+        <h2 class="form-signin-heading">Iniciar sesión</h2>
+        <label for="inputEmail" class="sr-only">Nombre de usuario</label>
+        <input type="text" id="inputUsername" class="form-control" placeholder="Nombre de usuario" required autofocus>
+        <label for="inputPassword" class="sr-only">Contraseña</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Iniciar sesión</button>
+      </form>
+
+    </div> <!-- /container -->
+    <script type="text/javascript">
+    Parse.initialize("3XWv4k4eZzbX63GE3OXlOR5rHVTruOxnXcpF3xcz", "E6EpUdMT23lzPE8rJ4gEmcMYnFyCOIWQZwDiCzc9");
+    $("#errorAlert").hide();
+    $("#login").submit(function(event){
+      event.preventDefault();
+
+      var name = $("#inputUsername").val();
+      var pass = $("#inputPassword").val();
+
+      var User = Parse.Object.extend("User");
+      var query = new Parse.Query(User);
+      query.equalTo("username", name);
+      query.first({
+          success: function(result) {
+            if(typeof result != 'undefined') {
+                Parse.User.logIn(name, pass, {
+                  success: function(user) {
+                      window.location.href="index.html";  
+                  }, error: function (user, error) {
+                      $("#errorLoginMessage").text(error.message);
+                      $("#errorAlert").show();
+                      console.log("Log in error: " + error.message);
+                  }
+                });
+
+            } else {
+              $("#errorLoginMessage").text("Wrong credentials");
+              $("#errorAlert").show();
+            }
+          }, 
+          error: function(error) {
+            $("#errorLoginMessage").text(error.message);
+            $("#errorAlert").show();
+          }
+        });
+
+      
+    });
+  </script>

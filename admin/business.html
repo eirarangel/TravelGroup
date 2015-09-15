@@ -1,0 +1,492 @@
+        <h1 class="page-header">Administración de Negocios</h1>
+
+          <div class="row">
+          	<div class="col-md-3 tool-bar">
+          		<input type="text" class="form-control" id="inputSearch" placeholder="Buscar">
+          	</div>
+          	<div class="col-md-1 tool-bar">
+          		<button type="button" class="btn btn-success" id="searchItem">Search</button>
+          	</div>
+          	<div class="col-md-4 tool-bar"></div>
+          	<div class="col-md-2 tool-bar">
+          		<button type="button" class="btn btn-success" id="addItem">Agregar negocio</button>
+	        </div>
+	        <div class="col-md-2 tool-bar">
+	            <button type="button" class="btn btn-danger" id="deleteItem" disabled>Borrar negocio(s)</button>
+        	</div>
+          </div>
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th><input id="selectAllItems" type='checkbox'></th>
+                  <th>#</th>
+                  <th>Nombre</th>
+                  <th>Dirección</th>
+                  <th>Rating</th>
+                  <th>No. Reseñas</th>
+                  <th>Creado</th>
+                </tr>
+              </thead>
+              <tbody id="bodyTable">
+
+                
+              </tbody>
+            </table>
+          </div>
+
+          <nav>
+            <ul class="pagination">
+
+            </ul>
+          </nav>
+        <!-- no eliminar los ultimos tres divs, final del dashboard, to be fix-->
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="editAdminModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="itemTitle"></h4>
+          </div>
+          <div class="modal-body">
+            <div class="content">
+              <div class="alert alert-danger alert-dismissible" role="alert" id="editItemError">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <p>Error: <span id="errorItemMessage"></span></p>
+              </div>
+            </div>
+            <form id="editItem">
+              <div class="row">
+                <div class="form-group col-md-4">
+                  <label for="formItemId">ID</label>
+                  <input type="text" class="form-control" id="formItemId" readonly>
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="formCreatedAt">Creado</label>
+                  <input type="text" class="form-control" id="formCreatedAt" readonly>
+                </div>
+                 <div class="form-group col-md-4">
+                  <label for="formUpdatedAt">Actualizado</label>
+                  <input type="text" class="form-control" id="formUpdatedAt" readonly>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group col-md-12">
+                  <label for="formName">Nombre</label>
+                  <input type="text" class="form-control" id="formName" placeholder="Nombre" required>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group col-md-12">
+                  <label for="formDescription">Descripción</label>
+                  <textarea class="form-control" id="formDescription" rows="3"></textarea>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group col-md-12">
+                  <label for="formAddress">Dirección</label>
+                  <textarea class="form-control" id="formAddress" rows="3" required></textarea>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group col-md-12">
+                  <label for="pac-input">Map section</label>
+                  <input id="pac-input" class="controls form-control" type="text" placeholder="Enter a location">
+                </div>
+              </div>
+              <div class="row">
+                 <div class="form-group col-md-12">
+                  <div id="map-canvas" style="width: 500px; height: 400px"></div>
+                  </div>
+              </div>
+              <div class="row">
+                <div class="form-group col-md-4">
+                  <label for="formEnable">Editar coordenadas</label>
+                  <input id="formEnable" class="form-control" type='checkbox'>
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="formLatitude">Latitud</label>
+                  <input type="number" step="0.01" class="form-control" id="formLatitude" readonly>
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="formLongitude">Longitud</label>
+                  <input type="number" step="0.01" class="form-control" id="formLongitude" readonly>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group col-md-6">
+                  <label for="formRating">Calificación Gral.</label>
+                  <input type="text" class="form-control" id="formRating" readonly>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="formReviews">No. Reseñas</label>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-default">Guardar cambios</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="confirmDeleteModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Eliminar negocio(s)</h4>
+          </div>
+          <div class="modal-body">
+            <p>¿Está seguro de ejecutar esta acción?
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-danger" id="deleteBusinessModal">Eliminar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      var table = {
+        limit: 10, 
+        page: 0, 
+        parseClass: Parse.Object.extend("Business"), 
+        filter: {
+          active: 1
+        },
+          select: ["name", "address"]
+      };
+      var map;
+      var myLatlng;
+      
+      $(document).ready(function() {
+          paginate();
+          $("#editItemError").hide();
+          setTable(table);
+      });
+
+      function saveRecord() {
+        var Business = Parse.Object.extend("Business");
+        var business = new Business();
+
+        business.set("name", $("#formName").val());
+        business.set("canonicalName", $("#formName").val().toLowerCase());
+        business.set("description", $("#formDescription").val());
+        business.set("address", $("#formAddress").val());
+        business.set("coordinates", new Parse.GeoPoint({latitude: parseFloat($("#formLatitude").val()), longitude: parseFloat($("#formLongitude").val())}));
+        business.set("active", 1);
+        business.save(null, {
+          success: function(business) {
+            setTable(table);
+            $("#editAdminModal").modal("hide");
+          }, 
+          error: function(business, error) {
+            console.log("Error: " + error.code + " " + error.message);
+          }
+        });
+      }
+
+      function editRecord() {
+        var Business = Parse.Object.extend("Business");
+        var business = new Business();
+
+        business.set("objectId", $("#formItemId").val());
+        business.save(null, {
+          success: function(business) {
+            business.set("name", $("#formName").val());
+            business.set("canonicalName", $("#formName").val().toLowerCase());
+            business.set("description", $("#formDescription").val());
+            business.set("address", $("#formAddress").val());
+            business.set("coordinates", new Parse.GeoPoint({latitude: parseFloat($("#formLatitude").val()), longitude: parseFloat($("#formLongitude").val())}));
+            business.save();
+            
+          }, 
+          error: function(business, error) {
+            console.log("Error: " + error.code + " " + error.message);
+          }
+        }).then(function(result) {
+          setTable(table);
+          $("#editAdminModal").modal("hide");
+        }, function(error) {
+
+        });
+      }
+
+      function deactivateBusiness(id) {
+        var Business = Parse.Object.extend("Business");
+        var business = new Business();
+
+        business.set("objectId", id);
+        business.save(null, {
+          success: function(business) {
+            business.set("active", 0);
+            business.save();
+            
+          }, 
+          error: function(business, error) {
+            console.log("Error: " + error.code + " " + error.message);
+          }
+        }).then(function(result) {
+          setTable(table);
+        }, function(error) {
+
+        });
+      }
+
+      $("#editItem").submit(function(event) {
+        event.preventDefault();
+        if($("#itemTitle").text() == "Agregar negocio") {
+          saveRecord();
+        } else {
+          editRecord();
+        }
+      });
+
+      function createTableData(results) {
+      	var rows = "";
+      	if(results.length == 0) {
+          rows += "<p>No hay resultados</p>";
+        }
+        for (var i = 0; i < results.length; i++) {
+          var object = results[i];
+          var row = "<tr id='" + object.id + "' class='rowItem'><td><input class='checkboxItem' type='checkbox'"
+                    + " name='checkItems[]' value='" + object.id + "'></td><td>";
+          row += object.id + "</td><td>";
+          row += object.get("name") + "</td><td>";
+          row += object.get("address") + "</td><td>";
+          row += " * </td><td>";
+          row += " * </td><td>";
+          row += object.createdAt + "</td></tr>";
+          rows += row;
+        }
+        $("#bodyTable").empty();
+        $("#bodyTable").append(rows);
+
+        setEvents();
+      }
+
+    function setTable(table) {
+        var query = new Parse.Query(table.parseClass);
+        for(var key in table.filter) {
+          	query.equalTo(key, table.filter[key]);
+        }
+        query.descending("createdAt");
+        query.limit(table.limit);
+        query.skip(table.page * table.limit);
+        query.find({
+          	success: function(results) {
+            	createTableData(results);
+          	},
+          	error: function(error) {
+            	console.log("Error: " + error.code + " " + error.message);
+          	}
+        });
+    }
+
+
+
+      function setEvents() {
+
+        $("#addItem").click(function() {
+          $("#itemTitle").text("Agregar negocio");
+          $("#editItem").trigger("reset");
+          myLatlng = new google.maps.LatLng(32.4969499,-116.9726224);
+          initialize();
+          $('#editAdminModal').modal('show');
+        });
+
+        $(".checkboxItem").change(function() {
+          var selected = [];
+          $("input:checkbox[name='checkItems[]']:checked").each(function(){
+            selected.push($(this).val());
+          }); 
+          
+          if(selected.length === 0) {
+            $("#deleteItem").attr("disabled", true);
+            $('#selectAllItems').attr('checked', false);
+          } else {
+            $("#deleteItem").removeAttr("disabled"); 
+          }
+        });
+
+        $('.rowItem').on('dblclick', function() {
+          var itemId = $(this).attr('id');
+          $("#itemTitle").text("Editar negocio");
+          
+          var query = new Parse.Query(table.parseClass);
+          query.equalTo("objectId", itemId);
+          query.first({
+            success: function(object) {
+              $("#formItemId").val(object.id);
+              $("#formCreatedAt").val(object.createdAt);
+              $("#formUpdatedAt").val(object.updatedAt);
+              $("#formName").val(object.get("name"))
+              $("#formDescription").val(object.get("description"));
+              $("#formAddress").val(object.get("address"));
+              myLatlng = new google.maps.LatLng(object.get("coordinates").latitude, object.get("coordinates").longitude);
+              initialize();
+            },
+            error: function(error) {
+              console.log("Error: " + error.code + " " + error.message);
+            }
+          });
+          $('#editAdminModal').modal('show');
+
+        });
+
+        $("#deleteItem").click(function() {
+          $("#confirmDeleteModal").modal("show");
+        });
+
+        $("#deleteBusinessModal").click(function() {
+          $("input:checkbox[name='checkItems[]']:checked").each(function() {
+            var id = $(this).val();
+            deactivateBusiness(id);
+          });
+          $("#confirmDeleteModal").modal("hide");
+          setTable(table);
+        });
+
+        $('#selectAllItems').click(function(event) {
+          if(this.checked) {
+              $('.checkboxItem').each(function() {
+                  this.checked = true;
+                  $("#deleteItem").removeAttr("disabled");          
+              });
+          } else {
+              $('.checkboxItem').each(function() {
+                  this.checked = false; 
+                  $("#deleteItem").attr("disabled", true);        
+              });         
+          }
+        });
+
+        $('#formEnable').change(function() {
+          if($(this).is(":checked")) {
+            $("#formLatitude").prop("readonly", false);
+            $("#formLongitude").prop("readonly", false);
+          } else {
+            $("#formLatitude").prop("readonly", true);
+            $("#formLongitude").prop("readonly", true);
+          } 
+        });
+
+        $('#formLatitude, #formLongitude').on("blur", function() {
+          var lat = $("#formLatitude").val();
+          var lng = $("#formLongitude").val();
+          myLatlng = new google.maps.LatLng(lat, lng);
+          initialize();
+        });
+      }
+
+      function paginate() { 
+        var query = new Parse.Query(table.parseClass);
+        query.equalTo("active", 1);
+        query.count({
+          success: function(count) {
+            var pages = Math.ceil(count/10);
+            var pagination = '<li id="prev" class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>';
+            for (var i = 1; i <= pages; i++) {
+              pagination += '<li id="first" class="page-number"><a href="#">' + i + '</a></li>';
+            }
+            $(".pagination").append(pagination);
+            $("#first").addClass("active");
+
+            $(".page-number").click(function() {
+              $(".page-number").removeClass("active");
+              $(this).addClass("active");
+              table.page = parseInt($(this).text()) - 1;
+              setTable(table);
+            });
+
+          }, error: function(error) {
+
+          }
+        });
+      }
+
+      function inactiveUser(userId) {
+        Parse.Cloud.run('inactiveUser', { userId: userId }, {
+          success: function(status) {
+            console.log("success");
+          },
+          error: function(error) {
+            console.log("error" + error.message);
+          }
+        });
+        $("#confirmDeleteModal").modal("hide");
+      }
+
+      function initialize() {
+        
+        var mapOptions = {
+          center: myLatlng,
+          zoom: 13
+        };
+        map = new google.maps.Map(document.getElementById('map-canvas'),
+          mapOptions);
+
+        var input = /** @type {HTMLInputElement} */(
+            document.getElementById('pac-input'));
+
+        var autocomplete = new google.maps.places.Autocomplete(input);
+        autocomplete.bindTo('bounds', map);
+
+        var infowindow = new google.maps.InfoWindow();
+        var marker = new google.maps.Marker({
+          position: myLatlng,
+          map: map,
+          draggable:true
+        });
+
+        $("#formLatitude").val(myLatlng.lat());
+        $("#formLongitude").val(myLatlng.lng());
+
+        google.maps.event.addListener(marker, 'dragend', function() {
+          $("#formLatitude").val(marker.getPosition().lat());
+          $("#formLongitude").val(marker.getPosition().lng());
+        });
+
+        google.maps.event.addListener(autocomplete, 'place_changed', function() {
+          infowindow.close();
+          marker.setVisible(false);
+          var place = autocomplete.getPlace();
+          if (!place.geometry) {
+            window.alert("Autocomplete's returned place contains no geometry");
+            return;
+          }
+
+          // If the place has a geometry, then present it on a map.
+          if (place.geometry.viewport) {
+            console.log("blu");
+            map.fitBounds(place.geometry.viewport);
+          } else {
+            map.setCenter(place.geometry.location);
+            map.setZoom(17);  // Why 17? Because it looks good.
+          }
+          $("#formLatitude").val(place.geometry.location.lat());
+          $("#formLongitude").val(place.geometry.location.lng());
+          marker.setPosition(place.geometry.location);
+          marker.setVisible(true);
+
+          var address = '';
+          if (place.address_components) {
+            address = [
+              (place.address_components[0] && place.address_components[0].short_name || ''),
+              (place.address_components[1] && place.address_components[1].short_name || ''),
+              (place.address_components[2] && place.address_components[2].short_name || '')
+            ].join(' ');
+          }
+
+          infowindow.setContent('<div><strong>' + place.name + '</strong><br>' + address);
+          infowindow.open(map, marker);
+        });
+      }
+  </script>

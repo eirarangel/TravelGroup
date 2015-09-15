@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.5.0.min.js"></script>
+
+
+    <title>Travel Group Admin</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  </head>
+
+  <body>
+
+    <script>
+      Parse.initialize("3XWv4k4eZzbX63GE3OXlOR5rHVTruOxnXcpF3xcz", "E6EpUdMT23lzPE8rJ4gEmcMYnFyCOIWQZwDiCzc9");
+
+      var currentUser = new Parse.User.current();
+      if(Parse.User.current()) {
+        $(function() {
+          $("body").load("http://localhost/TravelGroup/admin/dashboard.html"); 
+        }); 
+      } else {
+        $(function() {
+          $("body").load("http://localhost/TravelGroup/admin/login.html"); 
+        });
+      }
+    </script> 
+    <!-- Bootstrap core JavaScript-->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

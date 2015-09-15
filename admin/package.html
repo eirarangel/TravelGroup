@@ -1,0 +1,152 @@
+<h1 class="page-header">Paquetes</h1>
+    <div class="row">
+        <div class="col-md-2 tool-bar offset col-md-offset-10">
+            <button type="button" class="btn btn-success" id="addPackage">Agregar paquete</button>
+      </div>
+    </div>
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+</div>
+
+<!-- no eliminar los ultimos tres divs, final del dashboard, to be fix-->
+    </div>
+</div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#addPackage").click(function() {
+            $("#dynamic-content").load("http://localhost/TravelGroup/admin/package-edit.html");
+        });
+
+        setAccordion();
+    });
+
+    function setAccordion() {
+        var query = new Parse.Query(Parse.Object.extend("Category"));
+        query.descending("createdAt");
+        query.find({
+            success: function(results) {
+                createAccordionData(results);
+            },
+            error: function(error) {
+                console.log("Error: " + error.code + " " + error.message);
+            }
+        });
+    }
+
+    function createAccordionData(results) {
+        var panels = "";
+        if(results.length == 0) panels += "<p>No hay resultados</p>";
+        
+        for (var i = 0; i < results.length; i++) {
+            var object = results[i];
+            var name = object.get("name");
+            var nameEng = object.get("nameEng");
+            var panel = '<div class="panel panel-default">' +
+                            '<div class="panel-heading" role="tab" id="heading' + object.id + '">' +
+                                '<h4 class="panel-title">' +
+                                    '<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse' + object.id + '" aria-expanded="true" aria-controls="collapse' + object.id + '">' + name + ' | ' + nameEng +
+                                    '</a>' +
+                                '</h4>' +
+                            '</div>' +
+                            '<div id="collapse' + object.id + '" class="panel-collapse collapse" ' +
+                            'role="tabpanel" aria-labelledby="heading' + object.id + '">' +
+                                '<div id="panel' + object.id + '" class="panel-body"></div>' +
+                            '</div>' +
+                        '</div>';
+                        
+            panels += panel;
+        }
+        $("#accordion").empty();
+        $("#accordion").append(panels);
+        setEvent();
+    }
+
+    function setEvent() {
+        $('.panel-body').each(function() {
+            var id = $(this).attr('id').substring(5);
+            setTableData(id);
+        });
+    }
+
+    function setTableData(id) {
+        var table = "";
+        var queryCat = new Parse.Query(Parse.Object.extend("Category"));
+        queryCat.get(id, {
+            success: function(category) {
+                var query = new Parse.Query(Parse.Object.extend("Packages"));
+                query.equalTo("category", category);
+                query.equalTo("languages", 0);
+                query.find().then(function(results) {
+                        table = createTable(results);
+                        $('#panel'+id).append(table);
+                        $('#panel'+id).find('.editItemAction').each(function() {
+                            $(this).click(function() {
+                                var editId = $(this).text();    
+                                window.history.pushState("object or string", "Title", "http://localhost/TravelGroup/admin?edit=" + editId);
+                                $("#dynamic-content").load("http://localhost/TravelGroup/admin/package-edit.html");
+                            });
+                        });
+                    }, function(error) {
+                        console.log("Error: " + error.code + " " + error.message);
+                    });
+            }, error: function(category, error) {
+
+            }
+        });
+        return table;
+    }
+
+    function createTable(results) {
+        var table = "";
+        var rows = "";
+        
+        for (var i = 0; i < results.length; i++) {
+            var object = results[i];
+            var row = "<tr id='" + object.id + "' class='rowItem'><td><a href='#' class='editItemAction'>" + object.id + "</a></td><td>";
+            row += object.get("name") + "</td><td>";
+            if(object.get('priority') == 1) 
+                row += "<center><i class='fa fa-check'></i></center></td><td>";
+            else 
+                row += "</td><td>";
+            if(object.get('priority2') == 1) 
+                row += "<center><i class='fa fa-check'></i></center></td><td>";
+            else 
+                row += "</td><td>";
+            if(object.get('detailsAgent') == 1) 
+                row += "<center><i class='fa fa-check'></i></center></td></tr>";
+            else 
+                row += "</td></tr>";
+            rows += row;
+        }
+
+        if(results.length == 0) {
+            table += "<p>No hay paquetes en esta categoría</p>";
+        } else {
+            table = '<div class="table-responsive">' + 
+                        '<table class="table table-striped">' +
+                            '<thead>' +
+                                '<tr>' +
+                                    '<th>ID</th>' +
+                                    '<th>Nombre</th>' +
+                                    '<th>Prioridad Menu</th>' +
+                                    '<th>Prioridad Front</th>' +
+                                    '<th>Detalles Agente</th>' +
+                                '</tr>' +
+                            '</thead>' +
+                            '<tbody class="bodyTable">';
+            table += rows;
+            table += '</tbody></table></div>';
+        }
+        return table;
+    }
+
+    function editItemEvent() {
+        $('.editItemAction').click(function() {
+            var editId = $(this).text();
+            window.history.pushState("object or string", "Title", "http://localhost/TravelGroup/admin/?edit=" + editId);
+            $("#dynamic-content").load("http://localhost/TravelGroup/admin/package-edit.html");
+        });
+    }
+</script>

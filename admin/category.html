@@ -1,0 +1,358 @@
+<div class="alert alert-danger alert-dismissible" role="alert" id="errorAlert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <span id="errorMessage"></span>
+</div>
+
+<h1 class="page-header">Categorías</h1>
+    <div class="row">
+        <div class="col-md-2 tool-bar offset col-md-offset-10">
+            <button type="button" class="btn btn-success" id="addItem">Agregar categoría</button>
+	    </div>
+    </div>
+  
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Nombre inglés</th>
+                    <th>Ícono</th>
+                </tr>
+            </thead>
+            
+            <tbody id="bodyTable"></tbody>
+        </table>
+    </div>
+
+    <div><b>NOTA**</b></div>
+    <p>Límite de cuatro categorías</p>
+
+    <!-- no eliminar los ultimos tres divs, final del dashboard, to be fix-->
+    </div>
+</div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="editCategoryModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="itemTitle"></h4>
+            </div>
+            <div class="modal-body">
+                <div class="content">
+                    <div class="alert alert-danger alert-dismissible" role="alert" id="editItemError">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <p>Error: <span id="errorItemMessage"></span></p>
+                    </div>
+                </div>
+                <form id="editItem">
+                    <input type="hidden" id="categoryFormType">
+                    <div class="row">
+                        <div class="form-group col-md-4">
+                            <label for="formItemId">ID</label>
+                            <input type="text" class="form-control" id="formItemId" readonly>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="formCreatedAt">Creado</label>
+                            <input type="text" class="form-control" id="formCreatedAt" readonly>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="formUpdatedAt">Actualizado</label>
+                            <input type="text" class="form-control" id="formUpdatedAt" readonly>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <label for="formNameEsp">Nombre en español</label>
+                            <input type="text" class="form-control" id="formNameEsp" placeholder="Nombre en español" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <label for="formNameEng">Nombre en inglés</label>
+                            <input type="text" class="form-control" id="formNameEng" placeholder="Nombre en inglés" required>
+                        </div>
+                    </div>
+                    <div id="icon-grid-section">
+                        <div class="row icon-grid">
+                            <div id="fa-plane" class="col-md-1 icon-item item-selected"><i class="fa fa-plane"></i></div>
+                            <div id="fa-ship" class="col-md-1 icon-item"><i class="fa fa-ship"></i></div>
+                            <div id="fa-anchor" class="col-md-1 icon-item"><i class="fa fa-anchor"></i></div>
+                            <div id="fa-car" class="col-md-1 icon-item"><i class="fa fa-car"></i></div>
+                            <div id="fa-bed" class="col-md-1 icon-item"><i class="fa fa-bed"></i></div>
+                            <div id="fa-beer" class="col-md-1 icon-item"><i class="fa fa-beer"></i></div>
+                            <div id="fa-bicycle" class="col-md-1 icon-item"><i class="fa fa-bicycle"></i></div>
+                            <div id="fa-binoculars" class="col-md-1 icon-item"><i class="fa fa-binoculars"></i></div>
+                            <div id="fa-birthday-cake" class="col-md-1 icon-item"><i class="fa fa-birthday-cake"></i></div>
+                            <div id="fa-book" class="col-md-1 icon-item"><i class="fa fa-book"></i></div>
+                            <div id="fa-bus" class="col-md-1 icon-item"><i class="fa fa-bus"></i></div>
+                            <div id="fa-taxi" class="col-md-1 icon-item"><i class="fa fa-taxi"></i></div>
+                        </div>
+                        <div class="row icon-grid">
+                            <div id="fa-road" class="col-md-1 icon-item"><i class="fa fa-road"></i></div>
+                            <div id="fa-heart" class="col-md-1 icon-item"><i class="fa fa-heart"></i></div>
+                            <div id="fa-heart-o" class="col-md-1 icon-item"><i class="fa fa-heart-o"></i></div>
+                            <div id="fa-coffee" class="col-md-1 icon-item"><i class="fa fa-coffee"></i></div>
+                            <div id="fa-cutlery" class="col-md-1 icon-item"><i class="fa fa-cutlery"></i></div>
+                            <div id="fa-female" class="col-md-1 icon-item"><i class="fa fa-female"></i></div>
+                            <div id="fa-fighter-jet" class="col-md-1 icon-item"><i class="fa fa-fighter-jet"></i></div>
+                            <div id="fa-gift" class="col-md-1 icon-item"><i class="fa fa-gift"></i></div>
+                            <div id="fa-graduation-cap" class="col-md-1 icon-item"><i class="fa fa-graduation-cap"></i></div>
+                            <div id="fa-globe" class="col-md-1 icon-item"><i class="fa fa-globe"></i></div>
+                            <div id="fa-group" class="col-md-1 icon-item"><i class="fa fa-group"></i></div>
+                            <div id="fa-leaf" class="col-md-1 icon-item"><i class="fa fa-leaf"></i></div>
+                        </div>
+                        <div class="row icon-grid">
+                            <div id="fa-map-signs" class="col-md-1 icon-item"><i class="fa fa-map-signs"></i></div>
+                            <div id="fa-music" class="col-md-1 icon-item"><i class="fa fa-music"></i></div>
+                            <div id="fa-motorcycle" class="col-md-1 icon-item"><i class="fa fa-motorcycle"></i></div>
+                            <div id="fa-child" class="col-md-1 icon-item"><i class="fa fa-child"></i></div>
+                            <div id="fa-paw" class="col-md-1 icon-item"><i class="fa fa-paw"></i></div>
+                            <div id="fa-rocket" class="col-md-1 icon-item"><i class="fa fa-rocket"></i></div>
+                            <div id="fa-university" class="col-md-1 icon-item"><i class="fa fa-university"></i></div>
+                            <div id="fa-umbrella" class="col-md-1 icon-item"><i class="fa fa-umbrella"></i></div>
+                            <div id="fa-ticket" class="col-md-1 icon-item"><i class="fa fa-ticket"></i></div>
+                            <div id="fa-map" class="col-md-1 icon-item"><i class="fa fa-map"></i></div>
+                            <div id="fa-sun-o" class="col-md-1 icon-item"><i class="fa fa-sun-o"></i></div>
+                            <div id="fa-tree" class="col-md-1 icon-item"><i class="fa fa-tree"></i></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-3">
+                            <a href="#" id="deleteCategory">Eliminar categoría</a>
+                        </div>
+                        <div class="form-group col-md-4 col-md-offset-5">
+                            <button type="submit" id="saveCatItem" class="btn btn-success">Guardar cambios</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="confirmDeleteModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Eliminar categoría</h4>
+            </div>
+            <div class="modal-body"><p>¿Está seguro de ejecutar esta acción?</div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-danger" id="deleteCategoryAction">Eliminar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#editItemError").hide();
+        $("#errorAlert").hide();
+
+        validateCountCategories();
+
+        setTable();
+
+        $("#addItem").click(function() {
+            $("#formItemId").val('');
+            $("#formCreatedAt").val('');
+            $("#formUpdatedAt").val('');
+            $("#formNameEsp").val('');
+            $("#formNameEng").val('');
+            $("#editCategoryModal").modal("show");
+            $("#itemTitle").text("Agregar categoría");
+            $("#deleteCategory").hide();
+            $("#categoryFormType").val("1");
+        });
+
+        addCategoryEvent();
+
+        $("#deleteCategory").click(function() {
+            $("#editCategoryModal").modal("hide");
+            $("#confirmDeleteModal").modal("show");
+        });
+
+        $("#deleteCategoryAction").click(function() {
+            var Category = Parse.Object.extend("Category");
+            var category = new Category();
+            category.set("objectId", $("#formItemId").val());
+            validateCategoryRemoval(category);
+        });
+
+        $(".icon-item").click(function() {
+            $(".icon-item").removeClass("item-selected");
+            $(this).addClass("item-selected");
+        });
+    });
+
+    function validateCategoryRemoval(category) {
+        var query = new Parse.Query(Parse.Object.extend("Packages"));
+        query.equalTo("category", category);
+        query.count({
+          success: function(count) {
+            if(count == 0) {
+                removeCategory(category);
+            } else {
+                $("#errorMessage").text('No se puede eliminar una categoría con paquetes asignados, remover los paquetes de la categoría indicada antes de ejecutar esta acción.');
+                $("#errorAlert").show();
+                $("#confirmDeleteModal").modal("hide");
+            }
+          },
+          error: function(error) {
+          }
+        });
+    }
+
+    function removeCategory(category) {
+        category.destroy({
+            success: function(category) {
+                setTable();
+                $("#confirmDeleteModal").modal("hide");
+                validateCountCategories();
+            },
+            error: function(category, error) {
+                console.log("Error: " + error.code + " " + error.message);
+            }
+        });
+    }
+
+    function setTable() {
+        var query = new Parse.Query(Parse.Object.extend("Category"));
+        query.descending("createdAt");
+        query.find({
+            success: function(results) {
+                createTableData(results);
+            },
+            error: function(error) {
+                console.log("Error: " + error.code + " " + error.message);
+            }
+        });
+    }
+
+    function createTableData(results) {
+        var rows = "";
+        if(results.length == 0) rows += "<p>No hay resultados</p>";
+        
+        for (var i = 0; i < results.length; i++) {
+            var object = results[i];
+            var row = "<tr id='" + object.id + "' class='rowItem'><td><a href='#' class='editItemAction'>" + object.id + "</a></td><td>";
+            row += object.get("name") + "</td><td>";
+            row += object.get("nameEng") + "</td><td>";
+            row += "<i class='fa " + object.get("icon") + "'></i></td><td>";
+            rows += row;
+        }
+        $("#bodyTable").empty();
+        $("#bodyTable").append(rows);
+
+        $(".editItemAction").click(function() {
+            $("#editCategoryModal").modal("show");
+            $("#itemTitle").text("Editar categoría");
+            $("#categoryFormType").val("0");
+            $("#deleteCategory").show();
+            fillEditCategory($(this).text());
+        });
+    }
+
+    function addCategoryEvent() {
+        $("#editItem").submit(function(event){
+            event.preventDefault();
+
+            var nameEsp = $("#formNameEsp").val();
+            var nameEng = $("#formNameEng").val();
+            var icon = $("#icon-grid-section").find(".item-selected").attr("id");
+
+            var Category = Parse.Object.extend("Category");
+            var category = new Category();
+
+            // Agregar categoria
+            if($("#categoryFormType").val() == "1") {
+                category.set("name", nameEsp);
+                category.set("nameEng", nameEng);
+                category.set("icon", icon);
+                category.save(null, {
+                    success: function(category) {
+                        console.log('New object created with objectId: ' + category.id);
+                        successSaveCategory();
+                    },
+                    error: function(category, error) {
+                        failSaveCategory(error);
+                    }
+                });
+            } else {
+                // Editar categoria
+                var id = $("#formItemId").val();
+                category.set("objectId", id);
+                category.save(null, {
+                    success: function(category) {
+                        // Execute any logic that should take place after the object is saved.
+                        console.log('New object created with objectId: ' + category.id);
+                        category.set("name", nameEsp);
+                        category.set("nameEng", nameEng);
+                        category.set("icon", icon);
+                        category.save();
+                        successSaveCategory();
+                    }, error: function(category, error) {
+                        failSaveCategory(error);
+                    }
+                });
+            }
+        });
+    }
+
+    function fillEditCategory(id) {
+        var query = new Parse.Query(Parse.Object.extend("Category"));
+        query.equalTo("objectId", id);
+        query.first({
+            success: function(result) {
+                $("#formItemId").val(result.id);
+                $("#formCreatedAt").val(result.createdAt);
+                $("#formUpdatedAt").val(result.updatedAt);
+                $("#formNameEsp").val(result.get("name"));
+                $("#formNameEng").val(result.get("nameEng"));
+                var icon = result.get("icon");
+                $(".icon-item").removeClass("item-selected");
+                $("#icon-grid-section").find('#' + icon).addClass('item-selected');
+            },
+            error: function(error) {
+                console.log("Error: " + error.code + " " + error.message);
+            }
+        });
+    }
+
+    function successSaveCategory() {
+        setTable();
+        validateCountCategories();
+        $("#editCategoryModal").modal("hide");
+    }
+
+    function failSaveCategory(error) {
+        $("#errorItemMessage").text(error.message);
+        $("#editItemError").show(); 
+        console.log('Failed to create new object, with error code: ' + error.message);
+    }
+
+    function validateCountCategories() {
+        var query = new Parse.Query(Parse.Object.extend("Category"));
+        query.count({
+          success: function(count) {
+            if(count >= 4) {
+                $("#addItem").attr("disabled", true);
+            } else {
+                $("#addItem").attr("disabled", false);
+            }
+          },
+          error: function(error) {
+            // The request failed
+          }
+        });
+        $("#errorAlert").hide();
+    }
+
+</script>
