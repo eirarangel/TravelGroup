@@ -81,3 +81,50 @@
             </div>
             <!-- Main Nav -->
             <!-- End Header-->
+
+            <script type="text/javascript">
+            $(function() {
+                setMenuPackages();
+            });
+            function setMenuPackages() {
+                console.log("entra?");
+                    var query = new Parse.Query(Parse.Object.extend("Packages"));
+                    query.equalTo("priority", 1);
+                    query.equalTo("languages", 0);
+                    query.limit(4);
+                    query.find({
+                        success: function(results) {
+                            createMenuPackagesTemplate(results);
+                        }, error: function(error) {
+                            console.log("Error: " + error.code + " " + error.message);
+                        }
+                    });
+                }
+
+                function createMenuPackagesTemplate(results) {
+                    var elements = "";
+                    for (var i = 0; i < results.length; i++) {
+                        var object = results[i];
+                        var description = "Pregunta a tu agente de ventas";
+                        if(typeof object.get("description") != "undefined") {
+                            description = object.get("description").substring(0,100) + "...";
+                        }
+                        var image = "img/gallery-2/1.jpg";
+                        if(typeof object.get("image") != "undefined") {
+                            image = object.get("image").url();
+                        }
+
+                        var element = '<ul id="package' + object.id + '">' + 
+                                        '<li class="menu-element" id="menu-packages">' +
+                                            '<h2><span>' + object.get('name') + '</span></h2>' +
+                                            '<a href="packages.php?view=package' + object.id + '"><img class="img" src="'+image+'" alt="image 1"> </a>' +
+                                            '<p>' + description + '</p>' +
+                                            '<a href="packages.php?view=package' + object.id + '" class="btn btn-primary">View Details</a>' +
+                                        '</li>' +
+                                    '</ul>';
+                        elements += element;      
+                    }
+                    $("#top-menu-packages").empty();
+                    $("#top-menu-packages").append(elements);
+                }
+            </script>

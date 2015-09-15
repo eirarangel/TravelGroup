@@ -218,43 +218,12 @@
             navigationArrows:"solo",
             navigationStyle:"preview1"
         });
-        setMenuPackages();
         setCategories();
         setFrontPackages();
 
     });
 
-    function setMenuPackages() {
-        var query = new Parse.Query(Parse.Object.extend("Packages"));
-        query.equalTo("priority", 1);
-        query.equalTo("languages", 0);
-        query.limit(4);
-        query.find({
-            success: function(results) {
-                createMenuPackagesTemplate(results);
-            }, error: function(error) {
-                console.log("Error: " + error.code + " " + error.message);
-            }
-        });
-    }
 
-    function createMenuPackagesTemplate(results) {
-        var elements = "";
-        for (var i = 0; i < results.length; i++) {
-            var object = results[i];
-            var element = '<ul id="package' + object.id + '">' + 
-                            '<li class="menu-element" id="menu-packages">' +
-                                '<h2><span>' + object.get('name') + '</span></h2>' +
-                                '<a href="#"><img class="img" src="img/gallery-2/1.jpg" alt="image 1"> </a>' +
-                                '<p>' + object.get('description').substring(0,100) + '...</p>' +
-                                '<a href="packages.php?view=package' + object.id + '" class="btn btn-primary">View Details</a>' +
-                            '</li>' +
-                        '</ul>';
-            elements += element;      
-        }
-        $("#top-menu-packages").empty();
-        $("#top-menu-packages").append(elements);
-    }
 
     function setCategories() {
         var query = new Parse.Query(Parse.Object.extend("Category"));

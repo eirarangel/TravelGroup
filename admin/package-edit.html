@@ -116,6 +116,20 @@
             </div>
         </div>
     </div>
+    <div class="row">
+        <div class="form-group col-md-12">
+            <div class="fileinput fileinput-new" data-provides="fileinput">
+              <div class="fileinput-new thumbnail" style="width: 200px; height: 150px;">
+                <img data-src="holder.js/100%x100%" alt="...">
+              </div>
+              <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;"></div>
+              <div>
+                <span class="btn btn-default btn-file"><span class="fileinput-new">Select image</span><span class="fileinput-exists">Change</span><input type="file" id="profilePhotoFileUpload" name="..."></span>
+                <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+              </div>
+            </div>
+        </div>
+    </div>
 
     <div class="row">
     	<div class="form-group col-md-12">
@@ -295,6 +309,15 @@
                 packageDetails.descriptionEsp = $("#formDescriptionEsp").val();
                 packageDetails.descriptionEng = $("#formDescriptionEng").val();
             }
+            packageDetails.image = null;
+            var fileUploadControl = $("#profilePhotoFileUpload")[0];
+            if (fileUploadControl.files.length > 0) {
+              var file = fileUploadControl.files[0];
+              var name = "photo.jpg";
+
+              var parseFile = new Parse.File(name, file);
+              packageDetails.image = parseFile;
+            }
             packageDetails.categoryId = $("#formCategory").val();
             packageDetails.priority = 0;
             if ($('#formPriority').is(":checked")) packageDetails.priority = 1;
@@ -362,6 +385,8 @@
         } else {
             packageEsp.set('detailsAgent', 1);
         }
+        if(packageDetails.image !=null )
+            packageEsp.set("image", packageDetails.image);
         packageEsp.set('priority', packageDetails.priority);
         packageEsp.set('priority2', packageDetails.priority2);
         packageEsp.set('languages', 0);
@@ -383,6 +408,8 @@
         } else {
             packageEng.set('detailsAgent', 1);
         }
+        if(packageDetails.image !=null )
+            packageEng.set("image", packageDetails.image);
         packageEng.set('priority', packageDetails.priority);
         packageEng.set('priority2', packageDetails.priority2);
         packageEng.set('languages', 1);

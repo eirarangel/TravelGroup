@@ -41,9 +41,8 @@
                                         <div class="tab-pane active" id="hotel">                                        
                                         <div class="row padding-top">
                                         <div class="col-md-6">
-                                            <div class="img-hover">
-                                                <div class="overlay"> <a href="img/gallery-2/2.jpg" class="fancybox"><i class="fa fa-plus-circle"></i></a></div>
-                                                <img src="img/gallery-2/2.jpg" alt="" class="img-responsive">
+                                            <div id="package_image" class="img-hover">
+                                                
                                             </div>
                                         </div>
                                         <div class="col-md-6">
@@ -107,6 +106,14 @@
                 $("#package_name").text(packageObject.get("name"));
                 $("#package_price").text(packageObject.get("price"));
                 $("#package_description").text(packageObject.get("description"));
+
+                var image = "img/gallery-2/2.jpg";
+                if(typeof packageObject.get("image") != "undefined") {
+                    image = packageObject.get("image").url();
+                }
+
+                $("#package_image").append('<div class="overlay"><a href="'+image+'" class="fancybox"><i class="fa fa-plus-circle"></i></a></div><img src="'+image+'" alt="" class="img-responsive">');
+                
 
                 var destinations = packageObject.get("destinations").split(',');
                 var destination = "";

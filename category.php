@@ -33,140 +33,7 @@
 
                         <!-- boxes-carousel-->
                         <div id="boxes-carousel">
-                            <!-- Item carousel Boxed-->
-                            <div>
-                                <div class="img-hover">
-                                    <img src="img/gallery-2/1.jpg" alt="" class="img-responsive">
-                                    <div class="overlay"><a href="img/gallery-2/1.jpg" class="fancybox"><i class="fa fa-plus-circle"></i></a></div>
-                                </div>
-
-                                <div class="info-gallery">
-                                    <h3>
-                                        The Large Everest Mount<br>
-                                        <span>HIMALAYA MOUNTAINS</span>
-                                    </h3>
-                                    <hr class="separator">
-                                    <p>The Royal National is in London near Covent Garden and 100 meters from the British Museum.</p>
-                                    <ul class="starts">
-                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-star-half-empty"></i></a></li>
-                                    </ul>
-                                    <div class="content-btn"><a href="#" class="btn btn-primary">View Details</a></div>
-                                    <div class="price"><span>$</span><b>From</b>45</div>
-                                </div>
-                            </div>
-                            <!-- End Item carousel Boxed-->
-
-                            <!-- Item carousel Boxed-->
-                            <div>
-                                <div class="img-hover">
-                                    <img src="img/gallery-2/2.jpg" alt="" class="img-responsive">
-                                    <div class="overlay"><a href="img/gallery-2/2.jpg" class="fancybox"><i class="fa fa-plus-circle"></i></a></div>
-                                </div>
-
-                                <div class="info-gallery">
-                                    <h3>
-                                        Chinese Mountains<br>
-                                        <span>ORIENTAL NATURE</span>
-                                    </h3>
-                                    <hr class="separator">
-                                    <p>The Holiday Inn Bilbao is in a prime location next to the Basilica of Begoña and the historical town of Bilbao.</p>
-                                    <ul class="starts">
-                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-star-half-empty"></i></a></li>
-                                    </ul>
-                                    <div class="content-btn"><a href="#" class="btn btn-primary">View Details</a></div>
-                                    <div class="price"><span>$</span><b>From</b>25</div>
-                                </div>
-                            </div>
-                            <!-- End Item carousel Boxed-->
-
-                            <!-- Item carousel Boxed-->
-                            <div>
-                                <div class="img-hover">
-                                    <img src="img/gallery-2/3.jpg" alt="" class="img-responsive">
-                                    <div class="overlay"><a href="img/gallery-2/3.jpg" class="fancybox"><i class="fa fa-plus-circle"></i></a></div>
-                                </div>
-
-                                <div class="info-gallery">
-                                    <h3>
-                                        Polynesia Bora Bora<br>
-                                        <span>FRENCH ISLANDS</span>
-                                    </h3>
-                                    <hr class="separator">
-                                    <p>The spacious rooms have a bathroom with hairdryer, direct dial telephone, minibar, radio, Internet access and a double bed.</p>
-                                    <ul class="starts">
-                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-star-half-empty"></i></a></li>
-                                    </ul>
-                                    <div class="content-btn"><a href="#" class="btn btn-primary">View Details</a></div>
-                                    <div class="price"><span>$</span><b>From</b>60</div>
-                                </div>
-                            </div>
-                            <!-- End Item carousel Boxed-->
-
-                            <!-- Item carousel Boxed-->
-                            <div>
-                                <div class="img-hover">
-                                    <img src="img/gallery-2/6.jpg" alt="" class="img-responsive">
-                                    <div class="overlay"><a href="img/gallery-2/6.jpg" class="fancybox"><i class="fa fa-plus-circle"></i></a></div>
-                                </div>
-
-                                <div class="info-gallery">
-                                    <h3>
-                                        Tower Eiffel<br>
-                                        <span>ITALIE FRANCE</span>
-                                    </h3>
-                                    <hr class="separator">
-                                    <p>The Golden Bay, heated and opened in 2003, comprises a main building of five floors with a total of 380 rooms.</p>
-                                    <ul class="starts">
-                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-star-half-empty"></i></a></li>
-                                    </ul>
-                                    <div class="content-btn"><a href="#" class="btn btn-primary">View Details</a></div>
-                                    <div class="price"><span>$</span><b>From</b>15</div>
-                                </div>
-                            </div>
-                            <!-- End Item carousel Boxed-->
-
-                            <!-- Item carousel Boxed-->
-                            <div>
-                                <div class="img-hover">
-                                    <img src="img/gallery-2/4.jpg" alt="" class="img-responsive">
-                                    <div class="overlay"><a href="img/gallery-2/4.jpg" class="fancybox"><i class="fa fa-plus-circle"></i></a></div>
-                                </div>
-
-                                <div class="info-gallery">
-                                    <h3>
-                                        Tayrona Park<br>
-                                        <span>SANTA MARTA COLOMBIA</span>
-                                    </h3>
-                                    <hr class="separator">
-                                    <p>Hotel MS Maestranza is located in the Malagueta (Malaga center), in a privileged area next to the bullring.</p>
-                                    <ul class="starts">
-                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-star-half-empty"></i></a></li>
-                                    </ul>
-                                    <div class="content-btn"><a href="#" class="btn btn-primary">View Details</a></div>
-                                    <div class="price"><span>$</span><b>From</b>75</div>
-                                </div>
-                            </div>
-                            <!-- End Item carousel Boxed-->
+                            
                         </div>
                         <!-- End boxes-carousel-->
                     </div>
@@ -229,10 +96,15 @@
                 price = '<div class="price"><span>$</span><b>From</b>' + object.get("price") + '</div>';
             }
 
+            var image = "img/gallery-2/1.jpg";
+            if(typeof object.get("image") != "undefined") {
+                image = object.get("image").url();
+            }
+
             var element = '<div>' + 
                             '<div class="img-hover">' +
-                                '<img src="img/gallery-2/1.jpg" alt="" class="img-responsive">' +
-                                '<div class="overlay"><a href="img/gallery-2/1.jpg" class="fancybox"><i class="fa fa-plus-circle"></i></a></div>' +
+                                '<img src="'+ image +'" alt="" class="img-responsive">' +
+                                '<div class="overlay"><a href="'+image+'" class="fancybox"><i class="fa fa-plus-circle"></i></a></div>' +
                             '</div>' +
                             '<div class="info-gallery info-gallery-custom">' +
                                 '<h3>' + object.get("name") + '</h3>' +

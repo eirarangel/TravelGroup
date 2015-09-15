@@ -93,8 +93,9 @@
         var elements = "";
         for (var i = 0; i < results.length; i++) {
             var object = results[i];
-            var description = "";
+            var description = "Pregunta a tu agente de ventas";
             var price = "";
+            
             if(typeof object.get("description") != "undefined") {
                 description = object.get("description").substring(0,100) + "...";
             }
@@ -102,10 +103,14 @@
             if(typeof object.get("price") != "undefined") {
                 price = '<div class="price"><span>$</span><b>From</b>' + object.get("price") + '</div>';
             }
+            var image = "img/gallery-2/1.jpg";
+            if(typeof object.get("image") != "undefined") {
+                image = object.get("image").url();
+            }
             var element = '<div class="col-xs-12 col-sm-6 col-md-3 tripPack' + object.get("category").id + '">' + 
                             '<div class="img-hover">' +
-                                '<img src="img/gallery-2/1.jpg" alt="" class="img-responsive">' +
-                                '<div class="overlay"><a href="img/gallery-2/1.jpg" class="fancybox"><i class="fa fa-plus-circle"></i></a></div>' +
+                                '<img src="' + image +'" alt="" class="img-responsive">' +
+                                '<div class="overlay"><a href="' + image +'" class="fancybox"><i class="fa fa-plus-circle"></i></a></div>' +
                             '</div>' +
                             '<div class="info-gallery info-gallery-trip">' +
                             '<h3>' + object.get("name") + '<br><span>' + object.get("category").get("name").toUpperCase() + '</span></h3>' +
