@@ -9,28 +9,40 @@
                         <!-- SLIDE  -->
                         <li data-transition="slidevertical" data-slotamount="1" data-masterspeed="1000" data-saveperformance="off"  data-title="Slide">
                             <!-- MAIN IMAGE -->
-                            <img src="img/test/beach.jpg"  alt="fullslide1" data-bgposition="center center" data-kenburns="on" data-duration="6000" data-ease="Linear.easeNone" data-bgfit="130" data-bgfitend="100" data-bgpositionend="right center">
+                            <img src="img/official/banner1.jpg"  alt="fullslide1" data-bgposition="center center" data-kenburns="on" data-duration="6000" data-ease="Linear.easeNone" data-bgfit="130" data-bgfitend="100" data-bgpositionend="right center">
                             <!-- LAYERS -->
                         </li>
 
                         <!-- SLIDE  -->
                         <li data-transition="slidehorizontal" data-slotamount="1" data-masterspeed="1000" data-saveperformance="off"  data-title="Slide">
                             <!-- MAIN IMAGE -->
-                            <img src="img/test/beach2.jpg"  alt="fullslide1" data-bgposition="top center" data-kenburns="on" data-duration="6000" data-ease="Linear.easeNone" data-bgfit="130" data-bgfitend="100" data-bgpositionend="right center">
+                            <img src="img/official/banner2.jpg"  alt="fullslide1" data-bgposition="top center" data-kenburns="on" data-duration="6000" data-ease="Linear.easeNone" data-bgfit="130" data-bgfitend="100" data-bgpositionend="right center">
                             <!-- LAYERS -->
                         </li>
 
                         <!-- SLIDE  -->
                         <li data-transition="slidevertical" data-slotamount="1" data-masterspeed="1000" data-saveperformance="off"  data-title="Slide">
                             <!-- MAIN IMAGE -->
-                            <img src="img/test/beach3.jpg"  alt="fullslide1" data-bgposition="right center" data-kenburns="on" data-duration="6000" data-ease="Linear.easeNone" data-bgfit="130" data-bgfitend="100" data-bgpositionend="right center">
+                            <img src="img/official/banner3.jpg"  alt="fullslide1" data-bgposition="right center" data-kenburns="on" data-duration="6000" data-ease="Linear.easeNone" data-bgfit="130" data-bgfitend="100" data-bgpositionend="right center">
                             <!-- LAYERS -->
                         </li>
 
                         <!-- SLIDE  -->
                         <li data-transition="slidevertical" data-slotamount="1" data-masterspeed="1000" data-saveperformance="off"  data-title="Slide">
                             <!-- MAIN IMAGE -->
-                            <img src="img/test/beach4.jpg"  alt="fullslide1" data-bgposition="left center" data-kenburns="on" data-duration="6000" data-ease="Linear.easeNone" data-bgfit="130" data-bgfitend="100" data-bgpositionend="right center">
+                            <img src="img/official/banner4.jpg"  alt="fullslide1" data-bgposition="left center" data-kenburns="on" data-duration="6000" data-ease="Linear.easeNone" data-bgfit="130" data-bgfitend="100" data-bgpositionend="right center">
+                            <!-- LAYERS -->
+                        </li>
+                        <!-- SLIDE  -->
+                        <li data-transition="slidevertical" data-slotamount="1" data-masterspeed="1000" data-saveperformance="off"  data-title="Slide">
+                            <!-- MAIN IMAGE -->
+                            <img src="img/official/banner5.jpg"  alt="fullslide1" data-bgposition="left center" data-kenburns="on" data-duration="6000" data-ease="Linear.easeNone" data-bgfit="130" data-bgfitend="100" data-bgpositionend="right center">
+                            <!-- LAYERS -->
+                        </li>
+                        <!-- SLIDE  -->
+                        <li data-transition="slidevertical" data-slotamount="1" data-masterspeed="1000" data-saveperformance="off"  data-title="Slide">
+                            <!-- MAIN IMAGE -->
+                            <img src="img/official/banner6.jpg"  alt="fullslide1" data-bgposition="left center" data-kenburns="on" data-duration="6000" data-ease="Linear.easeNone" data-bgfit="130" data-bgfitend="100" data-bgpositionend="right center">
                             <!-- LAYERS -->
                         </li>
                     </ul> 

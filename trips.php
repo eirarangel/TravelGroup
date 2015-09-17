@@ -9,7 +9,7 @@
                 <!-- Content Parallax-->
                 <div class="opacy_bg_02">
                      <div class="container">
-                        <h1>Paquetes vacacionales</h1>
+                        <h1>Elección de los viajeros para sus vacaciones</h1>
                     </div>  
                 </div>  
                 <!-- End Content Parallax--> 
@@ -47,6 +47,7 @@
     $(document).ready(function() {
         setCategories();
         setPackages();
+        $(".image_03_parallax").css('background-image', 'url(img/official/banner6.jpg)');
     });
 
     function setCategories() {
@@ -143,7 +144,7 @@
             });
         });
 
-        $("#all-filter").click();
+        $("#all-filter").trigger( "click" );
     }
 </script>
     </body>

@@ -60,6 +60,7 @@
         query.get(id, {
             success: function(packageObject) {
                 $("#category_name").text(packageObject.get("name"));
+                $(".image_03_parallax").css('background-image', 'url(' + packageObject.get("image").url() + ')');
                 getPackages(packageObject);
             }, error: function(error) {
 

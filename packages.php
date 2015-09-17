@@ -107,6 +107,8 @@
                 $("#package_price").text(packageObject.get("price"));
                 $("#package_description").text(packageObject.get("description"));
 
+                $(".image_03_parallax").css('background-image', 'url(' + packageObject.get("category").get("image").url() + ')');
+
                 var image = "img/gallery-2/2.jpg";
                 if(typeof packageObject.get("image") != "undefined") {
                     image = packageObject.get("image").url();
