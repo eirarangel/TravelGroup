@@ -43,8 +43,8 @@
 
                                         <address>
                                           <strong>Travelia Emails</strong><br>
-                                          <i class="fa fa-envelope"></i><strong>Email:</strong><a href="mailto:#"> mar@atravelgroupcollege.com</a><br>
-                                          <i class="fa fa-envelope"></i><strong>Email:</strong><a href="mailto:#"> marpicazo@aol.com</a><br>
+                                          <i class="fa fa-envelope"></i><strong>Email:</strong><a href="mailto:#">mpicazo@travelgroup-holidays.com</a><br>
+                                          <i class="fa fa-envelope"></i><strong>Email:</strong><a href="mailto:#"> mpicazo@carefreevacations.com</a><br>
                                         </address>
                                     </aside>
 
