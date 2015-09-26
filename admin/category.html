@@ -14,7 +14,7 @@
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th>ID</th>
+                    <th></th>
                     <th>Nombre</th>
                     <th>Nombre inglés</th>
                     <th>Ícono</th>
@@ -242,7 +242,7 @@
         
         for (var i = 0; i < results.length; i++) {
             var object = results[i];
-            var row = "<tr id='" + object.id + "' class='rowItem'><td><a href='#' class='editItemAction'>" + object.id + "</a></td><td>";
+            var row = "<tr class='rowItem'><td><a href='#' id='" + object.id + "' class='editItemAction'><button type='button' class='btn btn-default btn-xs'>" + (i+1) + "</button></a></td><td>";
             row += object.get("name") + "</td><td>";
             row += object.get("nameEng") + "</td><td>";
             row += "<i class='fa " + object.get("icon") + "'></i></td><td>";
@@ -256,7 +256,7 @@
             $("#itemTitle").text("Editar categoría");
             $("#categoryFormType").val("0");
             $("#deleteCategory").show();
-            fillEditCategory($(this).text());
+            fillEditCategory($(this).attr("id"));
         });
     }
 

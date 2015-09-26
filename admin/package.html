@@ -83,7 +83,7 @@
                         $('#panel'+id).append(table);
                         $('#panel'+id).find('.editItemAction').each(function() {
                             $(this).click(function() {
-                                var editId = $(this).text();    
+                                var editId = $(this).attr("id");    
                                 window.history.pushState("object or string", "Title", "http://localhost/TravelGroup/admin?edit=" + editId);
                                 $("#dynamic-content").load("http://localhost/TravelGroup/admin/package-edit.html");
                             });
@@ -104,7 +104,8 @@
         
         for (var i = 0; i < results.length; i++) {
             var object = results[i];
-            var row = "<tr id='" + object.id + "' class='rowItem'><td><a href='#' class='editItemAction'>" + object.id + "</a></td><td>";
+
+            var row = "<tr id='" + object.id + "' class='rowItem'><td><a href='#' id='" + object.id + "' class='editItemAction'><button type='button' class='btn btn-default btn-xs'>" + (i+1) + "</button></a></td><td>";
             row += object.get("name") + "</td><td>";
             if(object.get('priority') == 1) 
                 row += "<center><i class='fa fa-check'></i></center></td><td>";
@@ -128,8 +129,8 @@
                         '<table class="table table-striped">' +
                             '<thead>' +
                                 '<tr>' +
-                                    '<th>ID</th>' +
-                                    '<th>Nombre</th>' +
+                                    '<th></th>' +
+                                    '<th>Nombre de Paquete</th>' +
                                     '<th>Prioridad Menu</th>' +
                                     '<th>Prioridad Front</th>' +
                                     '<th>Detalles Agente</th>' +
@@ -140,13 +141,5 @@
             table += '</tbody></table></div>';
         }
         return table;
-    }
-
-    function editItemEvent() {
-        $('.editItemAction').click(function() {
-            var editId = $(this).text();
-            window.history.pushState("object or string", "Title", "http://localhost/TravelGroup/admin/?edit=" + editId);
-            $("#dynamic-content").load("http://localhost/TravelGroup/admin/package-edit.html");
-        });
     }
 </script>

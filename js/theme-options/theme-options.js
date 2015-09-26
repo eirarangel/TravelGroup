@@ -18,7 +18,7 @@
 	function interface(){
 
     // Skin value
-    var skin = "blue"; // green (default), red ,yellow,purple,blue, orange, purple, pink, cocoa, custom 
+    var skin = "gold"; // green (default), red ,yellow,purple,blue, orange, purple, pink, cocoa, custom 
 
     // Boxed value
     var layout = "layout-semiboxed"; // layout-semiboxed(default), layout-boxed, layout-boxed-margin ,layout-wide
@@ -104,6 +104,10 @@
 	});
 	$(".cocoa").click(function(){
         $(".skin").attr("href", "css/skins/cocoa/cocoa.css");
+        return false;
+   	});
+   	$(".gold").click(function(){
+        $(".skin").attr("href", "css/skins/gold/gold.css");
         return false;
    	});
 

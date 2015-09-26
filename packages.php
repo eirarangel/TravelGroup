@@ -57,15 +57,15 @@
                                          <br />   
                                             <div class="row">
                                                 <div class="col-md-4">
-                                                    <h4>Destination</h4>
+                                                    <h4 id="destinations">Destination</h4>
                                                     <ul class="list-styles" id="package_destinations"></ul>
                                                 </div>
                                                 <div class="col-md-4">
-                                                    <h4>Includes</h4>
+                                                    <h4 id="includes">Includes</h4>
                                                     <ul class="list-styles" id="package_includes"></ul>                                   
                                                 </div>  
                                                 <div class="col-md-4">
-                                                    <h4>Restrictions</h4>
+                                                    <h4 id="restrictions">Restrictions</h4>
                                                     <ul class="list-styles" id="package_restrictions"></ul>                                   
                                                 </div>                                  
                                             </div>
@@ -104,9 +104,41 @@
             success: function(packageObject) {
                 $("#pack_category_name").text(packageObject.get("category").get("name"));
                 $("#package_name").text(packageObject.get("name"));
-                $("#package_price").text(packageObject.get("price"));
-                $("#package_description").text(packageObject.get("description"));
+                if(packageObject.get("detailsAgent") == 1) {
+                    $("#package_description").text("Pregunta a tu agente de ventas");
+                    $(".lead").hide();
+                    $("#destinations").hide();
+                    $("#includes").hide();
+                    $("#restrictions").hide(); 
+                } else {
+                    $("#package_price").text(packageObject.get("price"));
+                    $("#package_description").text(packageObject.get("description"));
 
+                    var destinations = packageObject.get("destinations").split(',');
+                    var destination = "";
+                    for(var i=0; i<destinations.length; i++) {
+                        destination += '<li><i class="fa fa-check"></i>' + destinations[i] + '</li>';
+                    }
+                    $("#package_destinations").empty();
+                    $("#package_destinations").append(destination);
+
+                    var includes = packageObject.get("include").split(',');
+                    var include = "";
+                    for(var i=0; i<includes.length; i++) {
+                        include += '<li><i class="fa fa-check"></i>' + includes[i] + '</li>';
+                    }
+                    $("#package_includes").empty();
+                    $("#package_includes").append(include);
+
+                    var restrictions = packageObject.get("restrictions").split(',');
+                    var restriction = "";
+                    for(var i=0; i<restrictions.length; i++) {
+                        restriction += '<li><i class="fa fa-check"></i>' + restrictions[i] + '</li>';
+                    }
+                    $("#package_restrictions").empty();
+                    $("#package_restrictions").append(restriction);
+                }
+                
                 $(".image_03_parallax").css('background-image', 'url(' + packageObject.get("category").get("image").url() + ')');
 
                 var image = "img/gallery-2/2.jpg";
@@ -115,31 +147,6 @@
                 }
 
                 $("#package_image").append('<div class="overlay"><a href="'+image+'" class="fancybox"><i class="fa fa-plus-circle"></i></a></div><img src="'+image+'" alt="" class="img-responsive">');
-                
-
-                var destinations = packageObject.get("destinations").split(',');
-                var destination = "";
-                for(var i=0; i<destinations.length; i++) {
-                    destination += '<li><i class="fa fa-check"></i>' + destinations[i] + '</li>';
-                }
-                $("#package_destinations").empty();
-                $("#package_destinations").append(destination);
-
-                var includes = packageObject.get("include").split(',');
-                var include = "";
-                for(var i=0; i<includes.length; i++) {
-                    include += '<li><i class="fa fa-check"></i>' + includes[i] + '</li>';
-                }
-                $("#package_includes").empty();
-                $("#package_includes").append(include);
-
-                var restrictions = packageObject.get("restrictions").split(',');
-                var restriction = "";
-                for(var i=0; i<restrictions.length; i++) {
-                    restriction += '<li><i class="fa fa-check"></i>' + restrictions[i] + '</li>';
-                }
-                $("#package_restrictions").empty();
-                $("#package_restrictions").append(restriction);
 
             }, error: function(error) {
 
