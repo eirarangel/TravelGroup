@@ -40,11 +40,13 @@
                     <!-- End Info Resalt-->
  
 
-                <div class="content_info">
-                    <div class="skin_base paddings-mini color-white text-center">
-                        <h2>Need Help? Call us Now! - (619) 730-0380</h2>
+                <a href="help.php" style="text-decoration: none;">
+                    <div class="content_info">
+                        <div class="skin_base paddings-mini color-white text-center">
+                            <h2>Need Help? Call us Now! - (619) 730-0380</h2>
+                        </div>
                     </div>
-                </div>
+                </a>  
 
             </section>
             <!-- End Content Central -->

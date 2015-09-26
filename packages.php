@@ -51,7 +51,10 @@
                                                     $<span id="package_price"></span> usd p/p
                                                     <span class="line"></span>
                                                 </p>
-                                                <p id="package_description"></p>                                                  
+                                                <p id="package_description"></p>
+                                                <div align="right">
+                                                    <input type="submit" onclick="location.href = 'reserve.php';" value="Reserve Now!">                                                  
+                                                </div>
                                         </div>
                                    </div>
                                          <br />   
@@ -81,12 +84,13 @@
                 </div>                        
                 </div>   
                 <!-- End content info - Vacations Destinatios--> 
-
-                <div class="content_info">
-                    <div class="skin_base paddings-mini color-white text-center">
-                        <h2>Need Help? Call us Now! - (619) 730-0380</h2>
+                <a href="help.php" style="text-decoration: none;">
+                    <div class="content_info">
+                        <div class="skin_base paddings-mini color-white text-center">
+                            <h2>Need Help? Call us Now! - (619) 730-0380</h2>
+                        </div>
                     </div>
-                </div>
+                </a>               
 
             </section>
             <!-- End Content Central -->

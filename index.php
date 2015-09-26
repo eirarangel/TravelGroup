@@ -73,7 +73,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="titles">
-                                <h2><span>¿</span>Why <span>choose</span> Travel Group<span>?</span></h2>
+                                <h2><span>¿</span>Why <span>choose</span> Travelgroup Holidays<span>?</span></h2>
                                 <i class="fa fa-plane"></i>
                                 <hr class="tall">
                             </div>                    
@@ -87,18 +87,17 @@
                             <div class="col-md-4">
                                 <div class="item-feature text-center">
                                     <div class="head-feature">
-                                        <span>Up</span>
-                                        <br>
+                                        <span>because we meet</span>
+                                        <br>                                        
                                         <div class="title-feature">
                                             <i class="fa fa-sun-o left-icon"></i>
                                             <i class="fa fa-umbrella right-icon"></i>
-                                            30
-                                        </div><span>%</span>
+                                            the expressed
+                                        </div>
                                         <br>
-                                        <span>discount</span>
                                     </div>
                                     <div class="info-feature">
-                                        <p>For over 4 years offering the best plans at the best price with exclusive discounts.</p> 
+                                        <p>wishes of our customers. <br /> Our secret "Make things happen". </p>
                                     </div>
                                 </div>
                             </div>
@@ -106,18 +105,17 @@
                             <div class="col-md-4 text-center">
                                 <div class="item-feature text-center">
                                     <div class="head-feature">
-                                        <span>over</span>
-                                        <br>
+                                        <span>because we are a</span>
+                                        <br>                                        
                                         <div class="title-feature">
-                                            <i class="fa fa-thumbs-o-up left-icon"></i>
-                                            <i class="fa fa-heart right-icon"></i>
-                                            1 million
+                                            <i class="fa fa-heart left-icon"></i>
+                                            <i class="fa fa-umbrella right-icon"></i>                                            
+                                            lifestyle
                                         </div>
                                         <br>
-                                        <span>Reviews</span>
                                     </div>
                                     <div class="info-feature">
-                                        <p>Browse and compare the views of users and safe acertarás.</p>
+                                        <p>that magnify an unforgettable experience. </p>
                                     </div>
                                 </div>
                             </div>
@@ -125,17 +123,17 @@
                             <div class="col-md-4 text-center">
                                 <div class="item-feature text-center">
                                     <div class="head-feature">
-                                        <span>pays</span>
-                                        <br>
+                                        <span>because we are an</span>
+                                        <br>                                        
                                         <div class="title-feature">
-                                            <i class="fa fa-check right-icon"></i>
-                                            the price 
+                                            <i class="fa fa-check left-icon"></i>
+                                            <i class="fa fa-umbrella right-icon"></i>                                            
+                                            affiliate
                                         </div>
                                         <br>
-                                        <span>+ low</span>
                                     </div>
                                     <div class="info-feature">
-                                        <p>All days Escape at the best price in offers for our products.</p>
+                                        <p>of Carefree Vacations travel, the most important agency in the west coast of the U.S. </p>
                                     </div>
                                 </div>
                             </div>
@@ -158,50 +156,26 @@
                             <ul class="services-lines full-services">
                                 <li>
                                     <div class="item-service-line">
-                                        <i class="fa fa-bicycle"></i>
-                                        <h5>Special Activities</h5>
+                                        <i class="fa fa-building-o"></i>
+                                        <h5>Travel Arrangements </h5>
                                     </div>
                                 </li>
                                  <li>
                                     <div class="item-service-line">
                                         <i class="fa fa-plane"></i>
-                                        <h5>Travel Arrangements</h5>
+                                        <h5>Flight Tickets Option</h5>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="item-service-line">
                                         <i class="fa fa-user"></i>
-                                        <h5>Private Guide</h5>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="item-service-line">
-                                        <i class="fa fa-search-plus"></i>
-                                        <h5>Location Manager</h5>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="item-service-line">
-                                        <i class="fa fa-map-marker"></i>
-                                        <h5>Handpicked Hotels</h5>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="item-service-line">
-                                        <i class="fa fa-money"></i>
-                                        <h5>Best Price Guarantee</h5>
+                                        <h5>Trust & Safety </h5>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="item-service-line">
                                         <i class="fa fa-bank"></i>
-                                        <h5>Trust & Safety</h5>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="item-service-line">
-                                        <i class="fa fa-line-chart"></i>
-                                        <h5>Best Travel Agent</h5>
+                                        <h5>Handpicked Hotels</h5>
                                     </div>
                                 </li>
                             </ul>
