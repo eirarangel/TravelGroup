@@ -10,8 +10,8 @@
     $campaignId = 'YOUR MAILCHIMP CAMPAIGN ID - see campaigns() method';
 
     //some email addresses used in the examples:
-    $my_email = 'jdrendon@imaginacionweb.net';
-    $boss_man_email = 'jmartinez@imaginacionweb.net';
+    //$my_email = 'jdrendon@imaginacionweb.net';
+    //$boss_man_email = 'jmartinez@imaginacionweb.net';
 
     //just used in xml-rpc examples
     $apiUrl = 'http://api.mailchimp.com/1.3/';

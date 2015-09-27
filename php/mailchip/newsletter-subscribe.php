@@ -7,7 +7,7 @@ $api = new MCAPI($apikey);
 
 // By default this sends a confirmation email - you will not see new members
 // until the link contained in it is clicked!
-$retval = $api->listSubscribe( $listId, $_GET['email'] );
+//$retval = $api->listSubscribe( $listId, $_GET['email'] );
 
 if ($api->errorCode){
 	echo "<div class='alert alert-danger'>Error, please check!</div>\n";

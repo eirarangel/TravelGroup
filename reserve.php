@@ -21,7 +21,7 @@ $l = "Budget:";
 $z = "Numero de adultos";
 $x = "Comentarios: ";
 $c = "Indícanos requerimientos especiales (vuelos, tours, traslados, etc.) para ayudarte a cotizar a tu gusto y necesidades.";
-
+$v = "Enviar";
 }
 else{
 $q = "Welcome";
@@ -45,6 +45,7 @@ $l = "Budget:";
 $z = "Approximate number of adults: ";
 $x = "Reviews: ";
 $c = "Please indicate special requirements (flights, tours, transfers, etc.) to help you contribute to your needs.";
+$v = "Send";
 
 }
 ?>
@@ -99,52 +100,52 @@ $c = "Please indicate special requirements (flights, tours, transfers, etc.) to 
                                                     <h5><em><?php echo $e; ?></em></h5>
                                                 </center>
 
-                                                <form id="form-contact" class="form-theme" action="php/send-mail.php">
-                                                    <div style="margin-left:20%; margin-right:20%;">
-                                                        <h5><?php echo $r; ?> <input type="text" name="name" value=""></h5>
+                                                <form action="php/send-mail2.php" id="form-contact" class="" style="margin-left:20%; margin-right:20%;">
+                                                        <h5><?php echo $r; ?> <input type="text" name="name"></h5>
                                                         <h5><?php echo $t; ?>
-                                                            <input type="radio" name="sex" value="yes" checked> <?php echo $y; ?> 
-                                                            <input type="radio" name="sex" value="no"> No
+                                                            <input type="radio" name="ciudadano" value="si" checked> <?php echo $y; ?> 
+                                                            <input type="radio" name="ciudadano" value="no"> No
                                                         </h5>
-                                                        <h5><?php echo $u; ?>   <input type="date" name="fecha"> </h5>
-                                                        <h5><?php echo $i; ?>  <input type="text" name="email" value=""></h5>
-                                                        <h5><?php echo $o; ?>   <input type="text" name="telephone" value=""> 
+                                                        <h5><?php echo $u; ?>   <input type="date" name="cumple"> </h5>
+                                                        <h5><?php echo $i; ?>   <input type="text" name="Email"></h5>
+                                                        <h5><?php echo $o; ?>   <input type="text" name="telephone"> 
                                                             <?php echo $a; ?> 
-                                                            <input type="radio" name="sex" value="yes" checked> <?php echo $y; ?> 
-                                                            <input type="radio" name="sex" value="no"> No
+                                                            <input type="radio" name="movil" value="yes" checked> <?php echo $y; ?> 
+                                                            <input type="radio" name="movil" value="no"> No
                                                         </h5>
                                                         <h4><?php echo $s; ?> </h4>
-                                                        <h5><?php echo $d; ?> <input type="text" name="citycountry" value=""></h5>                                                                                                        
-                                                        <h5><?php echo $f; ?> <input type="date" name="fecha"> <?php echo $g; ?>   <input type="date" name="fecha"></h5>
+                                                        <h5><?php echo $d; ?> <input type="text" name="citycountry"></h5>                                                                                                        
+                                                        <h5><?php echo $f; ?> <input type="date" name="fechain"> <?php echo $g; ?>   <input type="date" name="fechaout"></h5>
                                                         <h4><?php echo $h; ?> </h4>
-                                                        <input type="text" name="package_name" class="package_name" value="" readonly>
-                                                        <input type="hidden" name="package_id" class="package_id" value="">
+                                                        <input type="text" name="package_name" class="package_name" readonly>
+                                                        <input type="hidden" name="package_id" class="package_id">
                                                         <h5> <?php echo $j; ?> <input type="number" name="quantity" min="1" max="99" value="1"><br></h5>
                                                         <strong><?php echo $k; ?></strong><br />
                                                         <br />
                                                         <h5><?php echo $l; ?>
-                                                            <select>
-                                                              <option value="volvo">US$0 – 1,400</option>
-                                                              <option value="saab">US$1400 - 2800</option>
-                                                              <option value="mercedes">US$2800 – 4200</option>
-                                                              <option value="audi">US$4200 – 5600</option>
-                                                              <option value="volvo">US$5600 – 7000</option>
-                                                              <option value="saab">US$7000 – 8400</option>
-                                                              <option value="mercedes">US$8400 – 9800</option>
-                                                              <option value="audi">US$9800 – 11200</option>                                                          
+                                                            <select name="budget">
+                                                              <option value="US$0 – 1,400">US$0 – 1,400</option>
+                                                              <option value="US$1400 - 2800">US$1400 - 2800</option>
+                                                              <option value="US$2800 – 4200">US$2800 – 4200</option>
+                                                              <option value="US$4200 – 5600">US$4200 – 5600</option>
+                                                              <option value="US$5600 – 7000">US$5600 – 7000</option>
+                                                              <option value="US$7000 – 8400">US$7000 – 8400</option>
+                                                              <option value="US$8400 – 9800">US$8400 – 9800</option>
+                                                              <option value="US$9800 – 11200">US$9800 – 11200</option>                                                          
                                                             </select>    
                                                         </h5>
-                                                        <h5><?php echo $z; ?><input type="number" name="quantity" min="1" max="99" value="1"></h5>
+                                                        <h5><?php echo $z; ?><input type="number" name="adultos" min="1" max="99" value="1"></h5>
                                                         <h5><?php echo $x; ?></h5>
-                                                        <textarea rows="4" cols="50" value="Type of vacation….."></textarea><br />
+                                                        <textarea rows="4" cols="50" value="Type of vacation….." name="descripcion"></textarea><br />
                                                         <h6><em><?php echo $c; ?></em></h6>
                                                             <div align="right">
-                                                                <input type="submit" onclick="location.href = 'help.php';" value="Send"> 
+                                                                <input type="submit" onclick="location.href = 'help.php';" name="Submit" value="<?php echo $v; ?>" class="btn btn-primary">
+                                                                <!--<input type="submit" onclick="location.href = 'help.php';" value="Send"> -->
                                                             </div>
                                                         <br />
                                                         <br />
-                                                    </div>
                                                 </form>
+                                                <div id="result"></div>  
                                             </div>
                                         </div>
                                         <!-- end Tab One - Hotel -->
