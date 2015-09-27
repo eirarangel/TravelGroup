@@ -1,9 +1,4 @@
 <h1 class="page-header">Paquetes</h1>
-    <div class="row">
-        <div class="col-md-2 tool-bar offset col-md-offset-10">
-            <button type="button" class="btn btn-success" id="addPackage">Agregar paquete</button>
-      </div>
-    </div>
 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 
 </div>
@@ -15,10 +10,6 @@
 
 <script type="text/javascript">
     $(document).ready(function() {
-        $("#addPackage").click(function() {
-            $("#dynamic-content").load("http://localhost/TravelGroup/admin/package-edit.html");
-        });
-
         setAccordion();
     });
 
@@ -48,9 +39,10 @@
                                 '<h4 class="panel-title">' +
                                     '<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse' + object.id + '" aria-expanded="true" aria-controls="collapse' + object.id + '">' + name + ' | ' + nameEng +
                                     '</a>' +
+                                    '<button type="button" class="btn btn-success btn-xs addPackage" id="cat-' + object.id + '">Agregar paquete</button>' +
                                 '</h4>' +
                             '</div>' +
-                            '<div id="collapse' + object.id + '" class="panel-collapse collapse" ' +
+                            '<div id="collapse' + object.id + '" class="panel-collapse collapse in" ' +
                             'role="tabpanel" aria-labelledby="heading' + object.id + '">' +
                                 '<div id="panel' + object.id + '" class="panel-body"></div>' +
                             '</div>' +
@@ -60,6 +52,11 @@
         }
         $("#accordion").empty();
         $("#accordion").append(panels);
+        $(".addPackage").click(function() {
+            var id = $(this).attr("id").substring(4);
+             window.history.pushState("object or string", "Title", "http://localhost/TravelGroup/admin?cat=" + id)
+            $("#dynamic-content").load("http://localhost/TravelGroup/admin/package-edit.html");
+        });
         setEvent();
     }
 
@@ -129,11 +126,11 @@
                         '<table class="table table-striped">' +
                             '<thead>' +
                                 '<tr>' +
-                                    '<th></th>' +
+                                    '<th>Editar</th>' +
                                     '<th>Nombre de Paquete</th>' +
-                                    '<th>Prioridad Menu</th>' +
-                                    '<th>Prioridad Front</th>' +
-                                    '<th>Detalles Agente</th>' +
+                                    '<th class="align-center">Prioridad Menu</th>' +
+                                    '<th class="align-center">Prioridad Página Principal</th>' +
+                                    '<th class="align-center">Detalles Agente</th>' +
                                 '</tr>' +
                             '</thead>' +
                             '<tbody class="bodyTable">';

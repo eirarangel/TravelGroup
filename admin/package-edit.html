@@ -1,4 +1,3 @@
-<div class="content">
 <div class="row" id="topNav">
 	<a href="#" id="backPackage">Regresar</a>
 </div>
@@ -11,7 +10,6 @@
 <div class="alert alert-success alert-dismissible" role="alert" id="successAlert">
     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
     <span id="successMessage"></span>
-</div>
 </div>
 
 
@@ -136,24 +134,28 @@
     <div class="row">
     	<div class="form-group col-md-12">
             <label for="formCategory">Categoría</label>
-            <select id="formCategory" class="form-control" required>
-			</select>
+            <input class="form-control formCategory" type="text" readonly>
         </div>
     </div>
     <div class="row">
     	<div class="form-group col-md-6">
-            <label for="formPriority" class="priority_label">Prioridad 1</label>
+            <label for="formPriority" class="priority_label">Prioridad menú</label>
             <label class="radio-inline">
                 <input type="checkbox" id="formPriority" value="1">
             </label>
         </div>
 
         <div class="form-group col-md-6">
-            <label for="formPriority2" class="priority_label">Prioridad 2</label>
+            <label for="formPriority2" class="priority_label">Prioridad página principal</label>
             <label class="radio-inline">
                 <input type="checkbox" id="formPriority2" value="1">
             </label>
         </div>
+    </div>
+    <div class="row">
+    <label>IMPORTANTE</label>
+    <p>Las prioridades se deshabilitarán si ya se llenó el limite de paquetes con prioridad asignada, quitar la prioridad de otros paquetes antes de
+    asignar prioridad a otros.</p>
     </div>
     <div class="row">
         <div class="form-group col-md-3">
@@ -190,7 +192,8 @@
             window.history.pushState("object or string", "Title", "http://localhost/TravelGroup/admin/");
         	$("#dynamic-content").load("http://localhost/TravelGroup/admin/package.html");
         });
-        getCategories();
+        //getCategories();
+        validateEditAction();
         addCategoryItem();
         removePackageEvent();
 
@@ -211,13 +214,18 @@
         if(getURLParameter('edit')) {
             var packageId = getURLParameter('edit');
             var query = new Parse.Query(Parse.Object.extend("Packages"));
+            query.include("category");
             query.get(packageId, {
                 success: function(packageEsp) {
                     $("#formItemId").val(packageEsp.id);
                     $("#formCreatedAt").val(packageEsp.createdAt);
                     $("#formUpdatedAt").val(packageEsp.updatedAt);
                     $("#formNameEsp").val(packageEsp.get('name'));
-                    $("#formCategory").val(packageEsp.get('category').id);
+
+                    $(".page-header").text("Editar paquete de " + packageEsp.get('category').get("name"));
+                    $(".formCategory").val(packageEsp.get('category').get("name"));
+                    $(".formCategory").attr("id", packageEsp.get('category').id);
+
                     if(typeof packageEsp.get("image") != null) {
                         $("#file-input-new").hide();
                         $(".fileinput-exists").show();
@@ -257,6 +265,8 @@
                                 $("#formDescriptionEng").val(packageEng.get('description'));
                             }
                             $("#formNameEng").val(packageEng.get('name'));
+                            validatePriorityMenu();
+                            validatePriorityFront();
                         }, error: function(error) {
                             errorAlert(error);
                         }
@@ -267,34 +277,76 @@
             });
         } else {
             $("#deletePackage").hide();
+            getCategory(getURLParameter('cat'));
+            validatePriorityMenu();
+            validatePriorityFront();
         }
     }
 
- 	function getCategories() {
-        var query = new Parse.Query(Parse.Object.extend("Category"));
-        query.descending("createdAt");
-        query.find({
-            success: function(results) {
-                createCategoriesData(results);
-            },
-            error: function(error) {
-                errorAlert(error);
-            }
+    function validatePriorityMenu() {
+        var query = new Parse.Query(Parse.Object.extend("Packages"));
+        query.equalTo("priority", 1);
+        query.count({
+            success: function(count) {
+                if(count >= 4  && $("#formPriority").prop('checked') == false) {
+                    $("#formPriority").attr("disabled", true);
+                } 
+            }, error: function(error) {
+          }
         });
     }
 
-    function createCategoriesData(results) {
-        var rows = "";
-        if(results.length == 0) rows += "<p>No hay resultados</p>";
-        
-        for (var i = 0; i < results.length; i++) {
-            var object = results[i];
-            var row = "<option value ='" + object.id + "'>" + object.get("name") + " | " + object.get("nameEng") + "</option>";
-            rows += row;
-        }
-        $("#formCategory").append(rows);
-        validateEditAction();
+    function validatePriorityFront() {
+        var query = new Parse.Query(Parse.Object.extend("Packages"));
+        query.equalTo("priority2", 1);
+        query.count({
+            success: function(count) {
+                if(count >= 3  && $("#formPriority2").prop('checked') == false) {
+                    $("#formPriority2").attr("disabled", true);
+                } 
+            }, error: function(error) {
+          }
+        });
     }
+
+    function getCategory(id) {
+        var query = new Parse.Query(Parse.Object.extend("Category"));
+        query.get(id, {
+                success: function(category) {
+                    $(".page-header").text("Agregar paquete en " + category.get("name"));
+                    $(".formCategory").val(category.get("name"));
+                    $(".formCategory").attr("id", "cat" + category.id);
+                }, error: function(error) {
+
+                }
+            });
+    }
+
+ 	// function getCategories() {
+  //       var query = new Parse.Query(Parse.Object.extend("Category"));
+  //       query.descending("createdAt");
+  //       query.find({
+  //           success: function(results) {
+  //               createCategoriesData(results);
+  //           },
+  //           error: function(error) {
+  //               errorAlert(error);
+  //           }
+  //       });
+  //   }
+
+    // function createCategoriesData(results) {
+    //     var rows = "";
+    //     if(results.length == 0) rows += "<p>No hay resultados</p>";
+        
+    //     for (var i = 0; i < results.length; i++) {
+    //         var object = results[i];
+    //         var row = "<option value ='" + object.id + "'>" + object.get("name") + " | " + object.get("nameEng") + "</option>";
+    //         rows += row;
+    //     }
+    //     $("#formCategory").append(rows);
+    //     validateEditAction();
+    // }
 
     function addCategoryItem() {
         $("#addPackageItem").submit(function(event){
@@ -325,7 +377,7 @@
               var parseFile = new Parse.File(name, file);
               packageDetails.image = parseFile;
             }
-            packageDetails.categoryId = $("#formCategory").val();
+            packageDetails.categoryId = $(".formCategory").attr("id").substring(3);
             packageDetails.priority = 0;
             if ($('#formPriority').is(":checked")) packageDetails.priority = 1;
             packageDetails.priority2 = 0;
@@ -351,7 +403,8 @@
                                         packageEng = setPackageDataEng(packageEng, packageDetails);
                                         packageEng.set('category', category);
                                         packageEng.save();
-                                        successAlert("Paquete modificado");
+                                        window.history.pushState("object or string", "Title", "http://localhost/TravelGroup/admin/");
+                                        $("#dynamic-content").load("http://localhost/TravelGroup/admin/package.html");
                                     },
                                     error: function(error) {
                                         errorAlert(error);
@@ -433,12 +486,8 @@
                 packageEng.save(null, {
                     success: function(packageEng) {
                         console.log('save successfully yaih!');
-                        successAlert("Paquete agregado");
-                        $("#formItemId").val(packageEsp.id);
-                        $("#formCreatedAt").val(packageEsp.createdAt);
-                        $("#formUpdatedAt").val(packageEsp.updatedAt);
-                        $("#deletePackage").show();
-                        window.history.pushState("object or string", "Title", "http://localhost/TravelGroup/admin?edit=" + packageEsp.id);
+                        window.history.pushState("object or string", "Title", "http://localhost/TravelGroup/admin/");
+                        $("#dynamic-content").load("http://localhost/TravelGroup/admin/package.html");
                     }, error: function(packageEng, error) {
                         errorAlert(error);
                     }

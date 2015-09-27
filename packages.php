@@ -53,7 +53,7 @@
                                                 </p>
                                                 <p id="package_description"></p>
                                                 <div align="right">
-                                                    <input type="submit" onclick="location.href = 'reserve.php';" value="Reserve Now!">                                                  
+                                                    <input id="reserve_button" type="button" value="Reserve Now!">                                                  
                                                 </div>
                                         </div>
                                    </div>
@@ -97,8 +97,13 @@
 <?php include 'footer.html'; ?>
 
 <script type="text/javascript">
+    var id = getURLParameter("view").substring(7);
     $(document).ready(function() {
-        getPackage(getURLParameter("view").substring(7));
+        getPackage(id);
+
+        $("#reserve_button").click(function() {
+            window.location.href =  "reserve.php?package=" + id;
+        });
     });
 
     function getPackage(id) {

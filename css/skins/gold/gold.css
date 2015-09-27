@@ -87,7 +87,8 @@ blockquote > a,
 .sitemap li a:hover,
 .pagination > li > a, .pagination > li > span,
 address i,
-address a{
+address a,
+#privacy_policy{
 	color: #957947 !important;
 }
 

@@ -66,7 +66,9 @@
                                                     <h5>City and Country: <input type="text" name="citycountry" value=""></h5>                                                                                                        
                                                     <h5>Departure date:  <input type="date" name="fecha"> Return date:  <input type="date" name="fecha"></h5>
                                                     <h4>I WANT TO GO TO</h4>
-                                                    <h5>_VAR_DEMO__, Num. of nights <input type="number" name="quantity" min="1" max="99" value="1"><br></h5>
+                                                    <input type="text" name="package_name" class="package_name" value="" readonly>
+                                                    <input type="hidden" name="package_id" class="package_id" value="">
+                                                    <h5> Num. of nights <input type="number" name="quantity" min="1" max="99" value="1"><br></h5>
                                                     <strong>Note Cruise: All cabins must have one adult 21 years or older in the cabin</strong><br />
                                                     <br />
                                                     <h5>Budget:
@@ -111,53 +113,15 @@
 
 <script type="text/javascript">
     $(document).ready(function() {
-        getPackage(getURLParameter("view").substring(7));
+        getPackage(getURLParameter("package"));
     });
 
     function getPackage(id) {
         var query = new Parse.Query(Parse.Object.extend("Packages"));
-        query.include("category");
         query.get(id, {
             success: function(packageObject) {
-                $("#pack_category_name").text(packageObject.get("category").get("name"));
-                $("#package_name").text(packageObject.get("name"));
-                $("#package_price").text(packageObject.get("price"));
-                $("#package_description").text(packageObject.get("description"));
-
-                $(".image_03_parallax").css('background-image', 'url(' + packageObject.get("category").get("image").url() + ')');
-
-                var image = "img/gallery-2/2.jpg";
-                if(typeof packageObject.get("image") != "undefined") {
-                    image = packageObject.get("image").url();
-                }
-
-                $("#package_image").append('<div class="overlay"><a href="'+image+'" class="fancybox"><i class="fa fa-plus-circle"></i></a></div><img src="'+image+'" alt="" class="img-responsive">');
-                
-
-                var destinations = packageObject.get("destinations").split(',');
-                var destination = "";
-                for(var i=0; i<destinations.length; i++) {
-                    destination += '<li><i class="fa fa-check"></i>' + destinations[i] + '</li>';
-                }
-                $("#package_destinations").empty();
-                $("#package_destinations").append(destination);
-
-                var includes = packageObject.get("include").split(',');
-                var include = "";
-                for(var i=0; i<includes.length; i++) {
-                    include += '<li><i class="fa fa-check"></i>' + includes[i] + '</li>';
-                }
-                $("#package_includes").empty();
-                $("#package_includes").append(include);
-
-                var restrictions = packageObject.get("restrictions").split(',');
-                var restriction = "";
-                for(var i=0; i<restrictions.length; i++) {
-                    restriction += '<li><i class="fa fa-check"></i>' + restrictions[i] + '</li>';
-                }
-                $("#package_restrictions").empty();
-                $("#package_restrictions").append(restriction);
-
+                $(".package_name").val(packageObject.get("name"));
+                $(".package_id").val(packageObject.id);
             }, error: function(error) {
 
             }

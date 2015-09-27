@@ -115,7 +115,7 @@ body {
   padding:0px !important;
 }
 
-#addItem, #addPackage,#topNav {
+#addItem,#topNav {
   margin-bottom: 20px;
 }
 
@@ -151,4 +151,12 @@ body {
 }
 #icon-grid-section {
   margin:10px;
+}
+
+.addPackage {
+  float:right;
+}
+
+.align-center {
+  text-align: center;
 }
