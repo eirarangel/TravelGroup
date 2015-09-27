@@ -1,6 +1,6 @@
 <?php
-	$to = "jdrendon@imaginacionweb.net"; /*Your Email*/
-	$subject = "Messsage from Travelia Template"; /*Issue*/
+	$to = "israel-villalobos@hotmail.com"; /*Your Email*/
+	$subject = "Contact FORM"; /*Issue*/
 	$date = date ("l, F jS, Y"); 
 	$time = date ("h:i A"); 	
 	$Email=$_REQUEST['Email'];

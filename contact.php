@@ -1,7 +1,7 @@
 <?php include 'header.html'; ?>
 
             <!-- Section Title-->    
-            <div class="section-title-02">
+            <div class="section-title-01">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
@@ -42,9 +42,9 @@
                                         </address>
 
                                         <address>
-                                          <strong>Travelia Emails</strong><br>
+                                          <strong>Travelgroup Holidays.</strong><br>
                                           <i class="fa fa-envelope"></i><strong>Email:</strong><a href="mailto:#">mpicazo@travelgroup-holidays.com</a><br>
-                                          <i class="fa fa-envelope"></i><strong>Email:</strong><a href="mailto:#"> mpicazo@carefreevacations.com</a><br>
+                                          <i class="fa fa-envelope"></i><strong>Email:</strong><a href="mailto:#">mpicazo@carefreevacations.com</a><br>
                                         </address>
                                     </aside>
 
@@ -73,22 +73,6 @@
                     </div>
                 </div>   
                 <!-- End content info - page Fill with  --> 
-
-                <!-- Twitter Section -->
-                <div class="section-twitter content_resalt border-top">
-                    <i class="fa fa-twitter icon-big"></i>
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="text-center">
-                                    <h2>Our recents <span class="text-resalt">twitts</span>.</h2>
-                                </div>
-                                <div id="twitter"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>  
-                <!-- End Twitter Section -->  
             </div>
             <!-- End Content Central -->
       

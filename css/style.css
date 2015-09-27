@@ -1284,7 +1284,7 @@ p.lead .line{
 }
 .services-lines li:hover{
 	background-color: #F5F6FA;
-	cursor: pointer;
+	/*cursor: pointer;*/
 }
 .services-lines li:hover i {
     -ms-transform: translate(0,40px); /* IE 9 */
@@ -3698,4 +3698,7 @@ address strong{
 .widget .checkbox label{
 	font-size: 300;
 	font-size: 0.8rem;
+}
+.image_privacy_policy{
+	background: url(../img/official/privacy_policy_ripl1d.jpg);
 }

@@ -1,4 +1,94 @@
-<?php include 'header.html'; ?>
+<?php
+include 'header.html';
+if (isset($_GET['lang'])) {
+?>
+<!-- Section Title-->    
+            <div style="
+    height: 300px;
+    background-color: #262626;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    overflow: hidden;">
+                <!-- Parallax Background -->
+                <div class="bg_parallax image_03_parallax"></div>
+                <!-- Parallax Background -->
+
+                <!-- Content Parallax-->
+                <div class="opacy_bg_02">
+                     <div class="container">
+                        <h1 style="padding-top: 40px;">¿Dudas?</h1>
+                    </div>  
+                </div>  
+                <!-- End Content Parallax--> 
+            </div>   
+            <!-- End Section Title-->
+
+            <!--Content Central -->
+            <section class="content-central">
+                <!-- Shadow Semiboxed -->
+                <div class="semiboxshadow text-center">
+                    <img src="img/img-theme/shp.png" class="img-responsive" alt="">
+                </div>
+                <!-- End Shadow Semiboxed -->
+
+                <!-- End content info - Vacations Destinatios-->
+                <div class="content_info">
+                    <div class="content_info">
+                    <!-- Parallax Background -->
+                    <div class="bg_parallax image_02_parallax"></div>
+                    <!-- Parallax Background -->
+
+                    <div class="content_info">
+                    <!-- Info Resalt-->
+                    <div class="content_resalt tabs-detailed">
+                        <div class="container wow fadeInUp">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="tab-content">
+                                        <!-- Tab One - Hotel -->
+                                        <div class="tab-pane active" id="hotel">                                        
+                                            <div class="row padding-top">
+                                                <center>    
+                                                    <h2>Te ayudamos!</h2>
+                                                    
+                                                    <h4>Llama en Mexico o Estados Unidos</h4>
+                                                    <p>MX 661-100-6379 <br>
+                                                    US 619-730-0380 <br>
+                                                    </p>
+
+                                                    
+                                                    <h4>Horarios de servicio:</h4>
+                                                    Lunes a Viernes 9:00am-2:00pm <br />
+                                                    Sabados 9:00am-2:00pm <br />
+                                                    </p>
+             
+                                                    <h5>Dirección: 875 Bowsprit Rd. Chula Vista Ca.91914
+
+                                                    <h5>O contactanos via <a href="https://www.facebook.com/Travelgroup-Holidays-360078470852743/timeline/?ref=br_rs" target="_blank"><i class="fa fa-facebook-square"></i></a></h5>
+                                                    <br>
+                                                    <br>
+                                                </center>
+                                            </div>
+                                        </div>
+                                        <!-- end Tab One - Hotel -->
+                                    </div>  
+                                </div>                 
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Info Resalt-->
+                </div>
+                </div>                        
+                </div>   
+                <!-- End content info - Vacations Destinatios-->               
+
+            </section>
+            <!-- End Content Central -->
+<?php 
+}
+else{
+?>
 <!-- Section Title-->    
             <div style="
     height: 300px;
@@ -62,7 +152,7 @@
              
                                                     <h5>Address: 875 Bowsprit Rd. Chula Vista Ca.91914
 
-                                                    <h5>Or contact us via <a href="#"><i class="fa fa-facebook-square"></i></a> <a href="#"><i class="fa fa-twitter-square"></i></a></h5>
+                                                    <h5>O contactanos via <a href="https://www.facebook.com/Travelgroup-Holidays-360078470852743/timeline/?ref=br_rs" target="_blank"><i class="fa fa-facebook-square"></i></a></h5>
                                                     <br>
                                                     <br>
                                                 </center>
@@ -82,7 +172,11 @@
 
             </section>
             <!-- End Content Central -->
-<?php include 'footer.html'; ?>
+
+<?php 
+}
+    include 'footer.html';
+?>
 
 <script type="text/javascript">
     $(document).ready(function() {

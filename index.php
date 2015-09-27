@@ -1,5 +1,199 @@
-<?php include 'header.html'; ?>
+<?php
+include 'header.html';
+if (isset($_GET['lang'])) {
+?>
+    <!-- Slide And Filter Section-->    
+    <section class="tp-banner-container no-margin" style="overflow: visible;">
+        <!-- SLIDE  -->
+        <div class="tp-banner" >
+            <!-- SLIDES CONTENT-->
+            <ul> 
+                        <!-- SLIDE  -->
+                        <li data-transition="slidevertical" data-slotamount="1" data-masterspeed="1000" data-saveperformance="off"  data-title="Slide">
+                            <!-- MAIN IMAGE -->
+                            <img src="img/official/banner1.jpg"  alt="fullslide1" data-bgposition="center center" data-kenburns="on" data-duration="6000" data-ease="Linear.easeNone" data-bgfit="130" data-bgfitend="100" data-bgpositionend="right center">
+                            <!-- LAYERS -->
+                        </li>
 
+                        <!-- SLIDE  -->
+                        <li data-transition="slidehorizontal" data-slotamount="1" data-masterspeed="1000" data-saveperformance="off"  data-title="Slide">
+                            <!-- MAIN IMAGE -->
+                            <img src="img/official/banner2.jpg"  alt="fullslide1" data-bgposition="top center" data-kenburns="on" data-duration="6000" data-ease="Linear.easeNone" data-bgfit="130" data-bgfitend="100" data-bgpositionend="right center">
+                            <!-- LAYERS -->
+                        </li>
+
+                        <!-- SLIDE  -->
+                        <li data-transition="slidevertical" data-slotamount="1" data-masterspeed="1000" data-saveperformance="off"  data-title="Slide">
+                            <!-- MAIN IMAGE -->
+                            <img src="img/official/banner3.jpg"  alt="fullslide1" data-bgposition="right center" data-kenburns="on" data-duration="6000" data-ease="Linear.easeNone" data-bgfit="130" data-bgfitend="100" data-bgpositionend="right center">
+                            <!-- LAYERS -->
+                        </li>
+
+                        <!-- SLIDE  -->
+                        <li data-transition="slidevertical" data-slotamount="1" data-masterspeed="1000" data-saveperformance="off"  data-title="Slide">
+                            <!-- MAIN IMAGE -->
+                            <img src="img/official/banner4.jpg"  alt="fullslide1" data-bgposition="left center" data-kenburns="on" data-duration="6000" data-ease="Linear.easeNone" data-bgfit="130" data-bgfitend="100" data-bgpositionend="right center">
+                            <!-- LAYERS -->
+                        </li>
+                        <!-- SLIDE  -->
+                        <li data-transition="slidevertical" data-slotamount="1" data-masterspeed="1000" data-saveperformance="off"  data-title="Slide">
+                            <!-- MAIN IMAGE -->
+                            <img src="img/official/banner5.jpg"  alt="fullslide1" data-bgposition="left center" data-kenburns="on" data-duration="6000" data-ease="Linear.easeNone" data-bgfit="130" data-bgfitend="100" data-bgpositionend="right center">
+                            <!-- LAYERS -->
+                        </li>
+                        <!-- SLIDE  -->
+                        <li data-transition="slidevertical" data-slotamount="1" data-masterspeed="1000" data-saveperformance="off"  data-title="Slide">
+                            <!-- MAIN IMAGE -->
+                            <img src="img/official/banner6.jpg"  alt="fullslide1" data-bgposition="left center" data-kenburns="on" data-duration="6000" data-ease="Linear.easeNone" data-bgfit="130" data-bgfitend="100" data-bgpositionend="right center">
+                            <!-- LAYERS -->
+                        </li>
+                    </ul> 
+                    <!-- END SLIDES  --> 
+                    <div class="tp-bannertimer"></div>  
+                </div>
+                 <!-- SLIDE CONTENT-->
+                 <!-- FILTER HEADER - TITLE HEADER-->
+                <div class="filter-title">
+                    <!-- TITLE HEADER-->
+                    <div class="title-header">
+                        <div class="row icon-row" id="icon-row"></div>
+                    </div>
+                    <!-- END TITLE HEADER-->
+                    <!-- END FILTER HEADER-->
+                </div>
+                <!-- END FILTERHEADER - TITLE HEADER -->
+            </section>       
+            <!-- End Slide And Filter Section-->
+
+
+
+            <!--Content Central -->
+            <section class="content-central">
+           <!-- End content info - Features-->
+                <div class="content_info content_resalt">
+                    <!-- Title -->
+                    <div class="container">
+                        <div class="row">
+                            <div class="titles">
+                                <h2><span>¿</span>Por qué <span>elegir</span> Travelgroup Holidays<span>?</span></h2>
+                                <i class="fa fa-plane"></i>
+                                <hr class="tall">
+                            </div>                    
+                        </div>
+                    </div>
+                    <!-- End Title-->
+
+                    <!-- content-->
+                    <div class="container">
+                        <div class="row padding-bottom">
+                            <div class="col-md-4">
+                                <div class="item-feature text-center">
+                                    <div class="head-feature">
+                                        <span>porque cumplimos los</span>
+                                        <br>                                        
+                                        <div class="title-feature">
+                                            <i class="fa fa-sun-o left-icon"></i>
+                                            <i class="fa fa-umbrella right-icon"></i>
+                                            deseos 
+                                        </div>
+                                        <br>
+                                    </div>
+                                    <div class="info-feature">
+                                        <p>expresados de nuestros clientes. <br /> Nuestro secreto "Hacer que las cosas sucedan". </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 text-center">
+                                <div class="item-feature text-center">
+                                    <div class="head-feature">
+                                        <span>porque somos un</span>
+                                        <br>                                        
+                                        <div class="title-feature">
+                                            <i class="fa fa-heart left-icon"></i>
+                                            <i class="fa fa-umbrella right-icon"></i>                                            
+                                            estilo de vida
+                                        </div>
+                                        <br>
+                                    </div>
+                                    <div class="info-feature">
+                                        <p>que engrandece experiencias inolvidables!! </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 text-center">
+                                <div class="item-feature text-center">
+                                    <div class="head-feature">
+                                        <span>porque, somos una</span>
+                                        <br>                                        
+                                        <div class="title-feature">
+                                            <i class="fa fa-check left-icon"></i>
+                                            <i class="fa fa-umbrella right-icon"></i>                                            
+                                            agencia afiliada
+                                        </div>
+                                        <br>
+                                    </div>
+                                    <div class="info-feature">
+                                        <p>a Carefree Vacations travel, la agencia más importante en la costa de los Estados Unidos </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End content-->
+                </div>   
+                <!-- End content info - Features--> 
+
+                <!-- Item Gallery Grid View--> 
+                <div class="row" id="front-packages"></div>
+                                <!-- End Item Gallery Grid View--> 
+
+                
+                <!-- End content info - Services Items-->
+                <div class="content_info">
+                    <div class="row">
+                        <!-- Services Items -->
+                        <div class="col-md-12">
+                            <ul class="services-lines full-services">
+                                <li>
+                                    <div class="item-service-line">
+                                        <i class="fa fa-building-o"></i>
+                                        <h5>Arreglos de viaje</h5>
+                                    </div>
+                                </li>
+                                 <li>
+                                    <div class="item-service-line">
+                                        <i class="fa fa-plane"></i>
+                                        <h5>Opcion para boletaje aereo</h5>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-service-line">
+                                        <i class="fa fa-user"></i>
+                                        <h5>Confianza y seguro de viaje</h5>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-service-line">
+                                        <i class="fa fa-bank"></i>
+                                        <h5>Hoteles seleccionados</h5>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div> 
+                        <!-- End Services Items --> 
+                    </div>
+                </div>   
+                <!-- End content info - Services Items --> 
+
+                
+            </section>
+            <!-- End Content Central -->
+<?php 
+}
+else{
+?>
     <!-- Slide And Filter Section-->    
     <section class="tp-banner-container no-margin" style="overflow: visible;">
         <!-- SLIDE  -->
@@ -188,8 +382,10 @@
                 
             </section>
             <!-- End Content Central -->
-
-<?php include 'footer.html'; ?>         
+<?php 
+}
+    include 'footer.html';
+?>
 
 <!--Slider Function-->
 <script type="text/javascript">

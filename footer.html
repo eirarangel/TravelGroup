@@ -1,4 +1,94 @@
+<?php
+if (isset($_GET['lang'])) {
+?>
+<!DOCTYPE html>
 <!-- footer-->
+            <footer id="footer" class="footer-v1">
+                <div class="container">
+                    <div class="row">
+                        <!-- Title Footer-->
+                        <div class="col-md-5">
+                            <div class="title-footer">
+                                <h2>Reserve Ahora!
+                            </div>
+
+                            <p>Usted puede elegir su destino favorito y comenzar a planificar sus vacaciones a largo plazo. Ofrecemos muchos destinos y tenemos los mejores hoteles para que pueda alojar y disfrutar de su estancia sin problemas. Reserve ahora su viaje en Travelgroup Holidays.</p>
+                        </div>
+                        <!-- End Title Footer-->
+
+                        <div class="col-md-7">
+                            <div class="row">                             
+                                <!-- Social Us-->
+                                <div class="col-md-3">
+                                    <h3>SIGUENOS EN</h3>
+                                    <ul class="social">
+                                        <li class="facebook"><span><i class="fa fa-facebook"></i></span><a href="https://www.facebook.com/Travelgroup-Holidays-360078470852743/timeline/?ref=br_rs" target="_blank">Facebook</a></li>
+                                    </ul>
+                                </div>
+                                <!-- End Social Us-->
+                                
+                                <!-- Recent links-->
+                                <div class="col-md-4">
+                                    <h3>VIAJES</h3>
+                                    <ul id="trips_footer">                                           
+                                    </ul>
+                                </div>
+                                <!-- End Recent links-->
+
+                                <!-- Contact Us-->
+                                <div class="col-md-4">
+                                   <h3>CONTACTANOS</h3>
+                                   <ul class="contact_footer">
+                                        <li>
+                                            <i class="fa fa-envelope"></i>mpicazo@travelgroup-holidays.com
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-phone"></i> <strong>EU:</strong> (619) 730-0380
+                                         </li>
+                                        <li>
+                                            <i class="fa fa-phone"></i> <strong>MX:</strong> (661) 100-6379
+                                         </li>                                         
+                                        <li class="location">
+                                            <i class="fa fa-home"></i> 875 Bowsprit Rd. CA 91914
+                                        </li>                                   
+                                    </ul>
+                                </div>
+                                <!-- Contact Us-->
+                            </div>                      
+                        </div>
+                    </div>
+                </div>
+
+                <!-- footer Down-->
+                <div class="footer-down">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p>&copy; 2015 Travelgroup Holidays. <br />Afiliados a CAREFREE VACATIONS|CST #2079194-10, <a href="privacy_policy.php">Politicas de Privacidad</a>.</p>
+                            </div>
+                            <div class="col-md-6">
+                                <!-- Nav Footer-->
+                                <ul class="nav-footer">
+                                    <li><a href="travelgroup.php">INICIO</a> </li>
+                                    <li><a href="categorys.php">VIAJES</a></li> 
+                                    <li><a href="contact.php">CONTACTANOS</a></li>
+                                </ul>
+                                <!-- End Nav Footer-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- footer Down-->
+            </footer> 
+
+                        <!-- End footer-->
+        </div>
+        <!-- End layout-->
+<?php 
+}
+else{
+?>
+        <!-- footer-->
             <footer id="footer" class="footer-v1">
                 <div class="container">
                     <div class="row">
@@ -8,7 +98,7 @@
                                 <h2>Reserve now!
                             </div>
 
-                            <p>You can choose your favorite destination and start planning your long-awaited vacation. We offer thousands of destinations and have a wide variety of hotels so that you can host and enjoy your stay without problems. Book now your trip at Travelgroup holidays.</p>
+                            <p>You can choose your favorite destination and start planning your long-awaited vacation. We offer many of destinations and have the best hotels so that you can host and enjoy your stay without problems. Book now your trip at Travelgroup Holidays.</p>
                         </div>
                         <!-- End Title Footer-->
 
@@ -18,7 +108,7 @@
                                 <div class="col-md-3">
                                     <h3>FOLLOW US</h3>
                                     <ul class="social">
-                                        <li class="facebook"><span><i class="fa fa-facebook"></i></span><a href="#">Facebook</a></li>
+                                        <li class="facebook"><span><i class="fa fa-facebook"></i></span><a href="https://www.facebook.com/Travelgroup-Holidays-360078470852743/timeline/?ref=br_rs" target="_blank">Facebook</a></li>
                                     </ul>
                                 </div>
                                 <!-- End Social Us-->
@@ -81,7 +171,9 @@
                         <!-- End footer-->
         </div>
         <!-- End layout-->
-
+<?php 
+}
+?>
         <script type="text/javascript">
             $(function() {
                 setCategoriesFooter();
