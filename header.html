@@ -62,14 +62,14 @@ if (isset($_GET['lang'])) {
                         <ul class="collapse"><!-- collapse class for collapse the drop down -->
                             <!-- website title - Logo class -->
                             <li class="title">
-                                <a href="index.php"><span>T</span>ravelgroup<span>.</span></a> 
+                                <a href="index.php?lang=esp"><span>T</span>ravelgroup<span>.</span></a> 
                                 <!--<i class="fa fa-rocket"></i>-->
                             </li>
                             <!-- End website title - Logo class -->
 
-                            <li class="menu-element" id="menu-main_content"><a href="index.php">INICIO</a></li>
+                            <li class="menu-element" id="menu-main_content"><a href="index.php?lang=esp">INICIO</a></li>
 
-                            <li class="menu-element" id="menu-trips"><a href="trips.php">VIAJES</a></li>                        
+                            <li class="menu-element" id="menu-trips"><a href="trips.php?lang=esp">VIAJES</a></li>                        
                             
                             <li><a href="#">PAQUETES</a> 
                                 <div id="top-menu-packages" class="drop-down full-width hover-fade">
@@ -78,8 +78,8 @@ if (isset($_GET['lang'])) {
                             <?php 
                                 $url = substr($_SERVER['REQUEST_URI'], 0, -9);
                             ?>
-                            <li class="menu-element" id="menu-contact"><a href="contact.php">CONTACTO</a></li>
-                            <li><a href="<?= $url; ?>" style="display: inline-block;">Lenguaje <img src="img/mx.png" style="display: inline-block;"></a></li>
+                            <li class="menu-element" id="menu-contact"><a href="contact.php?lang=esp">CONTACTO</a></li>
+                            <li><a href="<?= $url ?>" style="display: inline-block;">Lenguaje <img src="img/mx.png" style="display: inline-block;"></a></li>
                         </ul>
                     </nav>
                     <!-- Main Nav -->
@@ -109,6 +109,7 @@ else{
         <link href="css/theme-responsive.css" rel="stylesheet" media="screen">
         <!-- Skins Theme -->
         <link href="#" rel="stylesheet" media="screen" class="skin">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
         <!-- Favicons -->
         <link rel="shortcut icon" href="img/icons/favicon.ico">
         <link rel="apple-touch-icon" href="img/icons/apple-touch-icon.png">
@@ -164,9 +165,14 @@ else{
                                 <div id="top-menu-packages" class="drop-down full-width hover-fade">
                                 </div>
                             </li>                        
-
+                            <?php
+                                $urlLang = "?lang=esp";
+                                if (isset($_GET['view'])) {
+                                    $urlLang = "&lang=esp";
+                                }
+                            ?>
                             <li class="menu-element" id="menu-contact"><a href="contact.php">CONTACT</a></li>
-                            <li><a href="<?= $_SERVER['REQUEST_URI']; ?>?lang=esp" style="display: inline-block;">Language <img src="img/usa.png" style="display: inline-block;"></a></li>
+                            <li><a href="<?= $_SERVER['REQUEST_URI'] . $urlLang; ?>" style="display: inline-block;">Language <img src="img/usa.png" style="display: inline-block;"></a></li>
                         </ul>
                     </nav>
                     <!-- Main Nav -->
@@ -180,14 +186,21 @@ else{
 ?>
 
             <script type="text/javascript">
+            var lang = "eng";
             $(function() {
+                if(getURLParameter("lang")) {
+                    lang = getURLParameter("lang");
+                }
                 setMenuPackages();
+                
             });
             function setMenuPackages() {
-                console.log("entra?");
                     var query = new Parse.Query(Parse.Object.extend("Packages"));
                     query.equalTo("priority", 1);
-                    query.equalTo("languages", 0);
+                    if(lang != "eng")
+                        query.equalTo("languages", 0);
+                    else 
+                        query.equalTo("languages", 1);
                     query.limit(4);
                     query.find({
                         success: function(results) {
@@ -202,7 +215,13 @@ else{
                     var elements = "";
                     for (var i = 0; i < results.length; i++) {
                         var object = results[i];
-                        var description = "Pregunta a tu agente de ventas";
+
+                        var description = "Ask your travel agent";
+                        var urlLang = "";
+                        if(lang == "esp") {
+                            description = "Pregunta a tu agente de ventas";
+                            urlLang = "&lang=esp";
+                        }
                         if(typeof object.get("description") != "undefined") {
                             description = object.get("description").substring(0,100) + "...";
                         }
@@ -211,17 +230,23 @@ else{
                             image = object.get("image").url();
                         }
 
+                        var button_text = "View details";
+                        if(lang != "eng") button_text = "Ver detalles";
                         var element = '<ul id="package' + object.id + '">' + 
                                         '<li class="menu-element" id="menu-packages">' +
                                             '<h2><span>' + object.get('name') + '</span></h2>' +
                                             '<a href="packages.php?view=package' + object.id + '"><img class="img" src="'+image+'" alt="image 1"> </a>' +
                                             '<p>' + description + '</p>' +
-                                            '<a href="packages.php?view=package' + object.id + '" class="btn btn-primary">View Details</a>' +
+                                            '<a href="packages.php?view=package' + object.id + urlLang + '" class="btn btn-primary">' + button_text + '</a>' +
                                         '</li>' +
                                     '</ul>';
                         elements += element;      
                     }
                     $("#top-menu-packages").empty();
                     $("#top-menu-packages").append(elements);
+                }
+
+                function getURLParameter(name) {
+                  return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null
                 }
             </script>

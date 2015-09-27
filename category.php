@@ -1,4 +1,17 @@
-<?php include 'header.html'; ?>
+<?php
+    include 'header.html';
+    if (isset($_GET['lang'])) {
+        $first = "Eleccion de ";
+        $second = "Viajeros ";
+        $third = "en Hoteles";
+        $help = "¿Necesitas ayuda? ¡Llámanos ahora! - (619) 730-0380";
+    } else {
+        $first = "Travelers ";
+        $second = "Choice ";
+        $third = "of Hotels";
+        $help = "Need Help? Call us Now! - (619) 730-0380";
+    }
+?>
             <!-- Section Title-->    
             <div class="section-title-01">
                 <!-- Parallax Background -->
@@ -23,7 +36,7 @@
                         <div class="container">
                             <div class="row">
                                 <div class="titles">
-                                    <h2>Travelers <span>Choice</span> of Hotels</h2>
+                                    <h2><?= $first; ?><span><?= $second; ?></span><?= $third; ?></h2>
                                     <i class="fa fa-plane"></i>
                                     <hr class="tall">
                                 </div>                    
@@ -43,7 +56,7 @@
                 <a href="help.php" style="text-decoration: none;">
                     <div class="content_info">
                         <div class="skin_base paddings-mini color-white text-center">
-                            <h2>Need Help? Call us Now! - (619) 730-0380</h2>
+                            <h2><?= $help; ?></h2>
                         </div>
                     </div>
                 </a>  
@@ -53,7 +66,11 @@
 
 <?php include 'footer.html'; ?>
 <script type="text/javascript">
+    var lang = "eng";
     $(document).ready(function() {
+        if(getURLParameter("lang")) {
+            lang = getURLParameter("lang");
+        }
         getCategory(getURLParameter("view").substring(8));
     });
 
@@ -61,7 +78,9 @@
         var query = new Parse.Query(Parse.Object.extend("Category"));
         query.get(id, {
             success: function(packageObject) {
-                $("#category_name").text(packageObject.get("name"));
+                var name = packageObject.get("nameEng");
+                if(lang == "esp") name = packageObject.get("name");
+                $("#category_name").text(name);
                 $(".image_03_parallax").css('background-image', 'url(' + packageObject.get("image").url() + ')');
                 getPackages(packageObject);
             }, error: function(error) {
@@ -73,7 +92,8 @@
     function getPackages(category) {
         var query = new Parse.Query(Parse.Object.extend("Packages"));
         query.equalTo("category", category);
-        query.equalTo("languages", 0);
+        if(lang == "esp") query.equalTo("languages", 0);
+        else query.equalTo("languages", 1);
         query.find({
             success: function(results) {
                 createPackageData(results);
@@ -89,14 +109,23 @@
         
         for (var i = 0; i < results.length; i++) {
             var object = results[i];
-            var description = "Pregunta a tu agente de ventas";
+            var description = "Ask your travel agent";
+            var from = "From";
+            var details = "View Details";
+            var urlLang = "";
+            if(lang == "esp") {
+                description = "Pregunta a tu agente de ventas";
+                from = "Desde";
+                details = "Ver Detalles";
+                urlLang = "&lang=esp";
+            }
             var price = "";
             if(typeof object.get("description") != "undefined") {
                 description = object.get("description").substring(0,100) + "...";
             }
 
             if(typeof object.get("price") != "undefined") {
-                price = '<div class="price"><span>$</span><b>From</b>' + object.get("price") + '</div>';
+                price = '<div class="price"><span>$</span><b>' + from + '</b>' + object.get("price") + '</div>';
             }
 
             var image = "img/gallery-2/1.jpg";
@@ -113,7 +142,7 @@
                                 '<h3>' + object.get("name") + '</h3>' +
                                 '<hr class="separator">' +
                                 '<p>' + description + '</p>' +
-                                '<div class="content-btn"><a href="packages.php?view=package' + object.id + '" class="btn btn-primary">View Details</a></div>' +
+                                '<div class="content-btn"><a href="packages.php?view=package' + object.id + urlLang + '" class="btn btn-primary">' + details + '</a></div>' +
                                 price +
                             '</div>' +
                         '</div>';

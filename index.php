@@ -389,7 +389,9 @@ else{
 
 <!--Slider Function-->
 <script type="text/javascript">
+    var lang = "eng";
     $(document).ready(function() {
+        if(getURLParameter("lang")) lang = getURLParameter("lang");
         $('.tp-banner').show().revolution({
             dottedOverlay:"none",
             delay:9000,
@@ -428,9 +430,16 @@ else{
             var classBorder = "";
             if(i != results.length-1) classBorder = "banner-col";
 
-            var element = '<a href="category.php?view=category' + object.id + '">' + 
+            var name = object.get("nameEng");
+            var urlLang = "";
+            if(lang == "esp") {
+                name = object.get("name");
+                urlLang = "&lang=esp";
+            }
+
+            var element = '<a href="category.php?view=category' + object.id + urlLang + '">' + 
                             '<div id="front' + object.id + '" class="col-md-3 ' + classBorder + ' front_category_icon">' +
-                                '<h2>' + object.get("name") + '</h2>' +
+                                '<h2>' + name + '</h2>' +
                                 '<h3 class="fa ' + object.get("icon") + ' icon-banner"></h3>' +
                             '</div>' +
                             '</a>';
@@ -443,7 +452,8 @@ else{
     function setFrontPackages() {
         var query = new Parse.Query(Parse.Object.extend("Packages"));
         query.equalTo("priority2", 1);
-        query.equalTo("languages", 0);
+        if(lang == "esp") query.equalTo("languages", 0);
+        else query.equalTo("languages", 1);
         query.include("category");
         query.limit(3);
         query.find({
@@ -466,6 +476,16 @@ else{
             if(typeof object.get("image") != "undefined") {
                 image = object.get("image").url();
             }
+            var from = "From";
+            var details = "View Details";
+            var urlLang = "";
+            var category_name = object.get("category").get("nameEng");
+            if(lang == "esp") {
+                category_name = object.get('category').get('name');
+                from = "Desde";
+                details = "Ver Detalles";
+                urlLang = "&lang=esp";
+            }
             var element = '<div class="col-xs-12 col-sm-6 col-md-4">' +
                             '<div class="img-hover">' +
                                 '<img src="'+image+'" alt="" class="img-responsive" style="max-height:220px; width:100%">' +
@@ -473,12 +493,12 @@ else{
                             '</div>' +
                             '<div class="info-gallery info-gallery-custom">' +
                                 '<h3>' + object.get('name') + '<br>' +
-                                    '<span>' + object.get('category').get('name') + '</span>' +
+                                    '<span>' + category_name.toUpperCase() + '</span>' +
                                 '</h3>' +
                                 '<hr class="separator">' +
                                 '<p>' + object.get('description') + '</p>' +
-                                '<div id="front' + object.id + '" class="content-btn front_package_btn"><a href="packages.php?view=package' + object.id + '" class="btn btn-primary">View Details</a></div>' +
-                                '<div class="price"><span>$</span><b>From</b>' + object.get('price') + '.00 USD</div>' +
+                                '<div id="front' + object.id + '" class="content-btn front_package_btn"><a href="packages.php?view=package' + object.id + urlLang + '" class="btn btn-primary">' + details + '</a></div>' +
+                                '<div class="price"><span>$</span><b>' + from + '</b>' + object.get('price') + '.00 USD</div>' +
                             '</div>' +
                          '</div>';
             elements += element;      

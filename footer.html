@@ -9,7 +9,7 @@ if (isset($_GET['lang'])) {
                         <!-- Title Footer-->
                         <div class="col-md-5">
                             <div class="title-footer">
-                                <h2>Reserve Ahora!
+                                <h2>¡Reserve Ahora!
                             </div>
 
                             <p>Usted puede elegir su destino favorito y comenzar a planificar sus vacaciones a largo plazo. Ofrecemos muchos destinos y tenemos los mejores hoteles para que pueda alojar y disfrutar de su estancia sin problemas. Reserve ahora su viaje en Travelgroup Holidays.</p>
@@ -64,14 +64,14 @@ if (isset($_GET['lang'])) {
                     <div class="container">
                         <div class="row">
                             <div class="col-md-6">
-                                <p>&copy; 2015 Travelgroup Holidays. <br />Afiliados a CAREFREE VACATIONS|CST #2079194-10, <a href="privacy_policy.php">Politicas de Privacidad</a>.</p>
+                                <p>&copy; 2015 Travelgroup Holidays. <br />Afiliados a CAREFREE VACATIONS|CST #2079194-10, <a href="privacy_policy.php?lang=esp">Politicas de Privacidad</a>.</p>
                             </div>
                             <div class="col-md-6">
                                 <!-- Nav Footer-->
                                 <ul class="nav-footer">
-                                    <li><a href="travelgroup.php">INICIO</a> </li>
-                                    <li><a href="categorys.php">VIAJES</a></li> 
-                                    <li><a href="contact.php">CONTACTANOS</a></li>
+                                    <li><a href="index.php?lang=esp">INICIO</a> </li>
+                                    <li><a href="trips.php?lang=esp">VIAJES</a></li> 
+                                    <li><a href="contact.php?lang=esp">CONTACTANOS</a></li>
                                 </ul>
                                 <!-- End Nav Footer-->
                             </div>
@@ -155,9 +155,8 @@ else{
                             <div class="col-md-6">
                                 <!-- Nav Footer-->
                                 <ul class="nav-footer">
-                                    <li><a href="travelgroup.php">HOME</a> </li>
-                                    <li><a href="categorys.php">TRIPS</a></li>
-                                    <li><a href="#">PACKAGES</a></li>         
+                                    <li><a href="index.php">HOME</a> </li>
+                                    <li><a href="trips.php">TRIPS</a></li>     
                                     <li><a href="contact.php">CONTACT</a></li>
                                 </ul>
                                 <!-- End Nav Footer-->
@@ -175,7 +174,9 @@ else{
 }
 ?>
         <script type="text/javascript">
+            var lang = "eng";
             $(function() {
+                if(getURLParameter("lang")) lang = getURLParameter("lang");
                 setCategoriesFooter();
             });
 
@@ -196,11 +197,21 @@ else{
                 var elements = "";
                 for (var i = 0; i < results.length; i++) {
                     var object = results[i];
-                    var element = '<li><i class="fa fa-check"></i> <a href="category.php?view=category' + object.id + '">' + object.get("name") + '</a></li>';
+                    var name = object.get("nameEng");
+                    var urlLang = "";
+                    if(lang == "esp") {
+                        name = object.get("name");
+                        urlLang = "&lang=esp";
+                    }
+                    var element = '<li><i class="fa fa-check"></i> <a href="category.php?view=category' + object.id + urlLang + '">' + name + '</a></li>';
                     elements += element;
                 }
                 $("#trips_footer").empty();
                 $("#trips_footer").append(elements);
+            }
+
+            function getURLParameter(name) {
+                  return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null
             }
         </script>
 

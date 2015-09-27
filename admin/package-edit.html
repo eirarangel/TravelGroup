@@ -224,7 +224,7 @@
 
                     $(".page-header").text("Editar paquete de " + packageEsp.get('category').get("name"));
                     $(".formCategory").val(packageEsp.get('category').get("name"));
-                    $(".formCategory").attr("id", packageEsp.get('category').id);
+                    $(".formCategory").attr("id", "cat" + packageEsp.get('category').id);
 
                     if(typeof packageEsp.get("image") != null) {
                         $("#file-input-new").hide();

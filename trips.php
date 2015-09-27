@@ -51,7 +51,11 @@ $eleccion = "Choice of holiday travelers";
 <?php include 'footer.html'; ?>
 
 <script type="text/javascript">
+    var lang = "eng";
     $(document).ready(function() {
+        if(getURLParameter("lang")) {
+            lang = getURLParameter("lang");
+        }
         setCategories();
         setPackages();
         $(".image_03_parallax").css('background-image', 'url(img/official/banner6.jpg)');
@@ -74,9 +78,11 @@ $eleccion = "Choice of holiday travelers";
         var elements = "";
         for (var i = 0; i < results.length; i++) {
             var object = results[i];
+            var name = object.get("nameEng");
+            if(lang == "esp") name = object.get("name");
             if(i==0)
                 elements += '<a href="#" data-filter="*" class="current" id="all-filter">Show All</a>';
-                var element = '<a href="#tripPack' + object.id + '" data-filter=".tripPack' + object.id + '">' + object.get("name") + '</a>';
+                var element = '<a href="#tripPack' + object.id + '" data-filter=".tripPack' + object.id + '">' + name + '</a>';
             elements += element;
         }
         $("#navigation-filters").empty();
@@ -86,7 +92,8 @@ $eleccion = "Choice of holiday travelers";
     function setPackages() {
         var query = new Parse.Query(Parse.Object.extend("Packages"));
         query.include("category");
-        query.equalTo("languages", 0);
+        if(lang == "esp") query.equalTo("languages", 0);
+        else query.equalTo("languages", 1);
         query.find({
             success: function(results) {
                 createPackageData(results);
@@ -101,15 +108,27 @@ $eleccion = "Choice of holiday travelers";
         var elements = "";
         for (var i = 0; i < results.length; i++) {
             var object = results[i];
-            var description = "Pregunta a tu agente de ventas";
+            var description = "Ask your travel agent";
+            var cat_name = object.get("category").get("nameEng").toUpperCase();
             var price = "";
+            var urlLang = "";
+            var details = "View Details";
+            var from = "From";
+
+            if(lang == "esp") {
+                description = "Pregunta a tu agente de ventas";
+                cat_name = object.get("category").get("name").toUpperCase();
+                urlLang = "&lang=esp";
+                details = "Ver Detalles";
+                from = "Desde";
+            }
             
             if(typeof object.get("description") != "undefined") {
                 description = object.get("description").substring(0,100) + "...";
             }
 
             if(typeof object.get("price") != "undefined") {
-                price = '<div class="price"><span>$</span><b>From</b>' + object.get("price") + '</div>';
+                price = '<div class="price"><span>$</span><b>' + from + '</b>' + object.get("price") + '</div>';
             }
             var image = "img/gallery-2/1.jpg";
             if(typeof object.get("image") != "undefined") {
@@ -121,10 +140,10 @@ $eleccion = "Choice of holiday travelers";
                                 '<div class="overlay"><a href="' + image +'" class="fancybox"><i class="fa fa-plus-circle"></i></a></div>' +
                             '</div>' +
                             '<div class="info-gallery info-gallery-trip">' +
-                            '<h3>' + object.get("name") + '<br><span>' + object.get("category").get("name").toUpperCase() + '</span></h3>' +
+                            '<h3>' + object.get("name") + '<br><span>' + cat_name + '</span></h3>' +
                             '<hr class="separator">' +
                             '<p>' + description + '</p>' +
-                            '<div class="content-btn info-gallery-btn"><a href="packages.php?view=package' + object.id + '" class="btn btn-primary">View Details</a></div>' +
+                            '<div class="content-btn info-gallery-btn"><a href="packages.php?view=package' + object.id + urlLang + '" class="btn btn-primary">' + details + '</a></div>' +
                             price +
                             '</div>' +
                         '</div>';
@@ -136,6 +155,15 @@ $eleccion = "Choice of holiday travelers";
 
         var $container = $("#navigation-packages");
         $container.isotope('insert', $newItems);
+        $("all-filter").addClass('current');
+        $container.isotope({
+                filter: $("all-filter").attr('data-filter'),
+                animationOptions: {
+                    duration: 750,
+                    easing: 'linear',
+                    queue: false
+                }
+        });
 
         $('#navigation-filters a').click(function(){
             $('#navigation-filters .current').removeClass('current');
@@ -150,8 +178,6 @@ $eleccion = "Choice of holiday travelers";
                     }
             });
         });
-
-        $("#all-filter").trigger( "click" );
     }
 </script>
     </body>

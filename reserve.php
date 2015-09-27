@@ -164,18 +164,46 @@ $c = "Please indicate special requirements (flights, tours, transfers, etc.) to 
 <?php include 'footer.html'; ?>
 
 <script type="text/javascript">
+    var lang = "eng";
     $(document).ready(function() {
+        if(getURLParameter("lang")) {
+            lang = getURLParameter("lang");
+        }
         getPackage(getURLParameter("package"));
     });
 
     function getPackage(id) {
         var query = new Parse.Query(Parse.Object.extend("Packages"));
+        if(lang == "esp") query.equalTo("languages", 0);
+        else query.equalTo("languages", 1);
         query.get(id, {
             success: function(packageObject) {
                 $(".package_name").val(packageObject.get("name"));
                 $(".package_id").val(packageObject.id);
             }, error: function(error) {
-
+                //tengo el id en ingles y busco el spanish one
+                    var queryEng = new Parse.Query(Parse.Object.extend("Packages"));
+                    queryEng.get(id, {
+                        success: function(packageObj) {
+                            if(lang == "esp") {
+                                window.location.replace("http://localhost/TravelGroup/reserve.php?package=" + packageObj.get("packageEsp").id + "&lang=esp");
+                            } else {
+                                var queryEsp = new Parse.Query(Parse.Object.extend("Packages"));
+                                queryEsp.equalTo("packageEsp", packageObj);
+                                queryEsp.first({
+                                  success: function(object) {
+                                    // Successfully retrieved the object.
+                                    window.location.replace("http://localhost/TravelGroup/reserve.php?package=" + object.id);
+                                  },
+                                  error: function(error) {
+                                    console.log("Error: " + error.code + " " + error.message);
+                                  }
+                              });
+                            }
+                        }, error: function(error) {
+                            console.log("hubo error");
+                        }
+                    });
             }
         });
     }
