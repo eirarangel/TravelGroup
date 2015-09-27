@@ -1,11 +1,39 @@
-<?php include 'header.html'; ?>
+<?php
+include 'header.html';
+if (isset($_GET['lang'])) {
+$contact = "Contacto";
+$office = "Oficina";
+$address = "Dirección";
+$city = "Ciudad";
+$phone = "Teléfono";
+$email = "Correo Electronico";
+$title_contact = "Forma de Contacto";
+$contact_text = "Encuentra una amplia variedad de paquetes turísticos, cruceros y más en travelgroup-holidays.com, puede elegir su destino favorito y comenzar a planificar sus vacaciones esperadas. <br />También puede consultar la disponibilidad de tours y hoteles de forma rápida y sencilla, con el fin de encontrar la opción que mejor se adapte a sus necesidades.";
+$name = "Nombre";
+$message = "Escribe tu Mensaje.";
+$send = "Mandar Mensaje";
+}
+else{
+$contact = "Contact";
+$office = "The Office";
+$address = "Address";
+$city = "City";
+$phone = "Phone";
+$email = "Email";
+$title_contact = "Contact Form";
+$contact_text = "Find a wide variety of tour packages, cruises and more in travelgroupcollege.com, you can choose your favorite destination and start planning your long-awaited vacation. <br />You can also check availability of tours and hotels quickly and easily, in order to find the option that best suits your needs.";
+$name = "name";
+$message = "Your Message.";
+$send = "Send Message";
+}
+?>
 
             <!-- Section Title-->    
             <div class="section-title-01">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
-                            <h1>Contact</h1>
+                            <h1><?php echo $contact; ?></h1>
                         </div>
                     </div>
                 </div>  
@@ -32,19 +60,19 @@
                                 <!-- Sidebars -->
                                 <div class="col-md-4">
                                     <aside>
-                                        <h4>The Office</h4>
+                                        <h4><?php echo $office; ?></h4>
                                         <address>
                                           <strong>Travelgroup Holidays.</strong><br>
-                                          <i class="fa fa-map-marker"></i><strong>Address: </strong> 875 Bowsprit Rd.<br>
-                                          <i class="fa fa-plane"></i><strong>City: </strong>Chula Vista, CA 91914<br>
-                                          <i class="fa fa-phone"></i><strong>Phone (US):</strong>(619) 730-0380<br />
-                                          <i class="fa fa-phone"></i><strong>Phone (MX):</strong>(661) 100-6379
+                                          <i class="fa fa-map-marker"></i><strong><?php echo $address; ?></strong> 875 Bowsprit Rd.<br>
+                                          <i class="fa fa-plane"></i><strong><?php echo $city; ?>: </strong>Chula Vista, CA 91914<br>
+                                          <i class="fa fa-phone"></i><strong><?php echo $phone; ?> (US):</strong>(619) 730-0380<br />
+                                          <i class="fa fa-phone"></i><strong><?php echo $phone; ?> (MX):</strong>(661) 100-6379
                                         </address>
 
                                         <address>
                                           <strong>Travelgroup Holidays.</strong><br>
-                                          <i class="fa fa-envelope"></i><strong>Email:</strong><a href="mailto:#">mpicazo@travelgroup-holidays.com</a><br>
-                                          <i class="fa fa-envelope"></i><strong>Email:</strong><a href="mailto:#">mpicazo@carefreevacations.com</a><br>
+                                          <i class="fa fa-envelope"></i><strong><?php echo $email; ?>:</strong><a href="mailto:#">mpicazo@travelgroup-holidays.com</a><br>
+                                          <i class="fa fa-envelope"></i><strong><?php echo $email; ?>:</strong><a href="mailto:#">mpicazo@carefreevacations.com</a><br>
                                         </address>
                                     </aside>
 
@@ -54,17 +82,16 @@
                                 <!-- End Sidebars -->
 
                                 <div class="col-md-8">
-                                    <h3>Contact Form</h3>
+                                    <h3><?php echo $title_contact; ?></h3>
                                     <p class="lead">
-                                       Find a wide variety of tour packages, cruises and more in travelgroupcollege.com, you can choose your favorite destination and start planning your long-awaited vacation.
-                                       You can also check availability of tours and hotels quickly and easily, in order to find the option that best suits your needs.
+                                      <?php echo $contact_text; ?>
                                     </p>
                                     <form id="form-contact" class="form-theme" action="php/send-mail.php">
-                                        <input type="text" placeholder="Name" name="Name" required="">
-                                        <input type="email" placeholder="Email" name="Email" required="">
-                                        <input type="number" placeholder="Phone" name="Phone" required="">
-                                        <textarea placeholder="Your Message" name="message" required=""></textarea>
-                                        <input type="submit" name="Submit" value="Send Message" class="btn btn-primary">
+                                        <input type="text" placeholder="<?php echo $name; ?>" name="Name" required="">
+                                        <input type="email" placeholder="<?php echo $email; ?>" name="Email" required="">
+                                        <input type="number" placeholder="<?php echo $phone; ?>" name="Phone" required="">
+                                        <textarea placeholder="<?php echo $message; ?>" name="message" required=""></textarea>
+                                        <input type="submit" name="Submit" value="<?php echo $send; ?>" class="btn btn-primary">
                                     </form> 
                                     <div id="result"></div>  
                                 </div>

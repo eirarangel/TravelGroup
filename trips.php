@@ -1,5 +1,12 @@
-<?php include 'header.html'; ?>
-
+<?php
+include 'header.html';
+if (isset($_GET['lang'])) {
+$eleccion = "Elección de los viajeros para sus vacaciones";
+}
+else{
+$eleccion = "Choice of holiday travelers";
+}
+?>
 <!-- Section Title-->    
             <div class="section-title-01">
                 <!-- Parallax Background -->
@@ -9,7 +16,7 @@
                 <!-- Content Parallax-->
                 <div class="opacy_bg_02">
                      <div class="container">
-                        <h1>Elección de los viajeros para sus vacaciones</h1>
+                        <h1><?php echo $eleccion; ?></h1>
                     </div>  
                 </div>  
                 <!-- End Content Parallax--> 
