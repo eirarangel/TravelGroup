@@ -79,9 +79,13 @@ $eleccion = "Choice of holiday travelers";
         for (var i = 0; i < results.length; i++) {
             var object = results[i];
             var name = object.get("nameEng");
-            if(lang == "esp") name = object.get("name");
+            var show = "Show All";
+            if(lang == "esp") {
+                name = object.get("name");
+                show = "Ver todo";
+            }
             if(i==0)
-                elements += '<a href="#" data-filter="*" class="current" id="all-filter">Show All</a>';
+                elements += '<a href="#" data-filter="*" class="current" id="all-filter">' + show + '</a>';
                 var element = '<a href="#tripPack' + object.id + '" data-filter=".tripPack' + object.id + '">' + name + '</a>';
             elements += element;
         }

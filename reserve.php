@@ -187,14 +187,14 @@ $v = "Send";
                     queryEng.get(id, {
                         success: function(packageObj) {
                             if(lang == "esp") {
-                                window.location.replace("http://localhost/TravelGroup/reserve.php?package=" + packageObj.get("packageEsp").id + "&lang=esp");
+                                window.location.replace("reserve.php?package=" + packageObj.get("packageEsp").id + "&lang=esp");
                             } else {
                                 var queryEsp = new Parse.Query(Parse.Object.extend("Packages"));
                                 queryEsp.equalTo("packageEsp", packageObj);
                                 queryEsp.first({
                                   success: function(object) {
                                     // Successfully retrieved the object.
-                                    window.location.replace("http://localhost/TravelGroup/reserve.php?package=" + object.id);
+                                    window.location.replace("reserve.php?package=" + object.id);
                                   },
                                   error: function(error) {
                                     console.log("Error: " + error.code + " " + error.message);

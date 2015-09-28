@@ -54,8 +54,8 @@
         $("#accordion").append(panels);
         $(".addPackage").click(function() {
             var id = $(this).attr("id").substring(4);
-             window.history.pushState("object or string", "Title", "http://localhost/TravelGroup/admin?cat=" + id)
-            $("#dynamic-content").load("http://localhost/TravelGroup/admin/package-edit.html");
+             window.history.pushState("object or string", "Title", "index.html?cat=" + id)
+            $("#dynamic-content").load("package-edit.html");
         });
         setEvent();
     }
@@ -81,8 +81,8 @@
                         $('#panel'+id).find('.editItemAction').each(function() {
                             $(this).click(function() {
                                 var editId = $(this).attr("id");    
-                                window.history.pushState("object or string", "Title", "http://localhost/TravelGroup/admin?edit=" + editId);
-                                $("#dynamic-content").load("http://localhost/TravelGroup/admin/package-edit.html");
+                                window.history.pushState("object or string", "Title", "index.html?edit=" + editId);
+                                $("#dynamic-content").load("package-edit.html");
                             });
                         });
                     }, function(error) {

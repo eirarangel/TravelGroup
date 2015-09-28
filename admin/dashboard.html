@@ -39,20 +39,20 @@
                   if(currentUser.id) {
                       console.log("Couldn't signed off");
                   } else {
-                    window.location.href="http://localhost/TravelGroup/admin/index.html";
+                    window.location.href="index.html";
                   }
               });
           });
 
           function init() {
-            $("#dynamic-content").load("http://localhost/TravelGroup/admin/category.html");
+            $("#dynamic-content").load("category.html");
               $("#menu-category").addClass("active");
               $("#user-name").text(currentUser.get("username"));
             
             $(".menu-element").click(function() {
                   var file = $(this).attr("id").substring(5) + ".html";
 
-                  $("#dynamic-content").load("http://localhost/TravelGroup/admin/" + file);
+                  $("#dynamic-content").load(file);
                   $(".menu-element").removeClass("active");
                   $(this).addClass("active");
               });

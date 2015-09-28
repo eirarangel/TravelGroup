@@ -30,11 +30,11 @@
       var currentUser = new Parse.User.current();
       if(Parse.User.current()) {
         $(function() {
-          $("body").load("http://localhost/TravelGroup/admin/dashboard.html"); 
+          $("body").load("dashboard.html"); 
         }); 
       } else {
         $(function() {
-          $("body").load("http://localhost/TravelGroup/admin/login.html"); 
+          $("body").load("login.html"); 
         });
       }
     </script> 

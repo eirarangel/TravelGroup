@@ -189,8 +189,8 @@
         $("#errorAlert").hide();
         $("#successAlert").hide();
         $("#backPackage").click(function() {
-            window.history.pushState("object or string", "Title", "http://localhost/TravelGroup/admin/");
-        	$("#dynamic-content").load("http://localhost/TravelGroup/admin/package.html");
+            window.history.pushState("object or string", "Title", "index.html");
+        	$("#dynamic-content").load("package.html");
         });
         //getCategories();
         validateEditAction();
@@ -403,8 +403,8 @@
                                         packageEng = setPackageDataEng(packageEng, packageDetails);
                                         packageEng.set('category', category);
                                         packageEng.save();
-                                        window.history.pushState("object or string", "Title", "http://localhost/TravelGroup/admin/");
-                                        $("#dynamic-content").load("http://localhost/TravelGroup/admin/package.html");
+                                        window.history.pushState("object or string", "Title", "index.html");
+                                        $("#dynamic-content").load("package.html");
                                     },
                                     error: function(error) {
                                         errorAlert(error);
@@ -486,8 +486,8 @@
                 packageEng.save(null, {
                     success: function(packageEng) {
                         console.log('save successfully yaih!');
-                        window.history.pushState("object or string", "Title", "http://localhost/TravelGroup/admin/");
-                        $("#dynamic-content").load("http://localhost/TravelGroup/admin/package.html");
+                        window.history.pushState("object or string", "Title", "index.html");
+                        $("#dynamic-content").load("package.html");
                     }, error: function(packageEng, error) {
                         errorAlert(error);
                     }
@@ -522,8 +522,8 @@
                                     packageEsp.destroy({
                                         success: function(myObject) {
                                             console.log('packageEsp deleted');
-                                            window.history.pushState("object or string", "Title", "http://localhost/TravelGroup/admin");
-                                            $("#dynamic-content").load("http://localhost/TravelGroup/admin/package.html");
+                                            window.history.pushState("object or string", "Title", "index.html");
+                                            $("#dynamic-content").load("package.html");
                                         }, error: function(myObject, error) {
                                             errorAlert(error);
                                         }
