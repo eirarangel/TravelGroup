@@ -246,10 +246,7 @@ else{
                  <!-- SLIDE CONTENT-->
                  <!-- FILTER HEADER - TITLE HEADER-->
                 <div class="filter-title">
-                    <!-- TITLE HEADER-->
-                    <div class="title-header">
-                        <div class="row icon-row" id="icon-row"></div>
-                    </div>
+                    <div class="icon-row" id="icon-row"></div>
                     <!-- END TITLE HEADER-->
                     <!-- END FILTER HEADER-->
                 </div>
@@ -438,9 +435,9 @@ else{
             }
 
             var element = '<a href="category.php?view=category' + object.id + urlLang + '">' + 
-                            '<div id="front' + object.id + '" class="col-md-3 ' + classBorder + ' front_category_icon">' +
-                                '<h2>' + name + '</h2>' +
-                                '<h3 class="fa ' + object.get("icon") + ' icon-banner"></h3>' +
+                            '<div id="front' + object.id + '" class="' + classBorder + ' front_category_icon">' +
+                                '<span class="category_name">' + name + '</span><br>' +
+                                '<span class="fa ' + object.get("icon") + ' icon-banner"></span>' +
                             '</div>' +
                             '</a>';
             elements += element;
