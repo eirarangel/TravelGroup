@@ -4,12 +4,12 @@
         $first = "Eleccion de ";
         $second = "Viajeros ";
         $third = "en Hoteles";
-        $help = "¿Necesitas ayuda? ¡Llámanos ahora! - (619) 730-0380";
+        $help = "¿Necesitas ayuda? ¡Llámanos ahora! - US <strong>(619) 730-0380</strong> o MX <strong>(661) 100-6379</strong>";
     } else {
         $first = "Travelers ";
         $second = "Choice ";
         $third = "of Hotels";
-        $help = "Need Help? Call us Now! - (619) 730-0380";
+        $help = "Need Help? Call us Now! - US <strong>(619) 730-0380</strong> or MX <strong>(661) 100-6379</strong>";
     }
 ?>
             <!-- Section Title-->    

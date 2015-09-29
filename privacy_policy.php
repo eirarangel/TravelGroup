@@ -135,7 +135,7 @@ firma autógrafa, firma electrónica, o cualquier mecanismo de autenticación qu
                 <a href="help.php" style="text-decoration: none;">
                     <div class="content_info">
                         <div class="skin_base paddings-mini color-white text-center">
-                            <h2>Need Help? Call us Now! - (619) 730-0380</h2>
+                            <h2>¿Necesitas ayuda? ¡Llámanos ahora! - US <strong>(619) 730-0380</strong> o MX <strong>(661) 100-6379</strong></h2>
                         </div>
                     </div>
                 </a>
@@ -275,7 +275,7 @@ else{
                 <a href="help.php" style="text-decoration: none;">
                     <div class="content_info">
                         <div class="skin_base paddings-mini color-white text-center">
-                            <h2>Need Help? Call us Now! - (619) 730-0380</h2>
+                            <h2>Need Help? Call us Now! - US <strong>(619) 730-0380</strong> or MX <strong>(661) 100-6379</strong></h2>
                         </div>
                     </div>
                 </a>

@@ -589,7 +589,7 @@ hr.tall{
 	border-bottom: 1px solid #dedede;
 }
 .header-v4.is-sticky .flat-mega-menu > ul > .title{
-	margin-bottom: 10px;
+	margin-top: 10px;
 }
 .header-v3 .flat-mega-menu > ul > li,
 .header-v3 .flat-mega-menu > ul > li > a,

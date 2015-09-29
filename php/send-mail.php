@@ -1,5 +1,5 @@
 <?php
-	$to = "israel-villalobos@hotmail.com"; /*Your Email*/
+	$to = "mpicazo@travelgroup-holidays.com"; /*Your Email*/
 	$subject = "Contact FORM"; /*Issue*/
 	$date = date ("l, F jS, Y"); 
 	$time = date ("h:i A"); 	
