@@ -85,7 +85,7 @@ $eleccion = "Choice of holiday travelers";
                 show = "Ver todo";
             }
             if(i==0)
-                elements += '<a href="#" data-filter="*" class="current" id="all-filter">' + show + '</a>';
+                elements += '<a href="#" data-filter="*" id="all-filter">' + show + '</a>';
                 var element = '<a href="#tripPack' + object.id + '" data-filter=".tripPack' + object.id + '">' + name + '</a>';
             elements += element;
         }
@@ -156,32 +156,35 @@ $eleccion = "Choice of holiday travelers";
 
         $newItems = $(elements);
         $("#navigation-packages").empty();
+        //$("#navigation-packages").append(elements);
 
         var $container = $("#navigation-packages");
-        $container.isotope('insert', $newItems);
-        $("all-filter").addClass('current');
-        $container.isotope({
-                filter: $("all-filter").attr('data-filter'),
+        setTimeout(function(){    
+            $container.isotope('insert', $newItems);
+            $("#all-filter").addClass('current');
+            $container.isotope({
+                filter: $("#all-filter").attr('data-filter'),
                 animationOptions: {
                     duration: 750,
                     easing: 'linear',
                     queue: false
                 }
-        });
-
-        $('#navigation-filters a').click(function(){
-            $('#navigation-filters .current').removeClass('current');
-            $(this).addClass('current');
-            var selector = $(this).attr('data-filter');
-            $container.isotope({
-                filter: selector,
-                      animationOptions: {
-                      duration: 750,
-                      easing: 'linear',
-                      queue: false
-                    }
             });
-        });
+
+            $('#navigation-filters a').click(function(){
+                $('#navigation-filters .current').removeClass('current');
+                $(this).addClass('current');
+                var selector = $(this).attr('data-filter');
+                $container.isotope({
+                    filter: selector,
+                          animationOptions: {
+                          duration: 750,
+                          easing: 'linear',
+                          queue: false
+                        }
+                });
+            });
+        }, 1000);  
     }
 </script>
     </body>

@@ -117,7 +117,8 @@ $v = "Send";
                                                         <h5><?php echo $d; ?> <input type="text" name="citycountry"></h5>                                                                                                        
                                                         <h5><?php echo $f; ?> <input type="date" name="fechain"> <?php echo $g; ?>   <input type="date" name="fechaout"></h5>
                                                         <h4><?php echo $h; ?> </h4>
-                                                        <input type="text" name="package_name" class="package_name" readonly>
+                                                        <input type="text" name="package_name" class="package_name" readonly> <br>
+                                                        <input type="text" name="package_category" class="package_category" readonly>
                                                         <input type="hidden" name="package_id" class="package_id">
                                                         <h5> <?php echo $j; ?> <input type="number" name="quantity" min="1" max="99" value="1"><br></h5>
                                                         <strong><?php echo $k; ?></strong><br />
@@ -177,10 +178,13 @@ $v = "Send";
         var query = new Parse.Query(Parse.Object.extend("Packages"));
         if(lang == "esp") query.equalTo("languages", 0);
         else query.equalTo("languages", 1);
+        query.include("category");
         query.get(id, {
             success: function(packageObject) {
                 $(".package_name").val(packageObject.get("name"));
                 $(".package_id").val(packageObject.id);
+                if(lang == "esp")  $(".package_category").val(packageObject.get("category").get("name"));
+                else $(".package_category").val(packageObject.get("category").get("nameEng"));
             }, error: function(error) {
                 //tengo el id en ingles y busco el spanish one
                     var queryEng = new Parse.Query(Parse.Object.extend("Packages"));

@@ -791,7 +791,7 @@ hr.tall{
 	background-color:rgba(0, 0, 0, 0.1);
 	border-radius: 25px;
 	padding:2%;
-	width:90%;
+	width:95%;
    	text-align: center;
    	height: 160px;
 }
@@ -804,7 +804,8 @@ hr.tall{
 
 .category_name {
 	color: #FFF;
-	font-size: 90%;
+	font-size: 80%;
+	margin-top:20px;
 }
 
 .icon-banner {
@@ -2621,8 +2622,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 .info-gallery-custom .content-btn { 
 	position: absolute;
 	bottom: 0;
-    margin: 20px;
-    left: 35%;
+    position: absolute;
+    width: 300px;
+    right: 25%;
+    left: 50%;
+    margin-left: -150px;
+    margin-bottom: 20px;
 }
 .info-gallery-trip {
 	height: 250px;
@@ -2631,8 +2636,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 .info-gallery-trip .info-gallery-btn {
 	position: absolute;
 	bottom: 0;
-    margin: 20px;
-    left: 25%;
+    width: 300px;
+    right: 25%;
+    left: 50%;
+    margin-left: -150px;
+    margin-bottom: 20px;
 }
 
 /* Galley list-view---------------------------------------------------------------*/
