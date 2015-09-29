@@ -1,5 +1,5 @@
 <?php
-	$to = "israel-villalobos@hotmail.com"; /*Your Email*/
+	$to = "mpicazo@travelgroup-holidays.com"; /*Your Email*/
 	$subject = "Reserve Now"; /*Issue*/
 	$date = date ("l, F jS, Y"); 
 	$time = date ("h:i A"); 	
@@ -16,6 +16,7 @@
 	Fecha de salida:	$_REQUEST[fechain]
 	Fecha de entrada:	$_REQUEST[fechaout]
 	Nombre del Paquete: $_REQUEST[package_name]
+	Categoria:			$_REQUEST[package_category]
 	Num. de noches: 	$_REQUEST[quantity]
 	Presupuesto:		$_REQUEST[budget]
 	Numero de adultos: 	$_REQUEST[adultos]

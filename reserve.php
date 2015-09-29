@@ -117,22 +117,24 @@ $v = "Send";
                                                         <h5><?php echo $d; ?> <input type="text" name="citycountry"></h5>                                                                                                        
                                                         <h5><?php echo $f; ?> <input type="date" name="fechain"> <?php echo $g; ?>   <input type="date" name="fechaout"></h5>
                                                         <h4><?php echo $h; ?> </h4>
-                                                        <input type="text" name="package_name" class="package_name" readonly> <br>
-                                                        <input type="text" name="package_category" class="package_category" readonly>
+
+                                                        <input type="text" name="package_name" class="package_name" readonly style="width:50%;"><br>
+                                                        <input type="text" name="package_category" class="package_category" readonly style="width:50%;">
+
                                                         <input type="hidden" name="package_id" class="package_id">
                                                         <h5> <?php echo $j; ?> <input type="number" name="quantity" min="1" max="99" value="1"><br></h5>
                                                         <strong><?php echo $k; ?></strong><br />
                                                         <br />
                                                         <h5><?php echo $l; ?>
                                                             <select name="budget">
-                                                              <option value="US$0 – 1,400">US$0 – 1,400</option>
-                                                              <option value="US$1400 - 2800">US$1400 - 2800</option>
-                                                              <option value="US$2800 – 4200">US$2800 – 4200</option>
-                                                              <option value="US$4200 – 5600">US$4200 – 5600</option>
-                                                              <option value="US$5600 – 7000">US$5600 – 7000</option>
-                                                              <option value="US$7000 – 8400">US$7000 – 8400</option>
-                                                              <option value="US$8400 – 9800">US$8400 – 9800</option>
-                                                              <option value="US$9800 – 11200">US$9800 – 11200</option>                                                          
+                                                              <option value="US$0 – 1,400">US$0 / 1,400</option>
+                                                              <option value="US$1400 - 2800">US$1400 / 2800</option>
+                                                              <option value="US$2800 – 4200">US$2800 / 4200</option>
+                                                              <option value="US$4200 – 5600">US$4200 / 5600</option>
+                                                              <option value="US$5600 – 7000">US$5600 / 7000</option>
+                                                              <option value="US$7000 – 8400">US$7000 / 8400</option>
+                                                              <option value="US$8400 – 9800">US$8400 / 9800</option>
+                                                              <option value="US$9800 – 11200">US$9800 / 11200</option>                                                          
                                                             </select>    
                                                         </h5>
                                                         <h5><?php echo $z; ?><input type="number" name="adultos" min="1" max="99" value="1"></h5>

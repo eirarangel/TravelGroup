@@ -71,8 +71,8 @@ $send = "Send Message";
 
                                         <address>
                                           <strong>Travelgroup Holidays.</strong><br>
-                                          <i class="fa fa-envelope"></i><strong><?php echo $email; ?>:</strong><a href="mailto:#">mpicazo@travelgroup-holidays.com</a><br>
-                                          <i class="fa fa-envelope"></i><strong><?php echo $email; ?>:</strong><a href="mailto:#">mpicazo@carefreevacations.com</a><br>
+                                          <i class="fa fa-envelope"></i><strong><?php echo $email; ?></strong><a href="mailto:mpicazo@travelgroup-holidays.com"><br />mpicazo@travelgroup-holidays.com</a><br>
+                                          <i class="fa fa-envelope"></i><strong><?php echo $email; ?></strong><a href="mailto:mpicazo@carefreevacations.com"><br />mpicazo@carefreevacations.com</a><br>
                                         </address>
                                     </aside>
 

@@ -99,7 +99,7 @@ if (isset($_GET['lang'])) {
                                         <br>
                                     </div>
                                     <div class="info-feature">
-                                        <p>expresados de nuestros clientes. <br /> Nuestro secreto "Hacer que las cosas sucedan". </p>
+                                        <p>no expresados de nuestros clientes. <br /> Nuestro secreto "Hacer que las cosas sucedan". </p>
                                     </div>
                                 </div>
                             </div>
@@ -117,7 +117,7 @@ if (isset($_GET['lang'])) {
                                         <br>
                                     </div>
                                     <div class="info-feature">
-                                        <p>que engrandece experiencias inolvidables!! </p>
+                                        <p>que engrandecerá experiencias inolvidables </p>
                                     </div>
                                 </div>
                             </div>

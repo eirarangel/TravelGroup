@@ -5,13 +5,13 @@
         $include = "Incluye";
         $restrictions = "Restricciones";
         $reserve = "¡Reserva Ahora!";
-        $help = "¿Necesitas ayuda? ¡Llámanos ahora! - (619) 730-0380";
+        $help = "¿Necesitas ayuda? ¡Llámanos ahora! - US <strong>(619) 730-0380</strong> o MX <strong>(661) 100-6379</strong>";
     } else {
         $destination = "Destinations";
         $include = "Include";
         $restrictions = "Restrictions";
         $reserve = "Reserve Now!";
-        $help = "Need Help? Call us Now! - (619) 730-0380";
+        $help = "Need Help? Call us Now! - US <strong>(619) 730-0380</strong> or MX <strong>(661) 100-6379</strong>";
     }
 ?>
 
