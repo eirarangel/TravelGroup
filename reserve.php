@@ -22,6 +22,7 @@ $z = "Numero de adultos";
 $x = "Comentarios: ";
 $c = "Indícanos requerimientos especiales (vuelos, tours, traslados, etc.) para ayudarte a cotizar a tu gusto y necesidades.";
 $v = "Enviar";
+$b = "help.php?lang=esp";
 }
 else{
 $q = "Welcome";
@@ -46,6 +47,7 @@ $z = "Approximate number of adults: ";
 $x = "Reviews: ";
 $c = "Please indicate special requirements (flights, tours, transfers, etc.) to help you contribute to your needs.";
 $v = "Send";
+$b = "help.php";
 
 }
 ?>
@@ -142,7 +144,7 @@ $v = "Send";
                                                         <textarea rows="4" cols="50" value="Type of vacation….." name="descripcion"></textarea><br />
                                                         <h6><em><?php echo $c; ?></em></h6>
                                                             <div align="right">
-                                                                <input type="submit" onclick="location.href = 'help.php';" name="Submit" value="<?php echo $v; ?>" class="btn btn-primary">
+                                                                <input type="submit" onclick="location.href = '<?= $b; ?>';" name="Submit" value="<?php echo $v; ?>" class="btn btn-primary">
                                                                 <!--<input type="submit" onclick="location.href = 'help.php';" value="Send"> -->
                                                             </div>
                                                         <br />

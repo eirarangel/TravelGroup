@@ -114,7 +114,7 @@
             var details = "View Details";
             var urlLang = "";
             if(lang == "esp") {
-                description = "Pregunta a tu agente de ventas";
+                description = "Pregunta a tu agente de viajes";
                 from = "Desde";
                 details = "Ver Detalles";
                 urlLang = "&lang=esp";

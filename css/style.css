@@ -3734,3 +3734,11 @@ address strong{
 .image_privacy_policy{
 	background: url(../img/official/privacy_policy_ripl1d.jpg);
 }
+.logo-language img {
+	margin-left: 5px;
+	padding-bottom: 2px;
+}
+
+.menu-item {
+	margin-top: 15px !important;
+}

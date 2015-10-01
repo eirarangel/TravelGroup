@@ -120,7 +120,7 @@ $eleccion = "Choice of holiday travelers";
             var from = "From";
 
             if(lang == "esp") {
-                description = "Pregunta a tu agente de ventas";
+                description = "Pregunta a tu agente de viajes";
                 cat_name = object.get("category").get("name").toUpperCase();
                 urlLang = "&lang=esp";
                 details = "Ver Detalles";

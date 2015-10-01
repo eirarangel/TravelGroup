@@ -50,22 +50,22 @@ if (isset($_GET['lang'])) {
                                         <div class="tab-pane active" id="hotel">                                        
                                             <div class="row padding-top">
                                                 <center>    
-                                                    <h2>Te ayudamos!</h2>
+                                                    <h2>¡Te ayudamos!</h2>
                                                     
-                                                    <h4>Llama en Mexico o Estados Unidos</h4>
+                                                    <h4>Llama en México o Estados Unidos</h4>
                                                     <p>MX 661-100-6379 <br>
                                                     US 619-730-0380 <br>
                                                     </p>
 
                                                     
                                                     <h4>Horarios de servicio:</h4>
-                                                    Lunes a Viernes 9:00am-2:00pm <br />
-                                                    Sabados 9:00am-2:00pm <br />
+                                                    Lunes a Viernes 9:00am - 8:00pm <br />
+                                                    Sábados 9:00am - 2:00pm <br />
                                                     </p>
              
                                                     <h5>Dirección: 875 Bowsprit Rd. Chula Vista Ca.91914
 
-                                                    <h5>O contactanos via <a href="https://www.facebook.com/Travelgroup-Holidays-360078470852743/timeline/?ref=br_rs" target="_blank"><i class="fa fa-facebook-square"></i></a></h5>
+                                                    <h5>O contáctanos vía <a href="https://www.facebook.com/Travelgroup-Holidays-360078470852743/timeline/?ref=br_rs" target="_blank"><i class="fa fa-facebook-square"></i></a></h5>
                                                     <br>
                                                     <br>
                                                 </center>
@@ -146,13 +146,13 @@ else{
 
                                                     
                                                     <h4>Service hours:</h4>
-                                                    Monday to Friday 9:00am-2:00pm <br />
-                                                    Saturday 9:00am-2:00pm <br />
+                                                    Monday to Friday 9:00am - 8:00pm <br />
+                                                    Saturday 9:00am - 2:00pm <br />
                                                     </p>
              
                                                     <h5>Address: 875 Bowsprit Rd. Chula Vista Ca.91914
 
-                                                    <h5>O contactanos via <a href="https://www.facebook.com/Travelgroup-Holidays-360078470852743/timeline/?ref=br_rs" target="_blank"><i class="fa fa-facebook-square"></i></a></h5>
+                                                    <h5>Or contact us via <a href="https://www.facebook.com/Travelgroup-Holidays-360078470852743/timeline/?ref=br_rs" target="_blank"><i class="fa fa-facebook-square"></i></a></h5>
                                                     <br>
                                                     <br>
                                                 </center>

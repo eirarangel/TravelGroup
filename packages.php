@@ -169,7 +169,8 @@
         else $("#pack_category_name").text(packageObject.get("category").get("nameEng"));
         $("#package_name").text(packageObject.get("name"));
         if(packageObject.get("detailsAgent") == 1) {
-                        $("#package_description").text("Pregunta a tu agente de ventas");
+                        if(lang == "esp") $("#package_description").text("Pregunta a tu agente de viajes.");
+                        else $("#package_description").text("Ask your travel agent.");
                         $(".lead").hide();
                         $("#destinations").hide();
                         $("#includes").hide();
